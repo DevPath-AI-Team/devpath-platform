@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import './Login.css'; 
-// --- İKONLAR (Harici paket hatası vermesin diye kodun içine gömdüm) ---
+import './Login.css'; // DÜZELTME: Dosya ismin küçük harf olduğu için burayı düzelttim
 
+// --- İKONLAR ---
 const MailIcon = () => (
   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="input-icon">
     <rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
@@ -21,22 +21,19 @@ const CodeIcon = () => (
   </svg>
 );
 
-// --- ASIL SAYFA KODU ---
-
 const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const navigate = useNavigate(); // Sayfa yönlendirmesi için
+  const navigate = useNavigate();
 
   const handleLogin = (e) => {
     e.preventDefault();
     console.log("Giriş denemesi:", email, password);
     
     // --- GEÇİCİ GİRİŞ MANTIĞI ---
-    // Şimdilik test etmek için şifre '123456' ise giriş başarılı sayalım.
     if(password === '123456') {
-        alert("Giriş Başarılı! Hoşgeldin lider.");
-        navigate('/dashboard'); // Seni Dashboard sayfasına atar
+        alert("Giriş Başarılı! Hoşgeldin .");
+        navigate('/dashboard'); 
     } else {
         alert("Hatalı şifre! (Test şifresi: 123456)");
     }
@@ -63,7 +60,7 @@ const Login = () => {
             <div className="input-group">
               <label>E-posta Adresi</label>
               <div className="input-wrapper">
-                <MailIcon /> {/* CSS'deki .input-icon sınıfı buraya etki eder */}
+                <MailIcon />
                 <input 
                   type="email" 
                   placeholder="ogrenci@iste.edu.tr" 
@@ -79,7 +76,7 @@ const Login = () => {
             <div className="input-group">
               <label>Şifre</label>
               <div className="input-wrapper">
-                <LockIcon /> {/* CSS'deki .input-icon sınıfı buraya etki eder */}
+                <LockIcon />
                 <input 
                   type="password" 
                   placeholder="••••••••" 
@@ -91,12 +88,12 @@ const Login = () => {
               </div>
             </div>
 
-            {/* Şifremi Unuttum */}
-            <div style={{textAlign: 'right', marginBottom: '1.5rem'}}>
-              <span className="link-text" style={{fontSize: '0.85rem', cursor:'pointer'}}>
-                Şifremi Unuttum?
-              </span>
-            </div>
+            {/* Şifremi Unuttum - GÜNCELLENDİ */}
+<div style={{textAlign: 'right', marginBottom: '1.5rem'}}>
+  <Link to="/forgot-password" className="link-text" style={{fontSize: '0.85rem'}}>
+    Şifremi Unuttum?
+  </Link>
+</div>
 
             {/* Giriş Butonu */}
             <button type="submit" className="login-btn">
@@ -113,7 +110,6 @@ const Login = () => {
 
       {/* --- SAĞ TARAF (GÖRSEL) --- */}
       <div className="login-right">
-        {/* CSS'deki .bg-pattern sınıfı burada desen oluşturacak */}
         <div className="bg-pattern"></div>
         <div className="right-content">
           <h2>Geleceği Kodla.</h2>

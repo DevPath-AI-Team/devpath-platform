@@ -5,10 +5,13 @@
     width: 100vw;
     font-family: 'Inter', system-ui, -apple-system, sans-serif;
     background-color: #f3f4f6;
-  }
-  
-  /* SOL TARA (Form Kısmı) */
-  .login-left {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* SOL TARAF (Form Kısmı) */
+.login-left {
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -16,73 +19,76 @@
     align-items: center;
     padding: 40px;
     background: white;
-  }
-  
-  .form-wrapper {
+}
+
+.form-wrapper {
     width: 100%;
     max-width: 400px;
-  }
-  
-  .brand-title {
+}
+
+.brand-title {
     font-size: 2rem;
     font-weight: 800;
-    color: #2563eb; /* Projenin ana mavisi */
+    color: #2563eb; /* Ana Mavi */
     margin-bottom: 0.5rem;
     letter-spacing: -1px;
-  }
-  
-  .welcome-text {
+}
+
+.welcome-text {
     color: #6b7280;
     margin-bottom: 2rem;
     font-size: 1rem;
-  }
-  
-  /* Input Alanları */
-  .input-group {
+}
+
+/* Input Alanları */
+.input-group {
     margin-bottom: 1.2rem;
     position: relative;
-  }
-  
-  .input-group label {
+}
+
+.input-group label {
     display: block;
     margin-bottom: 0.5rem;
     font-size: 0.9rem;
     font-weight: 600;
     color: #374151;
-  }
-  
-  .input-wrapper {
+}
+
+.input-wrapper {
     position: relative;
     display: flex;
     align-items: center;
-  }
-  
-  .input-icon {
+}
+
+/* İkonları hizalamak için */
+.input-icon {
     position: absolute;
     left: 12px;
     color: #9ca3af;
     pointer-events: none;
-  }
-  
-  .styled-input {
+    z-index: 10;
+}
+
+.styled-input {
     width: 100%;
-    padding: 12px 12px 12px 40px; /* İkon için soldan boşluk */
+    padding: 12px 12px 12px 40px; /* Soldan ikon payı */
     border: 1px solid #d1d5db;
     border-radius: 8px;
     outline: none;
     transition: all 0.2s ease;
     font-size: 0.95rem;
     background-color: #f9fafb;
-  }
-  
-  .styled-input:focus {
+    box-sizing: border-box; /* Taşmayı önler */
+}
+
+.styled-input:focus {
     border-color: #2563eb;
     background-color: #fff;
     box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1);
-  }
-  
-  /* Buton */
-  .login-btn {
+}
+
+/* Buton */
+.login-btn {
     width: 100%;
     padding: 14px;
     background-color: #2563eb;
@@ -94,77 +100,77 @@
     cursor: pointer;
     transition: background 0.2s;
     margin-top: 1rem;
-  }
-  
-  .login-btn:hover {
+}
+
+.login-btn:hover {
     background-color: #1d4ed8;
     transform: translateY(-1px);
-  }
-  
-  /* Linkler */
-  .footer-links {
+}
+
+/* Linkler */
+.footer-links {
     margin-top: 1.5rem;
     text-align: center;
     font-size: 0.9rem;
     color: #6b7280;
-  }
-  
-  .link-text {
+}
+
+.link-text {
     color: #2563eb;
     text-decoration: none;
     font-weight: 600;
     cursor: pointer;
-  }
-  
-  .link-text:hover {
+}
+
+.link-text:hover {
     text-decoration: underline;
-  }
-  
-  /* SAĞ TARAF (Görsel Kısmı) */
-  .login-right {
-    flex: 1.2; /* Biraz daha geniş olsun */
+}
+
+/* SAĞ TARAF (Görsel Kısmı) */
+.login-right {
+    flex: 1.2;
     background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
     overflow: hidden;
-  }
-  
-  /* Arkaplan Deseni (CSS ile basit desen) */
-  .bg-pattern {
+}
+
+/* Arkaplan Deseni */
+.bg-pattern {
     position: absolute;
     width: 100%;
     height: 100%;
     opacity: 0.1;
     background-image: radial-gradient(#ffffff 2px, transparent 2px);
     background-size: 30px 30px;
-  }
+}
 
-  .right-content {
+.right-content {
     text-align: center;
     color: white;
     z-index: 2;
     padding: 3rem;
     max-width: 500px;
-  }
-  
-  .right-content h2 {
+}
+
+.right-content h2 {
     font-size: 3rem;
     margin-bottom: 1.5rem;
     font-weight: 800;
     line-height: 1.2;
-  }
+}
 
-  .right-content p {
+.right-content p {
     font-size: 1.1rem;
     opacity: 0.9;
     line-height: 1.6;
-  }
-  
-  /* Mobilde sağ tarafı gizle */
-  @media (max-width: 900px) {
+}
+
+/* Mobilde sağ tarafı gizle */
+@media (max-width: 900px) {
     .login-right {
-      display: none;
+        display: none;
     }
-  }
+}
