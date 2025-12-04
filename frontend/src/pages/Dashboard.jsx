@@ -1,5 +1,6 @@
 import React from 'react';
 import './Dashboard.css';
+import { useNavigate } from 'react-router-dom';
 
 // --- İKONLAR ---
 const HomeIcon = () => <svg width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>;
@@ -21,6 +22,12 @@ const courses = [
 ];
 
 const Dashboard = () => {
+
+
+    const navigate = useNavigate(); 
+
+
+
   return (
     <div className="dashboard-container">
       {/* --- YAN MENÜ --- */}
@@ -87,7 +94,9 @@ const Dashboard = () => {
                         </div>
                     </div>
 
-                    <button className="continue-btn">Derse Devam Et</button>
+                    <button className="continue-btn"
+      onClick={() => navigate(`/course/${course.id}`)}>
+        Derse Devam Et</button>
                 </div>
             ))}
         </div>
