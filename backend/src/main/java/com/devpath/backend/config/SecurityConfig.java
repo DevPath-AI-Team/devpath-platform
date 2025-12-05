@@ -7,41 +7,53 @@ import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.config.annotation.authentication.configuration.AuthenticationConfiguration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.http.SessionCreationPolicy;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
-import org.springframework.security.crypto.password.PasswordEncoder;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 @Configuration
 @RequiredArgsConstructor
 public class SecurityConfig {
 
-    private final JwtAuthFilter jwtAuthFilter; // sende zaten var
+    private final JwtAuthFilter jwtAuthFilter;
 
-    // 🔹 1) BURAYI EKLE
+    // Şifreleri Bcrypt ile encode etmek için PasswordEncoder bean'i
     @Bean
     public PasswordEncoder passwordEncoder() {
-        // Şifreleri Bcrypt ile encode etmek için
         return new BCryptPasswordEncoder();
     }
 
-    // 🔹 2) Zaten vardır ama tam halini örnek için koyuyorum
+    // Ana güvenlik zinciri
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
+                // CSRF kapalı (JWT + REST API için)
                 .csrf(csrf -> csrf.disable())
-                .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
+
+                // Session yerine tamamen stateless JWT kullanıyoruz
+                .sessionManagement(session ->
+                        session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
+
+                // Hangi endpoint'e kim erişebilir?
                 .authorizeHttpRequests(auth -> auth
+                        // Kayıt / giriş herkese açık
                         .requestMatchers("/api/auth/**").permitAll()
+                        // Ders endpointleri şimdilik herkese açık (geliştirme için)
                         .requestMatchers("/api/lessons/**").permitAll()
+                        // İlerleme (UserProgress) endpointleri de şimdilik herkese açık
+                        .requestMatchers("/api/progress/**").permitAll()
+                        // Diğer tüm endpointler için authentication zorunlu
                         .anyRequest().authenticated()
                 )
+
+                // JWT filtresini UsernamePasswordAuthenticationFilter'dan önce ekliyoruz
                 .addFilterBefore(jwtAuthFilter, UsernamePasswordAuthenticationFilter.class);
 
         return http.build();
     }
 
-    // 🔹 3) AuthenticationManager bean (çoğu projede var)
+    // AuthenticationManager bean'i (AuthService içinde kullanılıyor)
     @Bean
     public AuthenticationManager authenticationManager(AuthenticationConfiguration config) throws Exception {
         return config.getAuthenticationManager();
