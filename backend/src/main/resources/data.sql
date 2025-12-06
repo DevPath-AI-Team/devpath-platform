@@ -2,7 +2,8 @@
 -- JAVA - BEGINNER DERSLER
 -- =========================
 --başlık, açıklama, youtube_url, sıra_indeksi, etkin, dil, seviye
-INSERT INTO lessons (title, description, youtube_url, order_index, active, language, level)
+
+INSERT INTO lessons (title, description, youtube_url, order_index, is_active, language, level)
 VALUES
   ('Giriş ve Tanıtım', 
    'Java nedir, hangi alanlarda kullanılır?', 
@@ -58,7 +59,7 @@ VALUES
    -- =========================
 -- JAVA - INTERMEDIATE DERSLER
 -- =========================
-INSERT INTO lessons (title, description, youtube_url, order_index, active, language, level)
+INSERT INTO lessons (title, description, youtube_url, order_index, is_active, language, level)
 VALUES
   ('For Döngüsüyle Çalışmak', 
    'For Döngüsünü Anlamak', 
@@ -144,7 +145,7 @@ VALUES
    -- =========================
 -- JAVA - ADVANCED DERSLER
 -- =========================
-INSERT INTO lessons (title, description, youtube_url, order_index, active, language, level)
+INSERT INTO lessons (title, description, youtube_url, order_index, is_active, language, level)
 VALUES
   ('Class Nedir?-Doğru Anlamak', 
    'Class Yapısı', 
@@ -159,7 +160,7 @@ VALUES
   ('Çok Önemli -Değer ve Referans Tipleri Anlamak', 
    '*****', 
    'https://www.youtube.com/watch?v=y9vmseRAMiU&list=PLqG356ExoxZUGwbqoJEKSMnaxVJe4Uvf8&index=30', 
-   29, true, 'JAVA', 'ADVANCED');
+   29, true, 'JAVA', 'ADVANCED'),
    
    ('ReCap Demo Classlarla Çalışmak', 
    'Demo Classlarla Çalışmak', 
@@ -174,7 +175,7 @@ VALUES
   ('Encapsulation İhityacını Anlamak', 
    'Encapsulation Gizli Dünyaya Açılan Kapı', 
    'https://www.youtube.com/watch?v=9qYgEaAaef8&list=PLqG356ExoxZUGwbqoJEKSMnaxVJe4Uvf8&index=33', 
-   32, true, 'JAVA', 'ADVANCED');
+   32, true, 'JAVA', 'ADVANCED'),
    
    ('Getter ve Setter ile Çalışmak', 
    'Getter ve Setter', 
@@ -204,7 +205,7 @@ VALUES
   ('Gerçek Hayatta Polimorfizm ile Çalışmak', 
    '**********', 
    'https://www.youtube.com/watch?v=DfEFbI6z2Is&list=PLqG356ExoxZUGwbqoJEKSMnaxVJe4Uvf8&index=39', 
-   38, true, 'JAVA', 'ADVANCED');
+   38, true, 'JAVA', 'ADVANCED'),
    
    ('Overriding Altyapısıyla Çalışmak', 
    'Override', 
@@ -219,7 +220,7 @@ VALUES
     ('Demo-Abstract Sınıflarını Pekiştirmek', 
    'Demo-Abstract', 
    'https://www.youtube.com/watch?v=U1sapsgPEvU&list=PLqG356ExoxZUGwbqoJEKSMnaxVJe4Uvf8&index=42', 
-   41, true, 'JAVA', 'ADVANCED');
+   41, true, 'JAVA', 'ADVANCED'),
    
    ('Interfaceler ile Çalışmak', 
    'Kurallar Bütünü', 
@@ -240,3 +241,206 @@ VALUES
    'Composition-Inner Class ve Static', 
    'https://www.youtube.com/watch?v=CRGYJ_kJpPk&list=PLqG356ExoxZUGwbqoJEKSMnaxVJe4Uvf8&index=46', 
    45, true, 'JAVA', 'ADVANCED');
+   
+-- =========================
+-- PYTHON - BEGINNER DERSLER
+-- =========================
+
+INSERT INTO lessons (title, description, youtube_url, order_index, is_active, language, level)
+VALUES
+('PYTHON - Kullanım Alanları, Avantajları ve Felsefesi',
+ 'Python dilinin tanımı, kullanım alanları ve felsefesi.',
+ 'https://www.youtube.com/watch?v=EzHgbO1Cee4&list=PLWctyKyPphPiul3WbHkniANLqSheBVP3O&index=1',
+ 1, true, 'PYTHON', 'BEGINNER'),
+
+('Python Dersleri #0 | Anaconda Kurulum',
+ 'Gerekli Anaconda ortamının kurulumu.',
+ 'https://www.youtube.com/watch?v=k-zK7ltCXCA&list=PLWctyKyPphPiul3WbHkniANLqSheBVP3O&index=2',
+ 2, true, 'PYTHON', 'BEGINNER'),
+
+('Python Dersleri #1 | Print Komutu ile Ekrana Yazdırma',
+ 'İlk çıktı alma ve Print fonksiyonu.',
+ 'https://www.youtube.com/watch?v=S0d0ma5q-iI&list=PLWctyKyPphPiul3WbHkniANLqSheBVP3O&index=3',
+ 3, true, 'PYTHON', 'BEGINNER'),
+
+('Python Dersleri #2 | Değişken ve Atama',
+ 'Değişken tanımlama ve atama işlemleri.',
+ 'https://www.youtube.com/watch?v=Uwq-YtI-T60&list=PLWctyKyPphPiul3WbHkniANLqSheBVP3O&index=4',
+ 4, true, 'PYTHON', 'BEGINNER'),
+
+('Python Dersleri #3 | Veri Tipleri ve Sayı Tipleri (Integer ve Float)',
+ 'Temel sayısal veri tipleri.',
+ 'https://www.youtube.com/watch?v=sJkyGixATl0&list=PLWctyKyPphPiul3WbHkniANLqSheBVP3O&index=5',
+ 5, true, 'PYTHON', 'BEGINNER'),
+
+('Python Dersleri #8 | Çok Boyutlu Veri Tipleri (Dictionary)',
+ 'Sözlük (Dictionary) veri yapısının tanıtımı.',
+ 'https://www.youtube.com/watch?v=QTMMimIXwtQ&list=PLWctyKyPphPiul3WbHkniANLqSheBVP3O&index=10',
+ 6, true, 'PYTHON', 'BEGINNER'),
+
+('Python Dersleri #11 | if Sorguları',
+ 'Program akış kontrolü ve if/elif/else yapıları.',
+ 'https://www.youtube.com/watch?v=ucrjAonOUAI&list=PLWctyKyPphPiul3WbHkniANLqSheBVP3O&index=13',
+ 7, true, 'PYTHON', 'BEGINNER'),
+
+('Python Dersleri #12 | Listelerde for Döngüleri',
+ 'For döngüsü ile listeler üzerinde yineleme.',
+ 'https://www.youtube.com/watch?v=wZZ34Uk1C2U&list=PLWctyKyPphPiul3WbHkniANLqSheBVP3O&index=14',
+ 8, true, 'PYTHON', 'BEGINNER'),
+
+('Python Dersleri #13 | Diğer Iterable Objelerde for Döngüleri',
+ 'Tüm yinelenebilir nesnelerde for döngüsü kullanımı.',
+ 'https://www.youtube.com/watch?v=1hi-KRcKy-g&list=PLWctyKyPphPiul3WbHkniANLqSheBVP3O&index=15',
+ 9, true, 'PYTHON', 'BEGINNER'),
+
+('Python Dersleri #14 | while Döngüleri',
+ 'Koşullu döngü yapısı.',
+ 'https://www.youtube.com/watch?v=HSlLrfVswGA&list=PLWctyKyPphPiul3WbHkniANLqSheBVP3O&index=16',
+ 10, true, 'PYTHON', 'BEGINNER'),
+
+('Python Dersleri #16 | break, continue ve pass Komutları',
+ 'Döngü kontrol ifadeleri.',
+ 'https://www.youtube.com/watch?v=9kS7BgYstZ0&list=PLWctyKyPphPiul3WbHkniANLqSheBVP3O&index=18',
+ 11, true, 'PYTHON', 'BEGINNER'),
+
+('Python Dersleri #18 | Fonksiyonlar - 1',
+ 'Fonksiyon tanımlama ve temel kullanımı.',
+ 'https://www.youtube.com/watch?v=McUxTvOyZ1w&list=PLWctyKyPphPiul3WbHkniANLqSheBVP3O&index=20',
+ 12, true, 'PYTHON', 'BEGINNER');
+
+-- =========================
+-- PYTHON - INTERMEDIATE
+-- =========================
+INSERT INTO lessons (title, description, youtube_url, order_index, is_active, language, level)
+VALUES
+('Python Dersleri #20 | map, filter ve lambda İfadeleri',
+ 'map, filter fonksiyonları ve lambda ifadeleri.',
+ 'https://www.youtube.com/watch?v=ySDNjAhDixU&list=PLWctyKyPphPiul3WbHkniANLqSheBVP3O&index=22',
+ 13, true, 'PYTHON', 'INTERMEDIATE'),
+
+('Python Dersleri #21 | input Komutu Üzerinden Kullanıcı Girdisi',
+ 'input() fonksiyonu ile kullanıcıdan girdi alma.',
+ 'https://www.youtube.com/watch?v=72y2jBvhEag&list=PLWctyKyPphPiul3WbHkniANLqSheBVP3O&index=24',
+ 14, true, 'PYTHON', 'INTERMEDIATE'),
+
+('Python Dersleri #23 | Try Except Komutları ile Hata Tedbiri',
+ 'Hata yakalama ve istisna yönetimi.',
+ 'https://www.youtube.com/watch?v=vKv5e_8rL10&list=PLWctyKyPphPiul3WbHkniANLqSheBVP3O&index=25',
+ 15, true, 'PYTHON', 'INTERMEDIATE'),
+
+('Python Dersleri #25 | Class Yapısı ve OOP Giriş',
+ 'Nesneye Yönelimli Programlamanın temelleri.',
+ 'https://www.youtube.com/watch?v=d2v_e2qKO44&list=PLWctyKyPphPiul3WbHkniANLqSheBVP3O&index=27',
+ 16, true, 'PYTHON', 'INTERMEDIATE'),
+
+('Python Dersleri #26 | Classlarda Methodlar',
+ 'Sınıf içinde metot tanımlama ve kullanma.',
+ 'https://www.youtube.com/watch?v=1F7JeGveCKE&list=PLWctyKyPphPiul3WbHkniANLqSheBVP3O&index=28',
+ 17, true, 'PYTHON', 'INTERMEDIATE'),
+
+('Python Dersleri #27 | Dunder Methodlar ve Kalıtım',
+ 'Özel metotlar ve kalıtım mekanizması.',
+ 'https://www.youtube.com/watch?v=OAxdvmQaYO0&list=PLWctyKyPphPiul3WbHkniANLqSheBVP3O&index=29',
+ 18, true, 'PYTHON', 'INTERMEDIATE'),
+
+('Python Dersleri #28 | Dosya ve Klasör Modülleri',
+ 'Dosya ve dizin işlemleri.',
+ 'https://www.youtube.com/watch?v=5aaPdOIZKIA&list=PLWctyKyPphPiul3WbHkniANLqSheBVP3O&index=30',
+ 19, true, 'PYTHON', 'INTERMEDIATE'),
+
+('Python Dersleri #35 | Decoratorlar',
+ 'Fonksiyonların davranışını değiştiren yapılar.',
+ 'https://www.youtube.com/watch?v=YqlAOGoG9vM&list=PLWctyKyPphPiul3WbHkniANLqSheBVP3O&index=37',
+ 20, true, 'PYTHON', 'INTERMEDIATE'),
+
+('Python Dersleri #36 | Requests Modülü - Giriş',
+ 'Web istekleri gönderme modülüne giriş.',
+ 'https://www.youtube.com/watch?v=IO7QleMvw5w&list=PLWctyKyPphPiul3WbHkniANLqSheBVP3O&index=38',
+ 21, true, 'PYTHON', 'INTERMEDIATE'),
+
+('Python Dersleri #37 | Requests GET metodu',
+ 'Requests ile GET metodu kullanımı.',
+ 'https://www.youtube.com/watch?v=4tYqVcxQIkE&list=PLWctyKyPphPiul3WbHkniANLqSheBVP3O&index=39',
+ 22, true, 'PYTHON', 'INTERMEDIATE'),
+
+('Python Dersleri #38 | Requests POST metodu',
+ 'Requests ile POST metodu kullanımı.',
+ 'https://www.youtube.com/watch?v=rT9DMb4vwhk&list=PLWctyKyPphPiul3WbHkniANLqSheBVP3O&index=40',
+ 23, true, 'PYTHON', 'INTERMEDIATE');
+ 
+-- =========================
+-- PYTHON - ADVANCED
+-- =========================
+INSERT INTO lessons (title, description, youtube_url, order_index, is_active, language, level)
+VALUES
+('Python Dersleri #39 | GUI Arayüzü',
+ 'GUI kavramına ve bileşenlerine giriş.',
+ 'https://www.youtube.com/watch?v=rCNbIPYyxz8&list=PLWctyKyPphPiul3WbHkniANLqSheBVP3O&index=41',
+ 24, true, 'PYTHON', 'ADVANCED'),
+
+('Python Dersleri #45 | Basit E-posta Gönderimi',
+ 'SMTPlib ile basit e-posta gönderme.',
+ 'https://www.youtube.com/watch?v=SR92w_Bfmtg&list=PLWctyKyPphPiul3WbHkniANLqSheBVP3O&index=46',
+ 25, true, 'PYTHON', 'ADVANCED'),
+
+('Python Dersleri #46 | Ekli E-posta Gönderimi',
+ 'Ekli dosya ile e-posta gönderme.',
+ 'https://www.youtube.com/watch?v=vywH4vHt8R0&list=PLWctyKyPphPiul3WbHkniANLqSheBVP3O&index=47',
+ 26, true, 'PYTHON', 'ADVANCED'),
+
+('Python Dersleri #47 | E-posta Okuma',
+ 'POP3/IMAP ile e-posta okuma işlemleri.',
+ 'https://www.youtube.com/watch?v=b1K9Jp129ac&list=PLWctyKyPphPiul3WbHkniANLqSheBVP3O&index=48',
+ 27, true, 'PYTHON', 'ADVANCED'),
+
+('PyData: IPywidget Uygulaması I',
+ 'IPywidget ile veri projelerine giriş.',
+ 'https://www.youtube.com/watch?v=ZB-fDVJKdt8&list=PLWctyKyPphPiul3WbHkniANLqSheBVP3O&index=49',
+ 28, true, 'PYTHON', 'ADVANCED'),
+
+('PyData: IPywidget Uygulaması II',
+ 'IPywidget uygulamasının devamı.',
+ 'https://www.youtube.com/watch?v=WmZag-FZpvk&list=PLWctyKyPphPiul3WbHkniANLqSheBVP3O&index=50',
+ 29, true, 'PYTHON', 'ADVANCED'),
+
+('Folium ile Veri Görselleştirme',
+ 'Folium ile coğrafi veri görselleştirme.',
+ 'https://www.youtube.com/watch?v=gSMPTI3lttY&list=PLWctyKyPphPiul3WbHkniANLqSheBVP3O&index=55',
+ 30, true, 'PYTHON', 'ADVANCED'),
+
+('Corona Günlük Yayılım Animasyonu',
+ 'Matplotlib ile veri animasyonu oluşturma.',
+ 'https://www.youtube.com/watch?v=milFvY9PElM&list=PLWctyKyPphPiul3WbHkniANLqSheBVP3O&index=56',
+ 31, true, 'PYTHON', 'ADVANCED'),
+
+('Ülke Bazlı Yayılım Modelleri',
+ 'Subplots ile veri modellerini görselleştirme.',
+ 'https://www.youtube.com/watch?v=-wUuoqFuNIo&list=PLWctyKyPphPiul3WbHkniANLqSheBVP3O&index=57',
+ 32, true, 'PYTHON', 'ADVANCED'),
+
+('Flask Intro - Local Tunnel - curl',
+ 'Flask ve API testlerine giriş.',
+ 'https://www.youtube.com/watch?v=nPdjSbQb30Y&list=PLWctyKyPphPiul3WbHkniANLqSheBVP3O&index=58',
+ 33, true, 'PYTHON', 'ADVANCED'),
+
+('Web Crawler + Matplotlib',
+ 'Web kazıma ve Matplotlib ile veri görselleştirme.',
+ 'https://www.youtube.com/watch?v=GKQEwmeYru4&list=PLWctyKyPphPiul3WbHkniANLqSheBVP3O&index=59',
+ 34, true, 'PYTHON', 'ADVANCED'),
+
+('Sentiment Analizi - YouTube API',
+ 'YouTube API ile veri toplama.',
+ 'https://www.youtube.com/watch?v=2QbW0TSvDuY&list=PLWctyKyPphPiul3WbHkniANLqSheBVP3O&index=60',
+ 35, true, 'PYTHON', 'ADVANCED'),
+
+('Sentiment Analizi - Google Translate API',
+ 'Duygu analizi teknikleri.',
+ 'https://www.youtube.com/watch?v=gxGdPx4rHbc&list=PLWctyKyPphPiul3WbHkniANLqSheBVP3O&index=61',
+ 36, true, 'PYTHON', 'ADVANCED'),
+
+('Sentiment Analizi - Violin ve Scatter Plot',
+ 'Grafikler ile duygu analizi sonuçlarını görselleştirme.',
+ 'https://www.youtube.com/watch?v=-qcnVOh_ynQ&list=PLWctyKyPphPiul3WbHkniANLqSheBVP3O&index=62',
+ 37, true, 'PYTHON', 'ADVANCED');
+ 
+ 
