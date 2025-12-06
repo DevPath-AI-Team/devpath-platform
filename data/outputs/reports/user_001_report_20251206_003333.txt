@@ -1,0 +1,54 @@
+============================================================
+📊 JAVA ÖĞRENME ANALİZ RAPORU
+============================================================
+
+👤 Kullanıcı: Ahmet Yılmaz
+📅 Analiz Tarihi: 2025-12-06
+
+============================================================
+📈 GENEL PERFORMANS
+============================================================
+Ortalama Test Puanı: 65.0%
+Ortalama Konu Puanı: 57.0%
+En İyi Test: 65%
+Test Sayısı: 1
+Başarı Oranı: 0.0%
+
+============================================================
+✅ GÜÇLÜ YÖNLERİNİZ
+============================================================
+• Java Temelleri ve Kurulum: 85%
+
+============================================================
+⚠️  GELİŞTİRİLECEK ALANLAR
+============================================================
+• Nesne YÃ¶nelimli Programlamaya GiriÅŸ: 25% (high öncelik)
+• Diziler (Arrays): 40% (medium öncelik)
+• OperatÃ¶rler: 45% (medium öncelik)
+• Inheritance (KalÄ±tÄ±m): 50% (medium öncelik)
+• Metodlar (Fonksiyonlar): 55% (medium öncelik)
+
+============================================================
+🎯 ÖNERİLER
+============================================================
+
+1. Nesne YÃ¶nelimli Programlamaya GiriÅŸ (Öncelik: 10/10)
+   Mevcut: 25% → Hedef: 70%
+   Tahmini Süre: 6 saat
+   • Temel kavramları öğrenin
+   • Örnek kodları inceleyin
+   • Basit alıştırmalar yapın
+
+2. OperatÃ¶rler (Öncelik: 8/10)
+   Mevcut: 45% → Hedef: 70%
+   Tahmini Süre: 3 saat
+   • Kavramları tekrar edin
+   • Orta seviye alıştırmalar yapın
+   • Hataları analiz edin
+
+3. Diziler (Arrays) (Öncelik: 8/10)
+   Mevcut: 40% → Hedef: 70%
+   Tahmini Süre: 4 saat
+   • Kavramları tekrar edin
+   • Orta seviye alıştırmalar yapın
+   • Hataları analiz edin

@@ -1,0 +1,89 @@
+{
+  "user_001": {
+    "user_id": "user_001",
+    "name": "Ahmet Y\u0131lmaz",
+    "tests_taken": [
+      {
+        "test_id": "beginner_test",
+        "date": "2024-01-15T10:30:00",
+        "score": 65,
+        "answers": [
+          {
+            "question_id": 1,
+            "selected": 0,
+            "is_correct": true
+          },
+          {
+            "question_id": 2,
+            "selected": 1,
+            "is_correct": true
+          },
+          {
+            "question_id": 3,
+            "selected": 2,
+            "is_correct": false
+          },
+          {
+            "question_id": 4,
+            "selected": 2,
+            "is_correct": true
+          },
+          {
+            "question_id": 5,
+            "selected": 1,
+            "is_correct": true
+          },
+          {
+            "question_id": 6,
+            "selected": 1,
+            "is_correct": true
+          },
+          {
+            "question_id": 7,
+            "selected": 3,
+            "is_correct": true
+          },
+          {
+            "question_id": 8,
+            "selected": 0,
+            "is_correct": true
+          },
+          {
+            "question_id": 9,
+            "selected": 3,
+            "is_correct": true
+          },
+          {
+            "question_id": 10,
+            "selected": 2,
+            "is_correct": false
+          }
+        ],
+        "time_taken": 720,
+        "passed": false
+      }
+    ],
+    "topic_scores": {
+      "1": 85,
+      "2": 60,
+      "3": 45,
+      "4": 70,
+      "5": 75,
+      "6": 55,
+      "7": 40,
+      "8": 25,
+      "9": 65,
+      "10": 50
+    },
+    "weak_topics": [
+      "3",
+      "7",
+      "8",
+      "10"
+    ],
+    "learning_goals": [
+      "Backend developer olmak",
+      "Spring Boot \u00f6\u011frenmek"
+    ]
+  }
+}

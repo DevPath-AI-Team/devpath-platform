@@ -1,0 +1,14 @@
+{
+    "tests": [
+        {
+            "id": "beginner_test",
+            "name": "Java Başlangıç Testi",
+            "description": "Java temelleri üzerine başlangıç seviyesi test",
+            "level": "beginner",
+            "total_questions": 10,
+            "passing_score": 70,
+            "time_limit": 900,
+            "topics": [1, 2, 3, 4, 5, 6, 7]
+        }
+    ]
+}

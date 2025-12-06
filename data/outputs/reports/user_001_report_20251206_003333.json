@@ -1,0 +1,274 @@
+{
+  "user_id": "user_001",
+  "name": "Ahmet Yılmaz",
+  "analysis_date": "2025-12-06T00:33:33.528573",
+  "overall_performance": {
+    "average_test_score": 65,
+    "average_topic_score": 57,
+    "best_test_score": 65,
+    "worst_test_score": 65,
+    "tests_taken": 1,
+    "pass_rate": 0.0
+  },
+  "topic_analysis": {
+    "1": {
+      "name": "Java Temelleri ve Kurulum",
+      "score": 85,
+      "status": "strong",
+      "level": "beginner",
+      "difficulty": "easy",
+      "duration": 3,
+      "priority": 1
+    },
+    "2": {
+      "name": "DeÄŸiÅŸkenler ve Veri Tipleri",
+      "score": 60,
+      "status": "strong",
+      "level": "beginner",
+      "difficulty": "easy",
+      "duration": 4,
+      "priority": 6
+    },
+    "3": {
+      "name": "OperatÃ¶rler",
+      "score": 45,
+      "status": "weak",
+      "level": "beginner",
+      "difficulty": "easy",
+      "duration": 3,
+      "priority": 8
+    },
+    "4": {
+      "name": "Kontrol YapÄ±larÄ± (if-else, switch)",
+      "score": 70,
+      "status": "strong",
+      "level": "beginner",
+      "difficulty": "easy",
+      "duration": 4,
+      "priority": 3
+    },
+    "5": {
+      "name": "DÃ¶ngÃ¼ler (for, while, do-while)",
+      "score": 75,
+      "status": "strong",
+      "level": "beginner",
+      "difficulty": "easy",
+      "duration": 4,
+      "priority": 3
+    },
+    "6": {
+      "name": "Metodlar (Fonksiyonlar)",
+      "score": 55,
+      "status": "strong",
+      "level": "beginner",
+      "difficulty": "medium",
+      "duration": 5,
+      "priority": 6
+    },
+    "7": {
+      "name": "Diziler (Arrays)",
+      "score": 40,
+      "status": "weak",
+      "level": "beginner",
+      "difficulty": "medium",
+      "duration": 4,
+      "priority": 8
+    },
+    "8": {
+      "name": "Nesne YÃ¶nelimli Programlamaya GiriÅŸ",
+      "score": 25,
+      "status": "weak",
+      "level": "intermediate",
+      "difficulty": "medium",
+      "duration": 6,
+      "priority": 10
+    },
+    "9": {
+      "name": "Encapsulation (KapsÃ¼lleme)",
+      "score": 65,
+      "status": "strong",
+      "level": "intermediate",
+      "difficulty": "medium",
+      "duration": 3,
+      "priority": 6
+    },
+    "10": {
+      "name": "Inheritance (KalÄ±tÄ±m)",
+      "score": 50,
+      "status": "weak",
+      "level": "intermediate",
+      "difficulty": "medium",
+      "duration": 5,
+      "priority": 6
+    }
+  },
+  "test_history": [
+    {
+      "test_name": "Java BaÅŸlangÄ±Ã§ Testi",
+      "date": "2024-01-15T10:30:00",
+      "score": 65,
+      "passed": false,
+      "time_taken": 720,
+      "time_per_question": 72.0
+    }
+  ],
+  "recommendations": [
+    {
+      "topic_id": "8",
+      "topic_name": "Nesne YÃ¶nelimli Programlamaya GiriÅŸ",
+      "current_score": 25,
+      "target_score": 70,
+      "priority": 10,
+      "estimated_time": 6,
+      "action_plan": [
+        "Temel kavramları öğrenin",
+        "Örnek kodları inceleyin",
+        "Basit alıştırmalar yapın"
+      ],
+      "resources": [
+        {
+          "type": "tutorial",
+          "title": "Detaylı Tutorial",
+          "estimated_time": "2 saat"
+        },
+        {
+          "type": "project",
+          "title": "Mini Proje",
+          "estimated_time": "3 saat"
+        }
+      ]
+    },
+    {
+      "topic_id": "3",
+      "topic_name": "OperatÃ¶rler",
+      "current_score": 45,
+      "target_score": 70,
+      "priority": 8,
+      "estimated_time": 3,
+      "action_plan": [
+        "Kavramları tekrar edin",
+        "Orta seviye alıştırmalar yapın",
+        "Hataları analiz edin"
+      ],
+      "resources": [
+        {
+          "type": "video",
+          "title": "Temel Kavramlar Videosu",
+          "estimated_time": "30 dk"
+        },
+        {
+          "type": "practice",
+          "title": "Online Alıştırmalar",
+          "estimated_time": "1 saat"
+        }
+      ]
+    },
+    {
+      "topic_id": "7",
+      "topic_name": "Diziler (Arrays)",
+      "current_score": 40,
+      "target_score": 70,
+      "priority": 8,
+      "estimated_time": 4,
+      "action_plan": [
+        "Kavramları tekrar edin",
+        "Orta seviye alıştırmalar yapın",
+        "Hataları analiz edin"
+      ],
+      "resources": [
+        {
+          "type": "tutorial",
+          "title": "Detaylı Tutorial",
+          "estimated_time": "2 saat"
+        },
+        {
+          "type": "project",
+          "title": "Mini Proje",
+          "estimated_time": "3 saat"
+        }
+      ]
+    },
+    {
+      "topic_id": "10",
+      "topic_name": "Inheritance (KalÄ±tÄ±m)",
+      "current_score": 50,
+      "target_score": 70,
+      "priority": 6,
+      "estimated_time": 5,
+      "action_plan": [
+        "Kavramları tekrar edin",
+        "Orta seviye alıştırmalar yapın",
+        "Hataları analiz edin"
+      ],
+      "resources": [
+        {
+          "type": "tutorial",
+          "title": "Detaylı Tutorial",
+          "estimated_time": "2 saat"
+        },
+        {
+          "type": "project",
+          "title": "Mini Proje",
+          "estimated_time": "3 saat"
+        }
+      ]
+    },
+    {
+      "type": "general",
+      "title": "Orta Seviyeye Geçiş",
+      "message": "Temellerde iyisiniz, şimdi OOP konularına odaklanın.",
+      "suggested_actions": [
+        "Class ve object kavramlarını pekiştirin",
+        "Inheritance ve polymorphism öğrenin",
+        "Küçük projeler yapın"
+      ]
+    }
+  ],
+  "strengths_weaknesses": {
+    "strengths": [
+      {
+        "topic_id": "1",
+        "name": "Java Temelleri ve Kurulum",
+        "score": 85,
+        "level": "beginner"
+      }
+    ],
+    "weaknesses": [
+      {
+        "topic_id": "8",
+        "name": "Nesne YÃ¶nelimli Programlamaya GiriÅŸ",
+        "score": 25,
+        "level": "intermediate",
+        "priority": "high"
+      },
+      {
+        "topic_id": "7",
+        "name": "Diziler (Arrays)",
+        "score": 40,
+        "level": "beginner",
+        "priority": "medium"
+      },
+      {
+        "topic_id": "3",
+        "name": "OperatÃ¶rler",
+        "score": 45,
+        "level": "beginner",
+        "priority": "medium"
+      },
+      {
+        "topic_id": "10",
+        "name": "Inheritance (KalÄ±tÄ±m)",
+        "score": 50,
+        "level": "intermediate",
+        "priority": "medium"
+      },
+      {
+        "topic_id": "6",
+        "name": "Metodlar (Fonksiyonlar)",
+        "score": 55,
+        "level": "beginner",
+        "priority": "medium"
+      }
+    ]
+  }
+}
