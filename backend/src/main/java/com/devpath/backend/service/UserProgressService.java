@@ -1,5 +1,6 @@
 package com.devpath.backend.service;
 
+import com.devpath.backend.DTO.PythonLessonStatusDTO;
 import com.devpath.backend.entity.UserProgress;
 
 import java.util.List;
@@ -18,4 +19,6 @@ public interface UserProgressService {
 
     // Bir kullanıcının tüm ilerlemeleri
     List<UserProgress> getUserProgress(Long userId);
+
+	void updateUserProgressFromPython(Long userId, List<PythonLessonStatusDTO> lessonStatuses);
 }

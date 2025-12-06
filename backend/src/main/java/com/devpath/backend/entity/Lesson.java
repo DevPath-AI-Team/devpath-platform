@@ -20,8 +20,8 @@ public class Lesson {
 	    @GeneratedValue(strategy = GenerationType.IDENTITY)
 	    private Long id;                    // Otomatik ID
 
-	    @Column(unique = true, nullable = false, length = 100)
-	    private String code;                // Örn: JAVA_INTRO_01
+	    @Column(nullable = false, length = 100)
+	    private String language;                // Örn: java python 
 
 	    @Column(nullable = false, length = 255)
 	    private String title;               // Ders başlığı
@@ -37,7 +37,7 @@ public class Lesson {
 
 	    private Integer estimatedMinutes;   // Tahmini süre (dk)
 
-	    private String videoUrl;            // Video linki
+	    private String youtubeUrl;            // Video linki
 
 	    private String materialUrl;         // PDF / not linki
 
