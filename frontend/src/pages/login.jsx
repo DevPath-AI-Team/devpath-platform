@@ -15,7 +15,7 @@ const Login = () => {
 
   const handleLogin = async (e) => {
     e.preventDefault();
-    setError(''); // Hatayı temizle
+    setError('');
     
     try {
       const response = await fetch('http://localhost:8080/api/auth/login', {
@@ -24,42 +24,38 @@ const Login = () => {
         body: JSON.stringify({ email, password }),
       });
 
-      // --- DEĞİŞEN KISIM BURASI (HATA ÖNLEYİCİ) ---
-      
-      // 1. Cevabı önce düz yazı (text) olarak al. JSON olarak almaya çalışırsak ve boşsa patlar.
       const textData = await response.text();
-      console.log("Backend Ham Cevap:", textData); // Konsola bak, ne geliyor görelim.
 
       if (response.ok) {
-        // 2. Eğer backend "Tamam" dedi ama veri göndermediyse (Boşsa)
-        if (!textData || textData.trim() === "") {
-            console.log("Backend boş cevap döndü ama giriş başarılı sayıldı.");
-            alert("Giriş Başarılı!");
-            navigate('/dashboard'); 
-            return;
-        }
-
-        // 3. Eğer veri varsa JSON'a çevir
+        // --- İŞTE YENİ VE GÜVENLİ KISIM ---
         try {
             const data = JSON.parse(textData);
             console.log("Giriş Başarılı Verisi:", data);
             
-            // Token varsa kaydet
+            // 1. KULLANICI ADINI KAYDET
+            // Büşra'nın backend'i 'fullName' gönderiyorsa bu çalışır
+            if (data.fullName) {
+                localStorage.setItem('userName', data.fullName);
+            }
+
+            // 2. TOKEN'I KAYDET
             if (data.token) {
-                localStorage.setItem('token', data.token); 
+                localStorage.setItem('token', data.token);
             }
             
             alert("Giriş Başarılı! Hoşgeldin.");
             navigate('/dashboard');
+
         } catch (parseError) {
-            // JSON hatalı olsa bile response.ok olduğu için içeri alalım
-            console.error("JSON Çevirme Hatası:", parseError);
+            // Backend veri göndermese bile (eski hali gibi) içeri alalım
+            console.error("JSON Çevirme Hatası (ama giriş başarılı):", parseError);
+            // Geçici olarak email'in @'den önceki kısmını isim olarak kullanalım
+            localStorage.setItem('userName', email.split('@')[0]);
             alert("Giriş Başarılı!");
             navigate('/dashboard');
         }
  
       } else {
-        // Şifre yanlışsa veya backend hata kodu döndüyse
         setError("E-posta veya şifre hatalı!");
       }
     } catch (err) {
@@ -78,47 +74,26 @@ const Login = () => {
           </div>
           <p className="welcome-text">Yazılım öğrenme yolculuğuna kaldığın yerden devam et.</p>
 
-          {error && (
-            <div style={{padding: '10px', marginBottom: '15px', borderRadius: '8px', fontSize: '0.9rem', backgroundColor: '#fee2e2', color: '#991b1b'}}>
-                {error}
-            </div>
-          )}
+          {error && (<div style={{padding: '10px', marginBottom: '15px', borderRadius: '8px', fontSize: '0.9rem', backgroundColor: '#fee2e2', color: '#991b1b'}}>{error}</div>)}
 
           <form onSubmit={handleLogin}>
             <div className="input-group">
               <label>E-posta Adresi</label>
               <div className="input-wrapper">
                 <MailIcon />
-                <input 
-                  type="email" 
-                  placeholder="ogrenci@iste.edu.tr" 
-                  className="styled-input"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  required
-                />
+                <input type="email" placeholder="ogrenci@iste.edu.tr" className="styled-input" value={email} onChange={(e) => setEmail(e.target.value)} required />
               </div>
             </div>
-
             <div className="input-group">
               <label>Şifre</label>
               <div className="input-wrapper">
                 <LockIcon />
-                <input 
-                  type="password" 
-                  placeholder="••••••••" 
-                  className="styled-input"
-                  value={password}
-                  onChange={(e) => setPassword(e.target.value)}
-                  required
-                />
+                <input type="password" placeholder="••••••••" className="styled-input" value={password} onChange={(e) => setPassword(e.target.value)} required />
               </div>
             </div>
-
             <div style={{textAlign: 'right', marginBottom: '1.5rem'}}>
               <Link to="/forgot-password" className="link-text" style={{fontSize: '0.85rem'}}>Şifremi Unuttum?</Link>
             </div>
-
             <button type="submit" className="login-btn">Giriş Yap</button>
           </form>
 

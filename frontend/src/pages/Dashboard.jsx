@@ -23,6 +23,8 @@ const courses = [
 
 const Dashboard = () => {
 
+const userName = localStorage.getItem('userName') || 'Kullanıcı';
+const userInitial = userName.split(' ').map(n => n[0]).join('');
 
     const navigate = useNavigate(); 
 
@@ -53,10 +55,10 @@ const Dashboard = () => {
         </nav>
 
         <div className="user-profile">
-            <div className="user-avatar">İY</div>
+            <div className="user-avatar">{userInitial}</div>
             <div style={{display:'flex', flexDirection:'column'}}>
-                <span style={{fontSize:'0.9rem', fontWeight:'600', color:'#374151'}}>İlknur Yüksek</span>
-                <span style={{fontSize:'0.8rem', color:'#9ca3af'}}>Bilgisayar Mühendisliği Öğrencisi</span>
+                <span style={{fontSize:'0.9rem', fontWeight:'600', color:'#374151'}}>{userName}</span>
+                <span style={{fontSize:'0.8rem', color:'#9ca3af'}}>Öğrenci</span>
             </div>
             <div style={{marginLeft:'auto', cursor:'pointer'}} onClick={() => window.location.href='/login'}>
                 <LogoutIcon />
