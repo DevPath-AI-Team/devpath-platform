@@ -1,0 +1,40 @@
+{
+    "tests": [
+        {
+            "id": "comprehensive_test",
+            "name": "Java Kapsamlı Seviye Belirleme Testi",
+            "description": "Java bilgisini değerlendirmek için kapsamlı test",
+            "level": "adaptive",
+            "total_questions": 30,
+            "passing_score": 70,
+            "topics": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20,
+                21,
+                22,
+                23,
+                25,
+                28,
+                30
+            ]
+        }
+    ]
+}

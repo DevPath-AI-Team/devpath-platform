@@ -1,0 +1,418 @@
+# ==============================================
+# DEVPATH AI - GENEL UYGULAMA AYARLARI
+# ==============================================
+
+app:
+  # Temel Uygulama Bilgileri
+  name: "DevPath AI - Java Öğrenme Platformu"
+  version: "1.0.0"
+  description: "Kişiselleştirilmiş Java öğrenme yol haritası oluşturucu"
+  author: "DevPath AI Team"
+  
+  # Çalışma Ortamı
+  environment: "development"  # development, staging, production
+  debug: true
+  log_level: "INFO"  # DEBUG, INFO, WARNING, ERROR, CRITICAL
+  
+  # Güvenlik
+  secret_key: "dev-secret-key-change-in-production"  # Production'da değiştir
+  cors_enabled: true
+  rate_limit_enabled: true
+  rate_limit_per_minute: 60
+
+# ==============================================
+# SUNUCU AYARLARI
+# ==============================================
+
+server:
+  # Backend Sunucusu (Flask)
+  backend:
+    host: "0.0.0.0"
+    port: 5000
+    workers: 4
+    timeout: 30  # saniye
+    reload: true  # Development için auto-reload
+    
+  # Frontend Sunucusu (React)
+  frontend:
+    host: "localhost"
+    port: 3000
+    api_proxy: "http://localhost:5000"
+    
+  # URL Yapılandırması
+  urls:
+    base_url: "http://localhost:5000"
+    api_prefix: "/api"
+    frontend_url: "http://localhost:3000"
+    docs_url: "http://localhost:5000/docs"
+
+# ==============================================
+# VERİTABANI AYARLARI
+# ==============================================
+
+database:
+  # JSON Dosya Tabanlı Veritabanı
+  type: "json_files"
+  
+  # Dosya Yolları
+  paths:
+    base: "./data"
+    curriculum: "./data/curriculum"
+    tests: "./data/tests"
+    users: "./data/users"
+    outputs: "./data/outputs"
+    
+  # Yedekleme Ayarları
+  backup:
+    enabled: true
+    interval: 86400  # 24 saat (saniye)
+    keep_backups: 7  # Son 7 yedek tut
+    backup_path: "./backups"
+    
+  # Cache Ayarları
+  cache:
+    enabled: true
+    ttl: 3600  # 1 saat (saniye)
+    max_size: 100  # Maksimum cache eleman sayısı
+
+# ==============================================
+# FRONTEND AYARLARI
+# ==============================================
+
+frontend:
+  # Genel Ayarlar
+  theme: "light"  # light, dark, auto
+  language: "tr"  # tr, en
+  default_page: "dashboard"
+  
+  # CORS (Cross-Origin Resource Sharing)
+  cors:
+    enabled: true
+    allowed_origins:
+      - "http://localhost:3000"
+      - "http://127.0.0.1:3000"
+      - "http://localhost:5000"
+    allowed_methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"]
+    allowed_headers: ["Content-Type", "Authorization"]
+    
+  # API İletişimi
+  api:
+    base_url: "http://localhost:5000/api"
+    timeout: 30000  # milisaniye
+    retry_attempts: 3
+    retry_delay: 1000  # milisaniye
+
+# ==============================================
+# ÖĞRENME YOLU AYARLARI
+# ==============================================
+
+learning_path:
+  # Temel Eşik Değerleri
+  passing_threshold: 70  # %70 başarı
+  mastery_threshold: 85  # %85 uzmanlık
+  
+  # Zaman Yönetimi
+  time_management:
+    max_weekly_hours: 20
+    min_weekly_hours: 5
+    default_weekly_hours: 10
+    daily_study_sessions: 2  # Günlük çalışma oturumu sayısı
+    session_duration: 60  # dakika
+    
+  # Zorluk Ayarları
+  difficulty:
+    beginner_hours: 3
+    intermediate_hours: 5
+    advanced_hours: 7
+    expert_hours: 9
+    
+  # Planlama
+  planning:
+    max_topics_per_week: 5
+    min_topics_per_week: 1
+    review_interval: 7  # gün
+    assessment_frequency: 14  # gün
+    
+  # İlerleme Takibi
+  progress_tracking:
+    enable_daily_logs: true
+    weekly_reports: true
+    milestone_notifications: true
+    goal_tracking: true
+
+# ==============================================
+# TEST ve DEĞERLENDİRME AYARLARI
+# ==============================================
+
+assessment:
+  # Test Ayarları
+  test:
+    questions_per_test: 10
+    time_per_question: 90  # saniye
+    passing_score: 70
+    retry_limit: 3
+    cool_down_period: 3600  # 1 saat (saniye)
+    
+  # Soru Bankası
+  question_bank:
+    total_questions: 150
+    easy_percentage: 40
+    medium_percentage: 40
+    hard_percentage: 20
+    
+  # Zorluk Seviyeleri
+  difficulty_levels:
+    beginner:
+      easy_questions: 70
+      medium_questions: 20
+      hard_questions: 10
+      
+    intermediate:
+      easy_questions: 30
+      medium_questions: 50
+      hard_questions: 20
+      
+    advanced:
+      easy_questions: 10
+      medium_questions: 40
+      hard_questions: 50
+      
+  # Puanlama Sistemi
+  scoring:
+    correct_answer: 10
+    partial_credit: true
+    time_bonus: true
+    difficulty_multiplier:
+      easy: 1.0
+      medium: 1.5
+      hard: 2.0
+
+# ==============================================
+# ANALİTİK ve RAPORLAMA
+# ==============================================
+
+analytics:
+  # Veri Toplama
+  data_collection:
+    enabled: true
+    anonymize_data: true
+    retention_period: 365  # gün
+    
+  # Metrikler
+  metrics:
+    track_performance: true
+    track_engagement: true
+    track_completion: true
+    track_improvement: true
+    
+  # Raporlama
+  reporting:
+    daily_reports: false
+    weekly_reports: true
+    monthly_reports: true
+    export_formats: ["json", "csv", "pdf"]
+    
+  # Dashboard
+  dashboard:
+    update_frequency: 300  # 5 dakika (saniye)
+    cache_duration: 600  # 10 dakika (saniye)
+
+# ==============================================
+# KULLANICI DENEYİMİ
+# ==============================================
+
+user_experience:
+  # Kişiselleştirme
+  personalization:
+    adaptive_difficulty: true
+    personalized_recommendations: true
+    learning_style_detection: true
+    
+  # Bildirimler
+  notifications:
+    enabled: true
+    types:
+      - "reminder"
+      - "achievement"
+      - "progress"
+      - "recommendation"
+    delivery_methods:
+      - "in_app"
+      - "email"
+      
+  # Motivasyon
+  motivation:
+    gamification: true
+    badges: true
+    points_system: true
+    leaderboard: true
+    
+  # Erişilebilirlik
+  accessibility:
+    high_contrast_mode: true
+    text_to_speech: false
+    keyboard_navigation: true
+
+# ==============================================
+# LOGGING (KAYIT TUTMA)
+# ==============================================
+
+logging:
+  # Log Seviyeleri
+  levels:
+    app: "INFO"
+    api: "DEBUG"
+    database: "WARNING"
+    security: "ERROR"
+    
+  # Log Formatı
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  date_format: "%Y-%m-%d %H:%M:%S"
+  
+  # Dosya Ayarları
+  file:
+    enabled: true
+    path: "./logs"
+    filename: "app.log"
+    max_size: 10485760  # 10MB
+    backup_count: 10
+    
+  # Konsol Çıktısı
+  console:
+    enabled: true
+    colorful: true
+    
+  # Uzaktan Loglama
+  remote:
+    enabled: false
+    endpoint: ""
+    api_key: ""
+
+# ==============================================
+# GÜVENLİK AYARLARI
+# ==============================================
+
+security:
+  # Kimlik Doğrulama
+  authentication:
+    enabled: true
+    session_timeout: 3600  # 1 saat (saniye)
+    token_expiry: 86400  # 24 saat (saniye)
+    
+  # Yetkilendirme
+  authorization:
+    role_based: true
+    permissions:
+      - "read:curriculum"
+      - "write:assessment"
+      - "read:reports"
+      - "write:profile"
+      
+  # Veri Güvenliği
+  data_protection:
+    encrypt_sensitive_data: true
+    hash_passwords: true
+    secure_cookies: true
+    
+  # API Güvenliği
+  api_security:
+    rate_limiting: true
+    request_validation: true
+    sql_injection_protection: true
+    xss_protection: true
+
+# ==============================================
+# PERFORMANS AYARLARI
+# ==============================================
+
+performance:
+  # Cache Ayarları
+  cache:
+    enabled: true
+    memory_limit: "512MB"
+    default_ttl: 3600  # 1 saat
+    
+  # Optimizasyonlar
+  optimization:
+    compress_responses: true
+    minify_assets: true
+    lazy_loading: true
+    
+  # Monitoring
+  monitoring:
+    enabled: true
+    metrics_endpoint: "/metrics"
+    health_check: "/health"
+    performance_logging: true
+
+# ==============================================
+# EĞİTİM İÇERİĞİ AYARLARI
+# ==============================================
+
+content:
+  # Müfredat
+  curriculum:
+    total_topics: 34
+    total_hours: 145
+    update_frequency: 30  # gün
+    
+  # Kaynak Tipleri
+  resource_types:
+    - "video"
+    - "article"
+    - "tutorial"
+    - "documentation"
+    - "exercise"
+    - "project"
+    
+  # Kalite Kontrol
+  quality_control:
+    content_review: true
+    accuracy_check: true
+    update_notifications: true
+
+# ==============================================
+# EMAIL AYARLARI
+# ==============================================
+
+email:
+  # SMTP Ayarları
+  smtp:
+    server: "smtp.gmail.com"
+    port: 587
+    username: ""
+    password: ""
+    use_tls: true
+    
+  # E-posta Şablonları
+  templates:
+    welcome_subject: "DevPath AI'ya Hoş Geldiniz!"
+    progress_report_subject: "Haftalık İlerleme Raporunuz"
+    reminder_subject: "Çalışma Hatırlatması"
+    
+  # Gönderim Ayarları
+  sending:
+    batch_size: 50
+    delay_between_emails: 1  # saniye
+
+# ==============================================
+# HATA YÖNETİMİ
+# ==============================================
+
+error_handling:
+  # Hata Yakalama
+  catching:
+    log_all_errors: true
+    show_user_friendly_messages: true
+    send_error_reports: false
+    
+  # Hata Sayfaları
+  pages:
+    404: "/errors/404.html"
+    500: "/errors/500.html"
+    
+  # Hata Raporlama
+  reporting:
+    email_admins: true
+    admin_emails:
+      - "admin@devpath-ai.com"
