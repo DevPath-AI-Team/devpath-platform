@@ -1,0 +1,1323 @@
+{
+    "version": "1.0",
+    "last_updated": "2024-12-06",
+    "total_resources": 120,
+    "categories": {
+        "videos": 45,
+        "tutorials": 25,
+        "documentation": 20,
+        "practice": 15,
+        "books": 10,
+        "courses": 5
+    },
+    "resources": [
+        {
+            "id": 1,
+            "topic_id": 1,
+            "title": "Java Kurulumu ve İlk Program",
+            "type": "video",
+            "difficulty": "beginner",
+            "duration": "15 dk",
+            "url": "https://www.youtube.com/watch?v=HRfmLqqvzUs",
+            "platform": "YouTube",
+            "language": "tr",
+            "rating": 4.8,
+            "description": "Java JDK kurulumu ve ilk 'Hello World' programı",
+            "tags": [
+                "kurulum",
+                "basics",
+                "setup"
+            ],
+            "prerequisites": [],
+            "related_topics": [
+                2
+            ]
+        },
+        {
+            "id": 2,
+            "topic_id": 1,
+            "title": "Java Development Kit (JDK) Resmi Dokümantasyon",
+            "type": "documentation",
+            "difficulty": "beginner",
+            "duration": "30 dk",
+            "url": "https://docs.oracle.com/javase/tutorial/getStarted/index.html",
+            "platform": "Oracle",
+            "language": "en",
+            "rating": 4.9,
+            "description": "Oracle'ın resmi Java JDK dokümantasyonu",
+            "tags": [
+                "official",
+                "documentation",
+                "jdk"
+            ],
+            "prerequisites": [],
+            "related_topics": [
+                2,
+                3
+            ]
+        },
+        {
+            "id": 3,
+            "topic_id": 2,
+            "title": "Java Değişkenler ve Veri Tipleri Detaylı Anlatım",
+            "type": "video",
+            "difficulty": "beginner",
+            "duration": "25 dk",
+            "url": "https://www.youtube.com/watch?v=EXAMPLE2",
+            "platform": "YouTube",
+            "language": "tr",
+            "rating": 4.6,
+            "description": "Primitive ve reference veri tipleri, değişken tanımlama kuralları",
+            "tags": [
+                "variables",
+                "data-types",
+                "primitive"
+            ],
+            "prerequisites": [
+                1
+            ],
+            "related_topics": [
+                3,
+                4
+            ]
+        },
+        {
+            "id": 4,
+            "topic_id": 2,
+            "title": "Java Data Types - Oracle Tutorial",
+            "type": "tutorial",
+            "difficulty": "beginner",
+            "duration": "20 dk",
+            "url": "https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html",
+            "platform": "Oracle",
+            "language": "en",
+            "rating": 4.7,
+            "description": "Oracle'ın resmi veri tipleri eğitimi",
+            "tags": [
+                "official",
+                "tutorial",
+                "data-types"
+            ],
+            "prerequisites": [
+                1
+            ],
+            "related_topics": [
+                3
+            ]
+        },
+        {
+            "id": 5,
+            "topic_id": 2,
+            "title": "Java Değişkenler Alıştırmaları",
+            "type": "practice",
+            "difficulty": "beginner",
+            "duration": "45 dk",
+            "url": "https://www.hackerrank.com/domains/java/java-datatypes",
+            "platform": "HackerRank",
+            "language": "en",
+            "rating": 4.5,
+            "description": "HackerRank'ta değişkenler ve veri tipleri pratik soruları",
+            "tags": [
+                "practice",
+                "exercises",
+                "variables"
+            ],
+            "prerequisites": [
+                1,
+                2
+            ],
+            "related_topics": [
+                3,
+                4
+            ]
+        },
+        {
+            "id": 6,
+            "topic_id": 3,
+            "title": "Java Operatörleri (Aritmetik, Karşılaştırma, Mantıksal)",
+            "type": "video",
+            "difficulty": "beginner",
+            "duration": "30 dk",
+            "url": "https://www.youtube.com/watch?v=EXAMPLE3",
+            "platform": "YouTube",
+            "language": "tr",
+            "rating": 4.7,
+            "description": "Java'da kullanılan tüm operatör türleri ve örnekler",
+            "tags": [
+                "operators",
+                "arithmetic",
+                "logical"
+            ],
+            "prerequisites": [
+                2
+            ],
+            "related_topics": [
+                4,
+                5
+            ]
+        },
+        {
+            "id": 7,
+            "topic_id": 3,
+            "title": "Java Operators - Interactive Tutorial",
+            "type": "tutorial",
+            "difficulty": "beginner",
+            "duration": "25 dk",
+            "url": "https://www.w3schools.com/java/java_operators.asp",
+            "platform": "W3Schools",
+            "language": "en",
+            "rating": 4.4,
+            "description": "W3Schools Java operatörleri etkileşimli eğitimi",
+            "tags": [
+                "tutorial",
+                "interactive",
+                "operators"
+            ],
+            "prerequisites": [
+                2
+            ],
+            "related_topics": [
+                4
+            ]
+        },
+        {
+            "id": 8,
+            "topic_id": 4,
+            "title": "Java if-else ve switch-case Yapıları",
+            "type": "video",
+            "difficulty": "beginner",
+            "duration": "35 dk",
+            "url": "https://www.youtube.com/watch?v=EXAMPLE4",
+            "platform": "YouTube",
+            "language": "tr",
+            "rating": 4.8,
+            "description": "Karar verme mekanizmaları ve koşullu ifadeler",
+            "tags": [
+                "if-else",
+                "switch-case",
+                "control-flow"
+            ],
+            "prerequisites": [
+                2,
+                3
+            ],
+            "related_topics": [
+                5,
+                6
+            ]
+        },
+        {
+            "id": 9,
+            "topic_id": 4,
+            "title": "Java Control Flow Statements",
+            "type": "documentation",
+            "difficulty": "beginner",
+            "duration": "40 dk",
+            "url": "https://docs.oracle.com/javase/tutorial/java/nutsandbolts/flow.html",
+            "platform": "Oracle",
+            "language": "en",
+            "rating": 4.9,
+            "description": "Oracle'ın resmi kontrol akışı ifadeleri dokümantasyonu",
+            "tags": [
+                "official",
+                "documentation",
+                "control-flow"
+            ],
+            "prerequisites": [
+                2,
+                3
+            ],
+            "related_topics": [
+                5
+            ]
+        },
+        {
+            "id": 10,
+            "topic_id": 5,
+            "title": "Java Döngüler (for, while, do-while)",
+            "type": "video",
+            "difficulty": "beginner",
+            "duration": "40 dk",
+            "url": "https://www.youtube.com/watch?v=EXAMPLE5",
+            "platform": "YouTube",
+            "language": "tr",
+            "rating": 4.6,
+            "description": "Java'da döngü yapıları ve iterasyon kavramı",
+            "tags": [
+                "loops",
+                "for",
+                "while",
+                "iteration"
+            ],
+            "prerequisites": [
+                4
+            ],
+            "related_topics": [
+                6,
+                7
+            ]
+        },
+        {
+            "id": 11,
+            "topic_id": 6,
+            "title": "Java Metodlar ve Fonksiyonlar",
+            "type": "video",
+            "difficulty": "beginner",
+            "duration": "45 dk",
+            "url": "https://www.youtube.com/watch?v=EXAMPLE6",
+            "platform": "YouTube",
+            "language": "tr",
+            "rating": 4.7,
+            "description": "Metod tanımlama, parametreler, geri dönüş değerleri",
+            "tags": [
+                "methods",
+                "functions",
+                "parameters"
+            ],
+            "prerequisites": [
+                2,
+                4
+            ],
+            "related_topics": [
+                8
+            ]
+        },
+        {
+            "id": 12,
+            "topic_id": 7,
+            "title": "Java Diziler (Arrays)",
+            "type": "video",
+            "difficulty": "beginner",
+            "duration": "35 dk",
+            "url": "https://www.youtube.com/watch?v=EXAMPLE7",
+            "platform": "YouTube",
+            "language": "tr",
+            "rating": 4.5,
+            "description": "Tek boyutlu ve çok boyutlu diziler, array işlemleri",
+            "tags": [
+                "arrays",
+                "data-structures",
+                "collections"
+            ],
+            "prerequisites": [
+                5
+            ],
+            "related_topics": [
+                14,
+                15,
+                16
+            ]
+        },
+        {
+            "id": 13,
+            "topic_id": 8,
+            "title": "Java OOP - Class ve Object Kavramları",
+            "type": "video",
+            "difficulty": "intermediate",
+            "duration": "50 dk",
+            "url": "https://www.youtube.com/watch?v=EXAMPLE8",
+            "platform": "YouTube",
+            "language": "tr",
+            "rating": 4.9,
+            "description": "Nesne yönelimli programlama temelleri, class ve object",
+            "tags": [
+                "oop",
+                "class",
+                "object",
+                "encapsulation"
+            ],
+            "prerequisites": [
+                6
+            ],
+            "related_topics": [
+                9,
+                10,
+                11,
+                12
+            ]
+        },
+        {
+            "id": 14,
+            "topic_id": 8,
+            "title": "Object-Oriented Programming Concepts",
+            "type": "tutorial",
+            "difficulty": "intermediate",
+            "duration": "60 dk",
+            "url": "https://docs.oracle.com/javase/tutorial/java/concepts/index.html",
+            "platform": "Oracle",
+            "language": "en",
+            "rating": 4.8,
+            "description": "Oracle'ın resmi OOP kavramları eğitimi",
+            "tags": [
+                "official",
+                "tutorial",
+                "oop",
+                "concepts"
+            ],
+            "prerequisites": [
+                6
+            ],
+            "related_topics": [
+                9,
+                10,
+                11
+            ]
+        },
+        {
+            "id": 15,
+            "topic_id": 9,
+            "title": "Java Encapsulation (Kapsülleme)",
+            "type": "video",
+            "difficulty": "intermediate",
+            "duration": "25 dk",
+            "url": "https://www.youtube.com/watch?v=EXAMPLE9",
+            "platform": "YouTube",
+            "language": "tr",
+            "rating": 4.6,
+            "description": "Private/public erişim belirteçleri, getter/setter metodları",
+            "tags": [
+                "encapsulation",
+                "access-modifiers",
+                "getters-setters"
+            ],
+            "prerequisites": [
+                8
+            ],
+            "related_topics": [
+                10
+            ]
+        },
+        {
+            "id": 16,
+            "topic_id": 10,
+            "title": "Java Inheritance (Kalıtım)",
+            "type": "video",
+            "difficulty": "intermediate",
+            "duration": "40 dk",
+            "url": "https://www.youtube.com/watch?v=EXAMPLE10",
+            "platform": "YouTube",
+            "language": "tr",
+            "rating": 4.7,
+            "description": "extends anahtar kelimesi, super çağrısı, kalıtım hiyerarşisi",
+            "tags": [
+                "inheritance",
+                "extends",
+                "super",
+                "polymorphism"
+            ],
+            "prerequisites": [
+                8,
+                9
+            ],
+            "related_topics": [
+                11,
+                12
+            ]
+        },
+        {
+            "id": 17,
+            "topic_id": 11,
+            "title": "Java Polymorphism (Çok Biçimlilik)",
+            "type": "video",
+            "difficulty": "intermediate",
+            "duration": "35 dk",
+            "url": "https://www.youtube.com/watch?v=EXAMPLE11",
+            "platform": "YouTube",
+            "language": "tr",
+            "rating": 4.8,
+            "description": "Method overriding ve overloading kavramları",
+            "tags": [
+                "polymorphism",
+                "overriding",
+                "overloading"
+            ],
+            "prerequisites": [
+                10
+            ],
+            "related_topics": [
+                12
+            ]
+        },
+        {
+            "id": 18,
+            "topic_id": 12,
+            "title": "Abstract Class ve Interface",
+            "type": "video",
+            "difficulty": "intermediate",
+            "duration": "45 dk",
+            "url": "https://www.youtube.com/watch?v=EXAMPLE12",
+            "platform": "YouTube",
+            "language": "tr",
+            "rating": 4.7,
+            "description": "Soyut sınıflar ve arayüzler, kullanım senaryoları",
+            "tags": [
+                "abstract",
+                "interface",
+                "polymorphism"
+            ],
+            "prerequisites": [
+                11
+            ],
+            "related_topics": [
+                17,
+                25,
+                26,
+                27
+            ]
+        },
+        {
+            "id": 19,
+            "topic_id": 13,
+            "title": "Java Exception Handling",
+            "type": "video",
+            "difficulty": "intermediate",
+            "duration": "40 dk",
+            "url": "https://www.youtube.com/watch?v=EXAMPLE13",
+            "platform": "YouTube",
+            "language": "tr",
+            "rating": 4.6,
+            "description": "try-catch-finally, throw, throws, custom exceptions",
+            "tags": [
+                "exceptions",
+                "try-catch",
+                "error-handling"
+            ],
+            "prerequisites": [
+                6,
+                8
+            ],
+            "related_topics": [
+                18,
+                19
+            ]
+        },
+        {
+            "id": 20,
+            "topic_id": 14,
+            "title": "Java Collections Framework - List",
+            "type": "video",
+            "difficulty": "intermediate",
+            "duration": "50 dk",
+            "url": "https://www.youtube.com/watch?v=EXAMPLE14",
+            "platform": "YouTube",
+            "language": "tr",
+            "rating": 4.5,
+            "description": "ArrayList, LinkedList, Vector kullanımı",
+            "tags": [
+                "collections",
+                "arraylist",
+                "list"
+            ],
+            "prerequisites": [
+                7,
+                12
+            ],
+            "related_topics": [
+                15,
+                16
+            ]
+        },
+        {
+            "id": 21,
+            "topic_id": 15,
+            "title": "Java Collections Framework - Set",
+            "type": "video",
+            "difficulty": "intermediate",
+            "duration": "30 dk",
+            "url": "https://www.youtube.com/watch?v=EXAMPLE15",
+            "platform": "YouTube",
+            "language": "tr",
+            "rating": 4.4,
+            "description": "HashSet, TreeSet, LinkedHashSet özellikleri",
+            "tags": [
+                "collections",
+                "hashset",
+                "set"
+            ],
+            "prerequisites": [
+                14
+            ],
+            "related_topics": [
+                16
+            ]
+        },
+        {
+            "id": 22,
+            "topic_id": 16,
+            "title": "Java Collections Framework - Map",
+            "type": "video",
+            "difficulty": "intermediate",
+            "duration": "45 dk",
+            "url": "https://www.youtube.com/watch?v=EXAMPLE16",
+            "platform": "YouTube",
+            "language": "tr",
+            "rating": 4.6,
+            "description": "HashMap, TreeMap, LinkedHashMap kullanımı",
+            "tags": [
+                "collections",
+                "hashmap",
+                "map"
+            ],
+            "prerequisites": [
+                15
+            ],
+            "related_topics": []
+        },
+        {
+            "id": 23,
+            "topic_id": 17,
+            "title": "Java Generics",
+            "type": "video",
+            "difficulty": "advanced",
+            "duration": "55 dk",
+            "url": "https://www.youtube.com/watch?v=EXAMPLE17",
+            "platform": "YouTube",
+            "language": "tr",
+            "rating": 4.8,
+            "description": "Generic tipler, wildcards, bounded types",
+            "tags": [
+                "generics",
+                "type-safety",
+                "compile-time"
+            ],
+            "prerequisites": [
+                14
+            ],
+            "related_topics": [
+                21,
+                22
+            ]
+        },
+        {
+            "id": 24,
+            "topic_id": 17,
+            "title": "Java Generics Tutorial - Oracle",
+            "type": "documentation",
+            "difficulty": "advanced",
+            "duration": "60 dk",
+            "url": "https://docs.oracle.com/javase/tutorial/java/generics/index.html",
+            "platform": "Oracle",
+            "language": "en",
+            "rating": 4.9,
+            "description": "Oracle'ın resmi Java Generics dokümantasyonu",
+            "tags": [
+                "official",
+                "documentation",
+                "generics"
+            ],
+            "prerequisites": [
+                14
+            ],
+            "related_topics": [
+                21
+            ]
+        },
+        {
+            "id": 25,
+            "topic_id": 18,
+            "title": "Java Multithreading - Thread Oluşturma",
+            "type": "video",
+            "difficulty": "advanced",
+            "duration": "60 dk",
+            "url": "https://www.youtube.com/watch?v=EXAMPLE18",
+            "platform": "YouTube",
+            "language": "tr",
+            "rating": 4.7,
+            "description": "Thread oluşturma yolları, Runnable vs Thread",
+            "tags": [
+                "multithreading",
+                "thread",
+                "runnable"
+            ],
+            "prerequisites": [
+                8,
+                13
+            ],
+            "related_topics": [
+                19
+            ]
+        },
+        {
+            "id": 26,
+            "topic_id": 19,
+            "title": "Java Synchronization ve Thread Safety",
+            "type": "video",
+            "difficulty": "advanced",
+            "duration": "70 dk",
+            "url": "https://www.youtube.com/watch?v=EXAMPLE19",
+            "platform": "YouTube",
+            "language": "tr",
+            "rating": 4.9,
+            "description": "Synchronized, race condition, deadlock kavramları",
+            "tags": [
+                "synchronization",
+                "thread-safety",
+                "concurrency"
+            ],
+            "prerequisites": [
+                18
+            ],
+            "related_topics": [
+                28
+            ]
+        },
+        {
+            "id": 27,
+            "topic_id": 20,
+            "title": "Java File I/O Operations",
+            "type": "video",
+            "difficulty": "intermediate",
+            "duration": "50 dk",
+            "url": "https://www.youtube.com/watch?v=EXAMPLE20",
+            "platform": "YouTube",
+            "language": "tr",
+            "rating": 4.5,
+            "description": "FileReader, BufferedReader, FileWriter kullanımı",
+            "tags": [
+                "io",
+                "file-handling",
+                "streams"
+            ],
+            "prerequisites": [
+                13
+            ],
+            "related_topics": []
+        },
+        {
+            "id": 28,
+            "topic_id": 21,
+            "title": "Java Lambda Expressions",
+            "type": "video",
+            "difficulty": "advanced",
+            "duration": "45 dk",
+            "url": "https://www.youtube.com/watch?v=EXAMPLE21",
+            "platform": "YouTube",
+            "language": "tr",
+            "rating": 4.6,
+            "description": "Functional interfaces, lambda syntax, method references",
+            "tags": [
+                "lambda",
+                "functional-programming",
+                "java8"
+            ],
+            "prerequisites": [
+                12,
+                17
+            ],
+            "related_topics": [
+                22
+            ]
+        },
+        {
+            "id": 29,
+            "topic_id": 22,
+            "title": "Java Stream API",
+            "type": "video",
+            "difficulty": "advanced",
+            "duration": "75 dk",
+            "url": "https://www.youtube.com/watch?v=EXAMPLE22",
+            "platform": "YouTube",
+            "language": "tr",
+            "rating": 4.8,
+            "description": "Stream operations, map-filter-reduce, parallel streams",
+            "tags": [
+                "streams",
+                "functional-programming",
+                "java8"
+            ],
+            "prerequisites": [
+                21
+            ],
+            "related_topics": [
+                23
+            ]
+        },
+        {
+            "id": 30,
+            "topic_id": 23,
+            "title": "Java Optional Class",
+            "type": "video",
+            "difficulty": "advanced",
+            "duration": "35 dk",
+            "url": "https://www.youtube.com/watch?v=EXAMPLE23",
+            "platform": "YouTube",
+            "language": "tr",
+            "rating": 4.4,
+            "description": "Null safety, Optional kullanımı, best practices",
+            "tags": [
+                "optional",
+                "null-safety",
+                "java8"
+            ],
+            "prerequisites": [
+                22
+            ],
+            "related_topics": []
+        },
+        {
+            "id": 31,
+            "topic_id": 24,
+            "title": "Java Date Time API (Java 8+)",
+            "type": "video",
+            "difficulty": "intermediate",
+            "duration": "40 dk",
+            "url": "https://www.youtube.com/watch?v=EXAMPLE24",
+            "platform": "YouTube",
+            "language": "tr",
+            "rating": 4.3,
+            "description": "LocalDate, LocalTime, DateTimeFormatter kullanımı",
+            "tags": [
+                "datetime",
+                "java8",
+                "api"
+            ],
+            "prerequisites": [
+                8
+            ],
+            "related_topics": []
+        },
+        {
+            "id": 32,
+            "topic_id": 25,
+            "title": "Design Patterns - Singleton",
+            "type": "video",
+            "difficulty": "expert",
+            "duration": "30 dk",
+            "url": "https://www.youtube.com/watch?v=EXAMPLE25",
+            "platform": "YouTube",
+            "language": "tr",
+            "rating": 4.7,
+            "description": "Singleton pattern implementation ve kullanım senaryoları",
+            "tags": [
+                "design-patterns",
+                "singleton",
+                "creational"
+            ],
+            "prerequisites": [
+                12
+            ],
+            "related_topics": [
+                26,
+                27
+            ]
+        },
+        {
+            "id": 33,
+            "topic_id": 26,
+            "title": "Design Patterns - Factory ve Abstract Factory",
+            "type": "video",
+            "difficulty": "expert",
+            "duration": "45 dk",
+            "url": "https://www.youtube.com/watch?v=EXAMPLE26",
+            "platform": "YouTube",
+            "language": "tr",
+            "rating": 4.6,
+            "description": "Factory pattern'ları ve object creation best practices",
+            "tags": [
+                "design-patterns",
+                "factory",
+                "creational"
+            ],
+            "prerequisites": [
+                25
+            ],
+            "related_topics": [
+                27
+            ]
+        },
+        {
+            "id": 34,
+            "topic_id": 27,
+            "title": "Design Patterns - Observer ve Strategy",
+            "type": "video",
+            "difficulty": "expert",
+            "duration": "55 dk",
+            "url": "https://www.youtube.com/watch?v=EXAMPLE27",
+            "platform": "YouTube",
+            "language": "tr",
+            "rating": 4.8,
+            "description": "Behavioral patterns ve loose coupling principles",
+            "tags": [
+                "design-patterns",
+                "observer",
+                "strategy",
+                "behavioral"
+            ],
+            "prerequisites": [
+                26
+            ],
+            "related_topics": []
+        },
+        {
+            "id": 35,
+            "topic_id": 28,
+            "title": "Java Memory Management ve Garbage Collection",
+            "type": "video",
+            "difficulty": "advanced",
+            "duration": "65 dk",
+            "url": "https://www.youtube.com/watch?v=EXAMPLE28",
+            "platform": "YouTube",
+            "language": "tr",
+            "rating": 4.9,
+            "description": "JVM memory model, heap, stack, GC algorithms",
+            "tags": [
+                "jvm",
+                "memory",
+                "garbage-collection"
+            ],
+            "prerequisites": [
+                8,
+                18
+            ],
+            "related_topics": [
+                29
+            ]
+        },
+        {
+            "id": 36,
+            "topic_id": 29,
+            "title": "JVM Architecture and Bytecode",
+            "type": "video",
+            "difficulty": "expert",
+            "duration": "70 dk",
+            "url": "https://www.youtube.com/watch?v=EXAMPLE29",
+            "platform": "YouTube",
+            "language": "tr",
+            "rating": 4.7,
+            "description": "JVM mimarisi, bytecode analysis, JIT compilation",
+            "tags": [
+                "jvm",
+                "bytecode",
+                "architecture"
+            ],
+            "prerequisites": [
+                28
+            ],
+            "related_topics": [
+                30
+            ]
+        },
+        {
+            "id": 37,
+            "topic_id": 30,
+            "title": "Java Reflection API",
+            "type": "video",
+            "difficulty": "expert",
+            "duration": "60 dk",
+            "url": "https://www.youtube.com/watch?v=EXAMPLE30",
+            "platform": "YouTube",
+            "language": "tr",
+            "rating": 4.8,
+            "description": "Runtime class inspection, dynamic invocation, frameworks",
+            "tags": [
+                "reflection",
+                "runtime",
+                "introspection"
+            ],
+            "prerequisites": [
+                8,
+                29
+            ],
+            "related_topics": [
+                31
+            ]
+        },
+        {
+            "id": 38,
+            "topic_id": 31,
+            "title": "Java Annotations",
+            "type": "video",
+            "difficulty": "advanced",
+            "duration": "40 dk",
+            "url": "https://www.youtube.com/watch?v=EXAMPLE31",
+            "platform": "YouTube",
+            "language": "tr",
+            "rating": 4.5,
+            "description": "Custom annotations, retention policies, meta-annotations",
+            "tags": [
+                "annotations",
+                "metadata",
+                "reflection"
+            ],
+            "prerequisites": [
+                8,
+                30
+            ],
+            "related_topics": []
+        },
+        {
+            "id": 39,
+            "topic_id": 32,
+            "title": "JUnit Testing Framework",
+            "type": "video",
+            "difficulty": "intermediate",
+            "duration": "55 dk",
+            "url": "https://www.youtube.com/watch?v=EXAMPLE32",
+            "platform": "YouTube",
+            "language": "tr",
+            "rating": 4.4,
+            "description": "JUnit 5, test cases, assertions, test lifecycle",
+            "tags": [
+                "testing",
+                "junit",
+                "tdd"
+            ],
+            "prerequisites": [
+                6,
+                13
+            ],
+            "related_topics": [
+                33
+            ]
+        },
+        {
+            "id": 40,
+            "topic_id": 33,
+            "title": "Mockito - Mocking Framework",
+            "type": "video",
+            "difficulty": "advanced",
+            "duration": "50 dk",
+            "url": "https://www.youtube.com/watch?v=EXAMPLE33",
+            "platform": "YouTube",
+            "language": "tr",
+            "rating": 4.6,
+            "description": "Mock objects, stubbing, verification, best practices",
+            "tags": [
+                "testing",
+                "mockito",
+                "mocking"
+            ],
+            "prerequisites": [
+                32
+            ],
+            "related_topics": []
+        },
+        {
+            "id": 41,
+            "topic_id": 34,
+            "title": "Maven Build Tool",
+            "type": "video",
+            "difficulty": "intermediate",
+            "duration": "45 dk",
+            "url": "https://www.youtube.com/watch?v=EXAMPLE34",
+            "platform": "YouTube",
+            "language": "tr",
+            "rating": 4.3,
+            "description": "Dependency management, build lifecycle, pom.xml",
+            "tags": [
+                "maven",
+                "build-tools",
+                "dependency-management"
+            ],
+            "prerequisites": [
+                1
+            ],
+            "related_topics": []
+        },
+        {
+            "id": 42,
+            "topic_id": 1,
+            "title": "Head First Java - Kitap Önerisi",
+            "type": "book",
+            "difficulty": "beginner",
+            "duration": "300 sayfa",
+            "url": "https://www.amazon.com/Head-First-Java-Kathy-Sierra/dp/0596009208",
+            "platform": "Amazon",
+            "language": "en",
+            "rating": 4.7,
+            "description": "Java öğrenmek için en popüler başlangıç kitabı",
+            "tags": [
+                "book",
+                "beginner",
+                "comprehensive"
+            ],
+            "prerequisites": [],
+            "related_topics": [
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8
+            ]
+        },
+        {
+            "id": 43,
+            "topic_id": 8,
+            "title": "Effective Java - Joshua Bloch",
+            "type": "book",
+            "difficulty": "advanced",
+            "duration": "400 sayfa",
+            "url": "https://www.amazon.com/Effective-Java-Joshua-Bloch/dp/0134685997",
+            "platform": "Amazon",
+            "language": "en",
+            "rating": 4.9,
+            "description": "Java best practices ve advanced konuları",
+            "tags": [
+                "book",
+                "advanced",
+                "best-practices"
+            ],
+            "prerequisites": [
+                8,
+                9,
+                10,
+                11,
+                12
+            ],
+            "related_topics": [
+                17,
+                18,
+                21,
+                22,
+                23,
+                25,
+                26,
+                27
+            ]
+        },
+        {
+            "id": 44,
+            "topic_id": 1,
+            "title": "Java Programming Masterclass - Udemy",
+            "type": "course",
+            "difficulty": "beginner",
+            "duration": "80 saat",
+            "url": "https://www.udemy.com/course/java-the-complete-java-developer-course/",
+            "platform": "Udemy",
+            "language": "en",
+            "rating": 4.6,
+            "description": "Tim Buchalka'nın kapsamlı Java kursu",
+            "tags": [
+                "course",
+                "comprehensive",
+                "udemy"
+            ],
+            "prerequisites": [],
+            "related_topics": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10
+            ]
+        },
+        {
+            "id": 45,
+            "topic_id": 17,
+            "title": "Advanced Java Programming - Coursera",
+            "type": "course",
+            "difficulty": "advanced",
+            "duration": "40 saat",
+            "url": "https://www.coursera.org/specializations/advanced-java",
+            "platform": "Coursera",
+            "language": "en",
+            "rating": 4.5,
+            "description": "University of California'nın ileri Java kursu",
+            "tags": [
+                "course",
+                "advanced",
+                "coursera"
+            ],
+            "prerequisites": [
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16
+            ],
+            "related_topics": [
+                17,
+                18,
+                19,
+                20,
+                21,
+                22,
+                23,
+                24,
+                25
+            ]
+        }
+    ],
+    "resource_filters": {
+        "by_difficulty": {
+            "beginner": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                42,
+                44
+            ],
+            "intermediate": [
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20,
+                21,
+                22,
+                27,
+                31,
+                39,
+                41
+            ],
+            "advanced": [
+                23,
+                24,
+                25,
+                26,
+                28,
+                29,
+                30,
+                32,
+                33,
+                34,
+                35,
+                37,
+                38,
+                40,
+                43,
+                45
+            ],
+            "expert": [
+                32,
+                33,
+                34,
+                36,
+                37
+            ]
+        },
+        "by_type": {
+            "video": [
+                1,
+                3,
+                6,
+                8,
+                10,
+                11,
+                12,
+                13,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20,
+                21,
+                22,
+                23,
+                25,
+                26,
+                27,
+                28,
+                29,
+                30,
+                31,
+                32,
+                33,
+                34,
+                35,
+                36,
+                37,
+                38,
+                39,
+                40,
+                41
+            ],
+            "tutorial": [
+                4,
+                7,
+                14
+            ],
+            "documentation": [
+                2,
+                9,
+                24
+            ],
+            "practice": [
+                5
+            ],
+            "book": [
+                42,
+                43
+            ],
+            "course": [
+                44,
+                45
+            ]
+        },
+        "by_language": {
+            "tr": [
+                1,
+                3,
+                6,
+                8,
+                10,
+                11,
+                12,
+                13,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20,
+                21,
+                22,
+                23,
+                25,
+                26,
+                27,
+                28,
+                29,
+                30,
+                31,
+                32,
+                33,
+                34,
+                35,
+                36,
+                37,
+                38,
+                39,
+                40,
+                41
+            ],
+            "en": [
+                2,
+                4,
+                5,
+                7,
+                9,
+                14,
+                24,
+                42,
+                43,
+                44,
+                45
+            ]
+        }
+    }
+}

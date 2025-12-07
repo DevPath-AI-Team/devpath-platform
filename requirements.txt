@@ -1,4 +1,4 @@
-fastapi
-uvicorn
-requests
-python-dotenv
+Flask==2.3.3
+Flask-CORS==4.0.0
+PyYAML==6.0.1
+statistics
