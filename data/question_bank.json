@@ -1,0 +1,611 @@
+{
+    "version": "1.0",
+    "total_questions": 30,
+    "categories": {
+        "beginner": 10,
+        "intermediate": 10,
+        "advanced": 10
+    },
+    "questions": [
+        {
+            "id": 1,
+            "topic_id": 1,
+            "difficulty": "easy",
+            "category": "beginner",
+            "question_text": "Java'da ekrana yazı yazdırmak için hangi komut kullanılır?",
+            "options": [
+                "System.out.println();",
+                "print();",
+                "echo();",
+                "write();"
+            ],
+            "correct_answer": 0,
+            "explanation": "Java'da System.out.println() metodu konsola yazı yazdırmak için kullanılır.",
+            "tags": [
+                "fundamentals",
+                "output",
+                "basics"
+            ]
+        },
+        {
+            "id": 2,
+            "topic_id": 1,
+            "difficulty": "easy",
+            "category": "beginner",
+            "question_text": "Java programlama dilinin yaratıcısı hangi şirkettir?",
+            "options": [
+                "Microsoft",
+                "Apple",
+                "Sun Microsystems",
+                "Google"
+            ],
+            "correct_answer": 2,
+            "explanation": "Java, Sun Microsystems tarafından geliştirilmiş ve daha sonra Oracle tarafından satın alınmıştır.",
+            "tags": [
+                "fundamentals",
+                "history",
+                "basics"
+            ]
+        },
+        {
+            "id": 3,
+            "topic_id": 2,
+            "difficulty": "easy",
+            "category": "beginner",
+            "question_text": "Java'da hangi veri tipi tam sayıları saklamak için kullanılır?",
+            "options": [
+                "float",
+                "double",
+                "int",
+                "boolean"
+            ],
+            "correct_answer": 2,
+            "explanation": "int veri tipi, -2,147,483,648 ile +2,147,483,647 arasındaki tam sayıları saklar.",
+            "tags": [
+                "variables",
+                "data-types",
+                "primitive"
+            ]
+        },
+        {
+            "id": 4,
+            "topic_id": 2,
+            "difficulty": "easy",
+            "category": "beginner",
+            "question_text": "Java'da String veri tipi için doğru değişken tanımlaması hangisidir?",
+            "options": [
+                "string message = 'Hello';",
+                "String message = \"Hello\";",
+                "str message = 'Hello';",
+                "string message = \"Hello\";"
+            ],
+            "correct_answer": 1,
+            "explanation": "Java'da String sınıfı büyük harfle başlar ve değerler çift tırnak içinde yazılır.",
+            "tags": [
+                "variables",
+                "string",
+                "data-types"
+            ]
+        },
+        {
+            "id": 5,
+            "topic_id": 3,
+            "difficulty": "easy",
+            "category": "beginner",
+            "question_text": "Java'da toplama işlemi için kullanılan operatör hangisidir?",
+            "options": [
+                "-",
+                "*",
+                "+",
+                "/"
+            ],
+            "correct_answer": 2,
+            "explanation": "Java'da toplama işlemi için + operatörü kullanılır.",
+            "tags": [
+                "operators",
+                "arithmetic",
+                "basics"
+            ]
+        },
+        {
+            "id": 6,
+            "topic_id": 3,
+            "difficulty": "easy",
+            "category": "beginner",
+            "question_text": "Java'da 'eşit değildir' operatörü hangisidir?",
+            "options": [
+                "==",
+                "!=",
+                "=",
+                "<>"
+            ],
+            "correct_answer": 1,
+            "explanation": "Java'da eşit değildir operatörü != sembolü ile gösterilir.",
+            "tags": [
+                "operators",
+                "comparison",
+                "relational"
+            ]
+        },
+        {
+            "id": 7,
+            "topic_id": 4,
+            "difficulty": "easy",
+            "category": "beginner",
+            "question_text": "Java'da if-else yapısında koşul doğruysa hangi blok çalışır?",
+            "options": [
+                "else bloğu",
+                "if bloğu",
+                "her iki blok da",
+                "hiçbiri"
+            ],
+            "correct_answer": 1,
+            "explanation": "if-else yapısında koşul doğruysa if bloğu, yanlışsa else bloğu çalışır.",
+            "tags": [
+                "control-flow",
+                "if-else",
+                "conditional"
+            ]
+        },
+        {
+            "id": 8,
+            "topic_id": 5,
+            "difficulty": "easy",
+            "category": "beginner",
+            "question_text": "Java'da for döngüsünün temel yapısı nedir?",
+            "options": [
+                "for (başlatma; koşul; artış) { kod }",
+                "for (koşul) { kod }",
+                "for (başlatma; artış) { kod }",
+                "for { kod }"
+            ],
+            "correct_answer": 0,
+            "explanation": "for döngüsü üç bölümden oluşur: başlatma, koşul kontrolü ve artış/azalış.",
+            "tags": [
+                "loops",
+                "for-loop",
+                "iteration"
+            ]
+        },
+        {
+            "id": 9,
+            "topic_id": 6,
+            "difficulty": "easy",
+            "category": "beginner",
+            "question_text": "Java'da metod tanımlarken geri dönüş tipi belirtilmezse ne kullanılır?",
+            "options": [
+                "int",
+                "String",
+                "void",
+                "null"
+            ],
+            "correct_answer": 2,
+            "explanation": "void anahtar kelimesi, metodun değer döndürmediğini belirtir.",
+            "tags": [
+                "methods",
+                "functions",
+                "return-type"
+            ]
+        },
+        {
+            "id": 10,
+            "topic_id": 7,
+            "difficulty": "easy",
+            "category": "beginner",
+            "question_text": "Java'da dizi elemanlarına erişim için kullanılan indeks kaçtan başlar?",
+            "options": [
+                "1",
+                "0",
+                "-1",
+                "rastgele"
+            ],
+            "correct_answer": 1,
+            "explanation": "Java'da diziler 0 indeksinden başlar, yani ilk eleman arr[0] şeklinde erişilir.",
+            "tags": [
+                "arrays",
+                "indexing",
+                "data-structures"
+            ]
+        },
+        {
+            "id": 11,
+            "topic_id": 8,
+            "difficulty": "medium",
+            "category": "intermediate",
+            "question_text": "Java'da class içindeki değişkenlere ne ad verilir?",
+            "options": [
+                "local variables",
+                "instance variables",
+                "parameters",
+                "constants"
+            ],
+            "correct_answer": 1,
+            "explanation": "Class içinde tanımlanan değişkenlere instance variables (örnek değişkenleri) denir.",
+            "tags": [
+                "oop",
+                "classes",
+                "instance-variables"
+            ]
+        },
+        {
+            "id": 12,
+            "topic_id": 8,
+            "difficulty": "medium",
+            "category": "intermediate",
+            "question_text": "Java'da constructor metodunun adı ne olmalıdır?",
+            "options": [
+                "init",
+                "create",
+                "Class adı ile aynı",
+                "new"
+            ],
+            "correct_answer": 2,
+            "explanation": "Constructor metodunun adı, bulunduğu class'ın adı ile aynı olmalıdır.",
+            "tags": [
+                "oop",
+                "constructor",
+                "classes"
+            ]
+        },
+        {
+            "id": 13,
+            "topic_id": 9,
+            "difficulty": "medium",
+            "category": "intermediate",
+            "question_text": "Java'da private anahtar kelimesi ne için kullanılır?",
+            "options": [
+                "Metodu herkese açık yapmak",
+                "Değişkeni sadece aynı class'tan erişilebilir yapmak",
+                "Class'ı başka package'lardan erişilebilir yapmak",
+                "Metodu final yapmak"
+            ],
+            "correct_answer": 1,
+            "explanation": "private erişim belirteci, üye değişken veya metodu sadece aynı class içinden erişilebilir kılar.",
+            "tags": [
+                "encapsulation",
+                "access-modifiers",
+                "private"
+            ]
+        },
+        {
+            "id": 14,
+            "topic_id": 10,
+            "difficulty": "medium",
+            "category": "intermediate",
+            "question_text": "Java'da inheritance (kalıtım) için kullanılan anahtar kelime hangisidir?",
+            "options": [
+                "implements",
+                "extends",
+                "inherit",
+                "super"
+            ],
+            "correct_answer": 1,
+            "explanation": "extends anahtar kelimesi ile bir class başka bir class'tan kalıtım yapabilir.",
+            "tags": [
+                "inheritance",
+                "extends",
+                "oop"
+            ]
+        },
+        {
+            "id": 15,
+            "topic_id": 11,
+            "difficulty": "medium",
+            "category": "intermediate",
+            "question_text": "Java'da polymorphism'in bir türü olan method overriding ne anlama gelir?",
+            "options": [
+                "Aynı ada sahip birden fazla metod oluşturmak",
+                "Alt sınıfta üst sınıfın metodunu yeniden tanımlamak",
+                "Metodu final yapmak",
+                "Metodu abstract yapmak"
+            ],
+            "correct_answer": 1,
+            "explanation": "Method overriding, alt sınıfta üst sınıfın metodunu aynı imza ile yeniden tanımlamaktır.",
+            "tags": [
+                "polymorphism",
+                "overriding",
+                "inheritance"
+            ]
+        },
+        {
+            "id": 16,
+            "topic_id": 12,
+            "difficulty": "medium",
+            "category": "intermediate",
+            "question_text": "Java'da abstract class ile interface arasındaki temel fark nedir?",
+            "options": [
+                "Abstract class'ta metod gövdesi olabilir, interface'te olamaz",
+                "Interface'te sadece abstract metodlar olabilir",
+                "Abstract class multiple inheritance destekler",
+                "Interface static metodlar içerebilir"
+            ],
+            "correct_answer": 0,
+            "explanation": "Abstract class'ta hem abstract hem de concrete (tam) metodlar olabilir, interface'te ise Java 8 öncesinde sadece abstract metodlar vardı.",
+            "tags": [
+                "abstract",
+                "interface",
+                "oop"
+            ]
+        },
+        {
+            "id": 17,
+            "topic_id": 13,
+            "difficulty": "medium",
+            "category": "intermediate",
+            "question_text": "Java'da exception handling için kullanılan temel yapı hangisidir?",
+            "options": [
+                "if-else",
+                "try-catch",
+                "for-loop",
+                "switch-case"
+            ],
+            "correct_answer": 1,
+            "explanation": "try-catch bloğu ile exception'lar yakalanır ve uygun şekilde işlenir.",
+            "tags": [
+                "exceptions",
+                "try-catch",
+                "error-handling"
+            ]
+        },
+        {
+            "id": 18,
+            "topic_id": 14,
+            "difficulty": "medium",
+            "category": "intermediate",
+            "question_text": "Java'da ArrayList'in temel özelliği nedir?",
+            "options": [
+                "Sabit boyutu vardır",
+                "Dinamik olarak büyür",
+                "Sadece primitive tipler saklanabilir",
+                "Hash tabanlı çalışır"
+            ],
+            "correct_answer": 1,
+            "explanation": "ArrayList, dinamik olarak büyüyen ve küçülen bir dizidir.",
+            "tags": [
+                "collections",
+                "arraylist",
+                "data-structures"
+            ]
+        },
+        {
+            "id": 19,
+            "topic_id": 15,
+            "difficulty": "medium",
+            "category": "intermediate",
+            "question_text": "Java'da HashSet'in temel özelliği nedir?",
+            "options": [
+                "Elemanları sıralı tutar",
+                "Tekrar eden elemanları otomatik olarak kaldırır",
+                "İndeks ile erişim sağlar",
+                "Fifo prensibi ile çalışır"
+            ],
+            "correct_answer": 1,
+            "explanation": "HashSet, Set arayüzünü implement eder ve tekrar eden elemanları kabul etmez.",
+            "tags": [
+                "collections",
+                "hashset",
+                "set"
+            ]
+        },
+        {
+            "id": 20,
+            "topic_id": 16,
+            "difficulty": "medium",
+            "category": "intermediate",
+            "question_text": "Java'da HashMap'te key-value ilişkisi nasıl çalışır?",
+            "options": [
+                "Key benzersiz olmak zorunda",
+                "Value benzersiz olmak zorunda",
+                "Her ikisi de benzersiz olmak zorunda",
+                "Benzersizlik şartı yok"
+            ],
+            "correct_answer": 0,
+            "explanation": "HashMap'te key'ler benzersiz olmak zorundadır, value'lar tekrar edebilir.",
+            "tags": [
+                "collections",
+                "hashmap",
+                "map"
+            ]
+        },
+        {
+            "id": 21,
+            "topic_id": 17,
+            "difficulty": "hard",
+            "category": "advanced",
+            "question_text": "Java'da generics ne için kullanılır?",
+            "options": [
+                "Tip güvenliği sağlamak",
+                "Performans artırmak",
+                "Bellek kullanımını azaltmak",
+                "Kod uzunluğunu azaltmak"
+            ],
+            "correct_answer": 0,
+            "explanation": "Generics, compile-time'da tip güvenliği sağlar ve runtime'da ClassCastException hatasını önler.",
+            "tags": [
+                "generics",
+                "type-safety",
+                "compile-time"
+            ]
+        },
+        {
+            "id": 22,
+            "topic_id": 18,
+            "difficulty": "hard",
+            "category": "advanced",
+            "question_text": "Java'da thread oluşturmanın iki temel yolu nedir?",
+            "options": [
+                "Runnable interface ve Thread class",
+                "Process class ve Executor",
+                "Timer class ve ScheduledExecutorService",
+                "ForkJoinPool ve ParallelStream"
+            ],
+            "correct_answer": 0,
+            "explanation": "Thread oluşturmanın temel yolları: Thread class'ından extend etmek veya Runnable interface'ini implement etmek.",
+            "tags": [
+                "multithreading",
+                "thread",
+                "runnable"
+            ]
+        },
+        {
+            "id": 23,
+            "topic_id": 19,
+            "difficulty": "hard",
+            "category": "advanced",
+            "question_text": "Java'da synchronized anahtar kelimesi ne için kullanılır?",
+            "options": [
+                "Thread'lerin sırayla çalışmasını sağlamak",
+                "Thread'lerin aynı anda çalışmasını engellemek",
+                "Bellek senkronizasyonu yapmak",
+                "Thread'lerin haberleşmesini sağlamak"
+            ],
+            "correct_answer": 1,
+            "explanation": "synchronized, aynı anda sadece bir thread'in critical section'a girmesini sağlar.",
+            "tags": [
+                "synchronization",
+                "thread-safety",
+                "concurrency"
+            ]
+        },
+        {
+            "id": 24,
+            "topic_id": 20,
+            "difficulty": "hard",
+            "category": "advanced",
+            "question_text": "Java'da FileReader ve BufferedReader arasındaki fark nedir?",
+            "options": [
+                "FileReader binary dosyalar için, BufferedReader text için",
+                "BufferedReader daha verimli buffer kullanır",
+                "FileReader daha hızlıdır",
+                "BufferedReader sadece binary dosyalar için kullanılır"
+            ],
+            "correct_answer": 1,
+            "explanation": "BufferedReader, verileri buffer'da tutarak daha verimli okuma sağlar ve FileReader'dan daha performanslıdır.",
+            "tags": [
+                "io",
+                "file-handling",
+                "buffered-reader"
+            ]
+        },
+        {
+            "id": 25,
+            "topic_id": 21,
+            "difficulty": "hard",
+            "category": "advanced",
+            "question_text": "Java'da lambda expression ne için kullanılır?",
+            "options": [
+                "Fonksiyonel programlama yapmak",
+                "Anonymous inner class'ları kısaltmak",
+                "Stream API ile birlikte kullanmak",
+                "Hepsi doğru"
+            ],
+            "correct_answer": 3,
+            "explanation": "Lambda expression'lar functional interface'leri implement etmek için kullanılır ve kodun daha kısa ve okunabilir olmasını sağlar.",
+            "tags": [
+                "lambda",
+                "functional-programming",
+                "stream-api"
+            ]
+        },
+        {
+            "id": 26,
+            "topic_id": 22,
+            "difficulty": "hard",
+            "category": "advanced",
+            "question_text": "Java Stream API'de intermediate ve terminal operation farkı nedir?",
+            "options": [
+                "Intermediate operation stream döndürür, terminal operation sonucun döndürür",
+                "Terminal operation stream döndürür, intermediate operation sonuç döndürür",
+                "İkisi de stream döndürür",
+                "İkisi de sonuç döndürür"
+            ],
+            "correct_answer": 0,
+            "explanation": "Intermediate operation (filter, map) Stream döndürür, terminal operation (collect, forEach) sonuç üretir.",
+            "tags": [
+                "streams",
+                "intermediate",
+                "terminal"
+            ]
+        },
+        {
+            "id": 27,
+            "topic_id": 23,
+            "difficulty": "hard",
+            "category": "advanced",
+            "question_text": "Java'da Optional class ne için kullanılır?",
+            "options": [
+                "Null pointer exception'ı önlemek",
+                "Bellek kullanımını optimize etmek",
+                "Garbage collection'ı hızlandırmak",
+                "Multi-threading'i kolaylaştırmak"
+            ],
+            "correct_answer": 0,
+            "explanation": "Optional class, null değerlerin güvenli bir şekilde işlenmesini sağlar ve NullPointerException'ı önler.",
+            "tags": [
+                "optional",
+                "null-safety",
+                "functional-programming"
+            ]
+        },
+        {
+            "id": 28,
+            "topic_id": 25,
+            "difficulty": "hard",
+            "category": "advanced",
+            "question_text": "Java'da Singleton design pattern'in temel özelliği nedir?",
+            "options": [
+                "Bir class'tan sadece bir instance oluşturulabilir",
+                "Bir class'tan birden fazla instance oluşturulabilir",
+                "Class static metodlara sahip olur",
+                "Class abstract olur"
+            ],
+            "correct_answer": 0,
+            "explanation": "Singleton pattern, bir class'tan uygulama boyunca sadece tek bir instance'ın oluşturulmasını sağlar.",
+            "tags": [
+                "design-patterns",
+                "singleton",
+                "creational"
+            ]
+        },
+        {
+            "id": 29,
+            "topic_id": 28,
+            "difficulty": "hard",
+            "category": "advanced",
+            "question_text": "Java'da JVM'nin temel bileşenleri nelerdir?",
+            "options": [
+                "Class Loader, Runtime Data Area, Execution Engine",
+                "Compiler, Interpreter, JIT Compiler",
+                "Heap, Stack, Method Area",
+                "Hepsi JVM bileşenleridir"
+            ],
+            "correct_answer": 3,
+            "explanation": "JVM üç ana bileşenden oluşur: Class Loader (sınıf yükleyici), Runtime Data Area (çalışma zamanı veri alanı), Execution Engine (çalıştırma motoru).",
+            "tags": [
+                "jvm",
+                "architecture",
+                "memory-management"
+            ]
+        },
+        {
+            "id": 30,
+            "topic_id": 30,
+            "difficulty": "hard",
+            "category": "advanced",
+            "question_text": "Java'da Reflection API ne için kullanılır?",
+            "options": [
+                "Runtime'da class bilgilerini incelemek ve manipüle etmek",
+                "Derleme zamanında optimizasyon yapmak",
+                "Garbage collection'ı kontrol etmek",
+                "Thread senkronizasyonu yapmak"
+            ],
+            "correct_answer": 0,
+            "explanation": "Reflection API, runtime'da class'ların özelliklerini, metodlarını ve field'larını incelemeye ve değiştirmeye olanak sağlar.",
+            "tags": [
+                "reflection",
+                "runtime",
+                "introspection"
+            ]
+        }
+    ]
+}
