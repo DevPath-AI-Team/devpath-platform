@@ -31,6 +31,8 @@ public class User {
     @Column(nullable = false)
     private Role role;
     
+    private String level;
+    
     @Column(name = "reset_token")
     private String resetToken;
 

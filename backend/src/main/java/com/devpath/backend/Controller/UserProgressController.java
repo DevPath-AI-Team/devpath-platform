@@ -20,16 +20,20 @@ public class UserProgressController {
     private final UserProgressService progressService;
     private final PythonApiClient pythonApiClient;
 
-    // PYTHON ANALİZ ÇAĞRISI
+    // 🔹 PYTHON ANALİZ ÇAĞRISI
+    // Artık sadece seviye (BEGINNER / INTERMEDIATE / ADVANCED) ve skor alıyoruz.
     @PostMapping("/analyze")
     public ResponseEntity<PythonAnalyzeResponse> analyzeQuiz(@RequestBody Map<String, Object> requestBody) {
 
-        PythonAnalyzeResponse pythonResponse = pythonApiClient.analyzeUserAnswer(requestBody);
+        // Python'a cevapları gönder → seviye + skor dönsün
+        PythonAnalyzeResponse pythonResponse = pythonApiClient.analyzeUser(requestBody);
 
-        Long userId = Long.valueOf(requestBody.get("userId").toString());
+        // İstersen burada DB'ye seviye kaydedebilirsin (şimdilik sadece frontend kullanacak):
+        // Long userId = Long.valueOf(requestBody.get("userId").toString());
+        // progressService.updateUserLevel(userId, pythonResponse.getLanguage(),
+        //                                 pythonResponse.getLevel(), pythonResponse.getScore());
 
-        progressService.updateUserProgressFromPython(userId, pythonResponse.getLessons());
-
+        // Frontend bu cevaptan level'a göre video seçecek
         return ResponseEntity.ok(pythonResponse);
     }
 

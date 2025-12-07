@@ -1,6 +1,5 @@
 package com.devpath.backend.service;
 
-import com.devpath.backend.DTO.PythonLessonStatusDTO;
 import com.devpath.backend.entity.User;
 import com.devpath.backend.entity.Lesson;
 import com.devpath.backend.entity.UserProgress;
@@ -48,7 +47,7 @@ public class UserProgressServiceImpl implements UserProgressService {
                 });
     }
 
-    // 🔹 İlerleme yüzdesini manuel güncellemek için (şimdilik çok kullanmayabiliriz)
+    // 🔹 İlerleme yüzdesini manuel güncellemek için
     @Override
     public UserProgress updateProgress(Long userId, Long lessonId, int percentage) {
 
@@ -76,7 +75,6 @@ public class UserProgressServiceImpl implements UserProgressService {
     // 🔹 Dersi direkt tamamlanmış işaretlemek için
     @Override
     public UserProgress completeLesson(Long userId, Long lessonId) {
-        // Direkt %100 yap
         return updateProgress(userId, lessonId, 100);
     }
 
@@ -90,49 +88,23 @@ public class UserProgressServiceImpl implements UserProgressService {
         return progressRepository.findAllByUser(user);
     }
 
-    // 🔹 PYTHON ANALİZ SONUCUNU İŞLEYEN YENİ METOT
-    // Quiz bittikten sonra Python’dan gelen (lessonId + status) listesine göre
-    // kullanıcının hangi derste olduğu / nereden başlaması gerektiği burada set ediliyor.
+    // 🔹 PYTHON ANALİZ SONUCUNA GÖRE KULLANICININ SEVİYESİNİ GÜNCELLE
+    //    ve istersen o seviyeye ait ilk dersi başlat
     @Override
-    public void updateUserProgressFromPython(Long userId, List<PythonLessonStatusDTO> lessonStatuses) {
+    public void updateUserLevelAndStartLesson(Long userId, String level, Long startLessonId) {
 
         User user = userRepository.findById(userId)
                 .orElseThrow(() -> new RuntimeException("Kullanıcı bulunamadı: " + userId));
 
-        for (PythonLessonStatusDTO dto : lessonStatuses) {
+        // ⚠️ User entity'de bu alanın olması gerekiyor:
+        // private String level;
+        user.setLevel(level);
 
-            Lesson lesson = lessonRepository.findById(dto.getLessonId())
-                    .orElseThrow(() -> new RuntimeException("Ders bulunamadı: " + dto.getLessonId()));
+        userRepository.save(user);
 
-            // Var olan kayıt varsa onu kullan, yoksa yeni oluştur
-            UserProgress progress = progressRepository
-                    .findByUserAndLesson(user, lesson)
-                    .orElseGet(() -> UserProgress.builder()
-                            .user(user)
-                            .lesson(lesson)
-                            .progress(0)
-                            .completed(false)
-                            .startedAt(LocalDateTime.now())
-                            .build()
-                    );
-
-            String status = dto.getStatus(); // completed / open / locked
-
-            if ("completed".equalsIgnoreCase(status)) {
-                progress.setCompleted(true);
-                progress.setProgress(100);
-                progress.setCompletedAt(LocalDateTime.now());
-            } else if ("open".equalsIgnoreCase(status)) {
-                progress.setCompleted(false);
-                progress.setProgress(50); // istersen 0 yapabilirsin
-            } else { // locked veya bilinmeyen
-                progress.setCompleted(false);
-                progress.setProgress(0);
-            }
-
-            progress.setUpdatedAt(LocalDateTime.now());
-
-            progressRepository.save(progress);
+        // startLessonId doluysa, bu kullanıcı için o dersi başlat
+        if (startLessonId != null) {
+            startLesson(userId, startLessonId);
         }
     }
 }

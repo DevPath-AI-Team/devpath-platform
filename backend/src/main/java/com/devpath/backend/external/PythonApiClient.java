@@ -22,10 +22,12 @@ public class PythonApiClient {
     //buna grek yok sorular frontend kısmında
 
     // Python’a kullanıcı cevabını gönder → analiz sonucu AL
-    public PythonAnalyzeResponse analyzeUserAnswer(Object request) {
+    public PythonAnalyzeResponse analyzeUser(Object request) {
         String url = PYTHON_BASE_URL + "/analyze";
         ResponseEntity<PythonAnalyzeResponse> response =
                 restTemplate.postForEntity(url, request, PythonAnalyzeResponse.class);
+
         return response.getBody();
     }
+
 }
