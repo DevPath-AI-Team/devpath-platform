@@ -13,7 +13,7 @@ from fastapi import APIRouter, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from typing import List
 
-from .schemas import (
+from ai_module.schemas import (
     # Curriculum
     CurriculumResponse, Topic,
     # Analyzer (legacy)
@@ -29,7 +29,10 @@ from .schemas import (
     # Detailed Roadmap
     DetailedRoadmapResponse, DetailedLesson, LearningPathItem
 )
-from .analyzer import analyze_user_level, analyze_placement_test, analyze_answer
+from ai_module.analyzer import analyze_user_level, analyze_placement_test, analyze_answer # DÜZELTİLDİ: .analyzer yerine ai_module.analyzer
+from ai_module.roadmap import generate_roadmap # DÜZELTİLDİ
+
+
 
 # Router tanımı - prefix ile tüm endpointler /python-ai altında olacak
 router = APIRouter(prefix="/python-ai", tags=["Python AI Module"])
@@ -245,7 +248,6 @@ async def create_roadmap(request: RoadmapRequest):
         recommended_start: Önerilen başlangıç konu ID'si
         total_lessons: Toplam ders sayısı
     """
-    from .roadmap import generate_roadmap
     result = generate_roadmap(request.level.value, request.completedTopics or [])
     
     lessons = [

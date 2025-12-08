@@ -18,7 +18,7 @@ class TestAnalyzer:
     def load_data(self):
         """Tüm verileri yükle - Kullanıcı verileri frontend'den gelecek"""
         try:
-            with open(f'../data/{self.results_file}', 'r') as f:
+            with open(f'data/{self.results_file}', 'r') as f:
                 self.results = json.load(f)
         except FileNotFoundError:
             print("⚠️  Test sonuçları dosyası bulunamadı. Frontend'den veri bekleniyor...")
@@ -28,7 +28,7 @@ class TestAnalyzer:
             self.results = {}  # Boş dict - frontend'den veri gelecek
 
         try:
-            with open('../data/java_curriculum.json', 'r') as f:
+            with open('data/java_curriculum.json', 'r') as f:
                 self.curriculum = json.load(f)
         except FileNotFoundError:
             print("❌ Java curriculum dosyası bulunamadı!")
@@ -38,7 +38,7 @@ class TestAnalyzer:
             self.curriculum = {"topics": []}
 
         try:
-            with open('../data/assessment_tests.json', 'r') as f:
+            with open('data/assessment_tests.json', 'r') as f:
                 self.tests = json.load(f)
         except FileNotFoundError:
             print("❌ Assessment tests dosyası bulunamadı!")
@@ -93,7 +93,7 @@ class TestAnalyzer:
         }
         
         # Örnek veriyi kaydet
-        with open(f'../data/{self.results_file}', 'w') as f:
+        with open(f'data/{self.results_file}', 'w') as f:
             json.dump(sample_results, f, indent=2)
         
         print("✅ Örnek test sonuçları oluşturuldu")
@@ -103,7 +103,7 @@ class TestAnalyzer:
         """Frontend'den gelen test cevaplarını işle ve kaydet"""
         try:
             # Soru bankasını yükle
-            with open('../data/question_bank.json', 'r', encoding='utf-8') as f:
+            with open('data/question_bank.json', 'r', encoding='utf-8') as f:
                 question_bank = json.load(f)
 
             questions = question_bank.get('questions', [])
@@ -206,8 +206,8 @@ class TestAnalyzer:
     def save_results(self):
         """Sonuçları dosyaya kaydet"""
         try:
-            os.makedirs('../data', exist_ok=True)
-            with open('../data/user_test_results.json', 'w', encoding='utf-8') as f:
+            os.makedirs('data', exist_ok=True)
+            with open('data/user_test_results.json', 'w', encoding='utf-8') as f:
                 json.dump(self.results, f, indent=2, ensure_ascii=False)
             print("✅ Test sonuçları kaydedildi")
         except Exception as e:
@@ -620,7 +620,7 @@ class TestAnalyzer:
         
         if not output_file:
             timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-            output_file = f"../data/outputs/reports/{user_id}_report_{timestamp}.json"
+            output_file = f"data/outputs/reports/{user_id}_report_{timestamp}.json"
         
         # Klasörü oluştur
         Path(output_file).parent.mkdir(parents=True, exist_ok=True)

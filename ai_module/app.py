@@ -15,9 +15,9 @@ from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 
 # Beyza'nın modüllerini import ediyoruz
-from main import router as python_ai_router
-from analyzer import analyze_answer
-from schemas import AnswerAnalyzeRequest, AnswerAnalyzeResponse
+from ai_module.main import router as python_ai_router
+from ai_module.analyzer import analyze_answer
+from ai_module.schemas import AnswerAnalyzeRequest, AnswerAnalyzeResponse
 
 # -----------------------------
 # Ortam değişkenlerini yükle (Chatbot için)

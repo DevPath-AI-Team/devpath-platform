@@ -1,5 +1,7 @@
 package com.devpath.backend.entity;
 
+import java.time.LocalDateTime;
+
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -28,4 +30,14 @@ public class User {
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
     private Role role;
+    
+    private String level;
+    
+    @Column(name = "reset_token")
+    private String resetToken;
+
+    //expire süresi dolmak
+    @Column(name = "reset_token_expire")
+    private LocalDateTime resetTokenExpire;
+
 }
