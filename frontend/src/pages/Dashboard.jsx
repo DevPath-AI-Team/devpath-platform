@@ -1,6 +1,6 @@
 import './Dashboard.css';
 import React, { useState } from "react";
-
+import { useNavigate } from 'react-router-dom'; 
 import Chatbot from "./Chatbot";
 import './Chatbot.css'; 
 
@@ -25,6 +25,7 @@ const courses = [
 
 const Dashboard = () => {
   const [showChat, setShowChat] = useState(false);
+  const navigate = useNavigate();
 
   return (
     <div className="dashboard-container">
@@ -35,11 +36,11 @@ const Dashboard = () => {
           <span className="brand-text">DevPath AI</span>
         </div>
 
-        <nav className="nav-menu">
-          <div className="nav-item active">
+   <nav className="nav-menu">
+          <div className="nav-item" onClick={() => navigate('/dashboard')}> 
             <HomeIcon /> <span>Ana Panel</span>
           </div>
-          <div className="nav-item">
+          <div className="nav-item active" onClick={() => navigate('/roadmap')}> {/* YÖNLENDİRME BURADA */}
             <MapIcon /> <span>Yol Haritam</span>
           </div>
           <div className="nav-item">

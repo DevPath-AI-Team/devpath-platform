@@ -1,0 +1,236 @@
+/* Ana Sayfa Düzeni */
+.roadmap-page-container {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Üst Başlık ve İstatistikler */
+.roadmap-header {
+    margin-bottom: 3rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #e5e7eb;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.roadmap-title-section h1 {
+    font-size: 2.2rem;
+    color: #1f2937;
+    margin: 0;
+}
+
+.roadmap-title-section p {
+    color: #6b7280;
+    margin-top: 0.5rem;
+    max-width: 600px;
+}
+
+.roadmap-stats {
+    display: flex;
+    gap: 20px;
+}
+
+.stat-card {
+    background-color: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    padding: 15px 20px;
+    text-align: center;
+}
+
+.stat-value {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #2563eb;
+    margin-bottom: 4px;
+}
+
+.stat-label {
+    display: block;
+    font-size: 0.8rem;
+    color: #6b7280;
+    font-weight: 500;
+}
+
+/* --- ZAMAN TÜNELİ (TIMELINE) --- */
+.timeline-main {
+    position: relative;
+}
+
+.timeline-container {
+    border-left: 4px solid #e5e7eb; /* Ana çizgi */
+    padding-left: 25px;
+    position: relative;
+    padding-top: 10px;
+}
+
+.timeline-item {
+    position: relative;
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    border: 1px solid #e5e7eb;
+}
+
+/* Yuvarlak Nokta (Circle) */
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -33px; /* Çizgi ile hizalama */
+    top: 25px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #e5e7eb;
+    border: 4px solid white;
+    z-index: 10;
+}
+
+/* Statü Bazlı Stiller */
+.timeline-item:hover {
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+}
+
+/* Durum: TAMAMLANDI */
+.timeline-item.item-completed {
+    opacity: 0.7;
+    border-left: 5px solid #10b981; /* Yeşil çizgi */
+}
+
+.timeline-item.item-completed::before {
+    background: #10b981; /* Yeşil nokta */
+}
+
+/* Durum: TEKRAR GÖZDEN GEÇİR */
+.timeline-item.item-review {
+    background: #fffbeb; /* Hafif sarı */
+    border-left: 5px solid #f59e0b; /* Turuncu çizgi */
+}
+
+.timeline-item.item-review::before {
+    background: #f59e0b; /* Turuncu nokta */
+}
+
+/* Durum: ŞU ANKİ (CURRENT) */
+.timeline-item.item-current {
+    border: 2px solid #2563eb; /* Mavi dış çizgi */
+    box-shadow: 0 0 0 4px #eff6ff; /* Hafif Mavi parıltı */
+    transform: scale(1.02);
+    z-index: 20;
+}
+
+.timeline-item.item-current::before {
+    background: #2563eb; /* Mavi nokta */
+}
+
+/* Durum: KİLİTLİ */
+.timeline-item.item-locked {
+    background: #f9fafb;
+    border: 1px dashed #d1d5db;
+    opacity: 0.6;
+}
+
+.timeline-item.item-locked::before {
+    background: #d1d5db;
+}
+
+/* İÇERİK */
+.timeline-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.timeline-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.timeline-title {
+    font-size: 1.1rem;
+    color: #1f2937;
+    font-weight: 700;
+    margin: 0;
+}
+
+.timeline-description {
+    color: #6b7280;
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+    line-height: 1.4;
+}
+
+.timeline-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #f3f4f6;
+    padding-top: 10px;
+}
+
+.time-info {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #9ca3af;
+    font-size: 0.85rem;
+}
+
+.timeline-badge.type-badge {
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: white;
+    background-color: #2563eb;
+}
+
+/* Buton */
+.start-btn {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    background-color: #2563eb;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.start-btn:hover:not(:disabled) {
+    background-color: #1d4ed8;
+}
+
+.start-btn:disabled {
+    background-color: #d1d5db;
+    color: #6b7280;
+    cursor: not-allowed;
+}
+
+.timeline-main-end-note {
+    text-align: center;
+    padding: 30px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #10b981;
+}
+
+/* Animasyon */
+@keyframes pulse {
+    0% { transform: scale(1.02); box-shadow: 0 0 0 0 rgba(37, 99, 235, 0.4); }
+    70% { transform: scale(1.02); box-shadow: 0 0 0 10px rgba(37, 99, 235, 0); }
+    100% { transform: scale(1.02); box-shadow: 0 0 0 0 rgba(37, 99, 235, 0); }
+}
+
+.pulse-animation {
+    animation: pulse 1.5s infinite;
+}

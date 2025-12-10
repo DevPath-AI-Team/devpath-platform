@@ -29,12 +29,21 @@ public class SecurityConfig {
         return new BCryptPasswordEncoder();
     }
 
-    // Ana güvenlik zinciri
+    // AuthenticationManager bean'i (AuthService içinde kullanılıyor)
+    @Bean
+    public AuthenticationManager authenticationManager(AuthenticationConfiguration config) throws Exception {
+        return config.getAuthenticationManager();
+    }
+    
+    // Ana güvenlik zinciri (Büşra'nın ve senin endpoint bazlı izinlerini birleştirdik)
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
                 // CSRF kapalı (JWT + REST API için)
                 .csrf(csrf -> csrf.disable())
+
+                // CORS Entegrasyonu
+                .cors(cors -> cors.configurationSource(corsConfigurationSource()))
 
                 // Session yerine tamamen stateless JWT kullanıyoruz
                 .sessionManagement(session ->
@@ -44,10 +53,10 @@ public class SecurityConfig {
                 .authorizeHttpRequests(auth -> auth
                         // Kayıt / giriş herkese açık
                         .requestMatchers("/api/auth/**").permitAll()
-                        // Ders endpointleri şimdilik herkese açık (geliştirme için)
+                        // QUIZ ve LESSON endpointleri herkese açık (geliştirme için)
                         .requestMatchers("/api/lessons/**").permitAll()
-                        // İlerleme (UserProgress) endpointleri de şimdilik herkese açık
                         .requestMatchers("/api/progress/**").permitAll()
+                        .requestMatchers("/api/quiz/**").permitAll() // Yeni Quiz Controller için eklendi
                         // Diğer tüm endpointler için authentication zorunlu
                         .anyRequest().authenticated()
                 )
@@ -58,33 +67,12 @@ public class SecurityConfig {
         return http.build();
     }
 
-    // AuthenticationManager bean'i (AuthService içinde kullanılıyor)
-    @Bean
-    public AuthenticationManager authenticationManager(AuthenticationConfiguration config) throws Exception {
-        return config.getAuthenticationManager();
-    }
-
-    @Bean
-    public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
-        http
-            .csrf(csrf -> csrf.disable())
-            .cors(cors -> cors.configurationSource(corsConfigurationSource()))
-            .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
-            .authorizeHttpRequests(auth -> auth
-                .requestMatchers("/**").permitAll() // Her yere izin (Test modu)
-            )
-            .addFilterBefore(jwtAuthFilter, UsernamePasswordAuthenticationFilter.class);
-
-        return http.build();
-    }
-
+    // CORS Konfigürasyonu (Eski hatayı çözen kısım korundu)
     @Bean
     public CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration configuration = new CorsConfiguration();
         
-        // --- İŞTE ÇÖZÜM BURADA ---
-        // "setAllowedOrigins" YERİNE "setAllowedOriginPatterns" kullanıyoruz.
-        // Bu sayede hem "*" (herkes) hem de Credentials (kimlik) aynı anda çalışır.
+        // "setAllowedOriginPatterns" kullanıyoruz.
         configuration.setAllowedOriginPatterns(List.of("*")); 
         
         configuration.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE", "OPTIONS"));

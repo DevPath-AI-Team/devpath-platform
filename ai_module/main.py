@@ -3,7 +3,7 @@ FastAPI Python AI Modülü
 Bu modül bağımsız çalışır ve diğer ekipler sadece router'ı import ederek kullanabilir.
 
 Kullanım:
-    from ai_module.main import router as python_ai_router
+    from .main import router as python_ai_router
     app.include_router(python_ai_router)
 """
 
@@ -13,7 +13,7 @@ from fastapi import APIRouter, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from typing import List
 
-from ai_module.schemas import (
+from schemas import (
     # Curriculum
     CurriculumResponse, Topic,
     # Analyzer (legacy)
@@ -29,8 +29,8 @@ from ai_module.schemas import (
     # Detailed Roadmap
     DetailedRoadmapResponse, DetailedLesson, LearningPathItem
 )
-from ai_module.analyzer import analyze_user_level, analyze_placement_test, analyze_answer # DÜZELTİLDİ: .analyzer yerine ai_module.analyzer
-from ai_module.roadmap import generate_roadmap # DÜZELTİLDİ
+from analyzer import analyze_user_level, analyze_placement_test, analyze_answer # DÜZELTİLDİ: .analyzer yerine ai_module.analyzer
+from roadmap import generate_roadmap # DÜZELTİLDİ
 
 
 

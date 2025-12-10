@@ -7,6 +7,7 @@ import Dashboard from './pages/Dashboard';
 import Lesson from './pages/Lesson';
 import LanguageSelection from './pages/LanguageSelection';
 import Quiz from './pages/Quiz';
+import Roadmap from './pages/Roadmap'; 
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path="/select-language" element={<LanguageSelection />} />
         <Route path="/quiz/:language" element={<Quiz />} />
         <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/roadmap" element={<Roadmap />} /> {/* YENİ: Roadmap Rotası */}
         <Route path="/course/:id" element={<Lesson />} />
         <Route path="*" element={<Navigate to="/login" />} />
       </Routes>
