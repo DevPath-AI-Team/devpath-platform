@@ -1,0 +1,326 @@
+{
+    "version": "1.1",
+    "total_questions": 160,
+    "categories": {
+        "beginner": 60,
+        "intermediate": 50,
+        "advanced": 50
+    },
+    "questions": [
+        {
+            "id": 1,
+            "topic_id": 1,
+            "difficulty": "easy",
+            "category": "beginner",
+            "language": "java",
+            "question_text": "Java'da ekrana yazı yazdırmak için hangi komut kullanılır?",
+            "options": [
+                "System.out.println();",
+                "print();",
+                "echo();",
+                "write();"
+            ],
+            "correct_answer": 0,
+            "explanation": "Java'da System.out.println() metodu konsola yazı yazdırmak için kullanılır.",
+            "tags": [
+                "fundamentals",
+                "output",
+                "basics"
+            ]
+        },
+        {
+            "id": 2,
+            "topic_id": 1,
+            "difficulty": "easy",
+            "category": "beginner",
+            "language": "java",
+            "question_text": "Java programlama dilinin yaratıcısı hangi şirkettir?",
+            "options": [
+                "Microsoft",
+                "Apple",
+                "Sun Microsystems",
+                "Google"
+            ],
+            "correct_answer": 2,
+            "explanation": "Java, Sun Microsystems tarafından geliştirilmiş ve daha sonra Oracle tarafından satın alınmıştır.",
+            "tags": [
+                "fundamentals",
+                "history",
+                "basics"
+            ]
+        },
+        {
+            "id": 3,
+            "topic_id": 2,
+            "difficulty": "easy",
+            "category": "beginner",
+            "language": "java",
+            "question_text": "Java'da hangi veri tipi tam sayıları saklamak için kullanılır?",
+            "options": [
+                "float",
+                "double",
+                "int",
+                "boolean"
+            ],
+            "correct_answer": 2,
+            "explanation": "int veri tipi, -2,147,483,648 ile +2,147,483,647 arasındaki tam sayıları saklar.",
+            "tags": [
+                "variables",
+                "data-types",
+                "primitive"
+            ]
+        },
+        {
+            "id": 4,
+            "topic_id": 2,
+            "difficulty": "easy",
+            "category": "beginner",
+            "language": "java",
+            "question_text": "Java'da String veri tipi için doğru değişken tanımlaması hangisidir?",
+            "options": [
+                "string message = 'Hello';",
+                "String message = \"Hello\";",
+                "str message = 'Hello';",
+                "string message = \"Hello\";"
+            ],
+            "correct_answer": 1,
+            "explanation": "Java'da String sınıfı büyük harfle başlar ve değerler çift tırnak içinde yazılır.",
+            "tags": [
+                "variables",
+                "string",
+                "data-types"
+            ]
+        },
+        {
+            "id": 5,
+            "topic_id": 3,
+            "difficulty": "easy",
+            "category": "beginner",
+            "language": "java",
+            "question_text": "Java'da toplama işlemi için kullanılan operatör hangisidir?",
+            "options": [
+                "-",
+                "*",
+                "+",
+                "/"
+            ],
+            "correct_answer": 2,
+            "explanation": "Java'da toplama işlemi için + operatörü kullanılır.",
+            "tags": [
+                "operators",
+                "arithmetic",
+                "basics"
+            ]
+        },
+        {
+            "id": 151,
+            "topic_id": 35,
+            "difficulty": "easy",
+            "category": "beginner",
+            "language": "javascript",
+            "question_text": "JavaScript'te tarayıcı konsoluna mesaj yazdırmak için hangi fonksiyon kullanılır?",
+            "options": [
+                "System.out.println()",
+                "print()",
+                "console.log()",
+                "document.write()"
+            ],
+            "correct_answer": 2,
+            "explanation": "JavaScript'te `console.log()` fonksiyonu, web tarayıcısının geliştirici konsoluna bilgi yazdırmak için standart bir yöntemdir.",
+            "tags": [
+                "javascript",
+                "fundamentals",
+                "output"
+            ]
+        },
+        {
+            "id": 152,
+            "topic_id": 36,
+            "difficulty": "easy",
+            "category": "beginner",
+            "language": "javascript",
+            "question_text": "Hangisi JavaScript'te bir değişken bildirmek için kullanılan bir anahtar kelime değildir?",
+            "options": [
+                "var",
+                "let",
+                "const",
+                "val"
+            ],
+            "correct_answer": 3,
+            "explanation": "`var`, `let`, ve `const` JavaScript'te değişken bildirmek için kullanılır. `val` anahtar kelimesi JavaScript'e ait değildir.",
+            "tags": [
+                "javascript",
+                "variables",
+                "declaration"
+            ]
+        },
+        {
+            "id": 153,
+            "topic_id": 37,
+            "difficulty": "easy",
+            "category": "beginner",
+            "language": "javascript",
+            "question_text": "JavaScript'te bir değişkenin tipini kontrol etmek için hangi operatör kullanılır?",
+            "options": [
+                "typeof",
+                "type()",
+                "instanceof",
+                "getType"
+            ],
+            "correct_answer": 0,
+            "explanation": "`typeof` operatörü, bir değişkenin veri tipini (number, string, boolean, object vb.) bir dize olarak döndürür.",
+            "tags": [
+                "javascript",
+                "data-types",
+                "operators"
+            ]
+        },
+        {
+            "id": 154,
+            "topic_id": 38,
+            "difficulty": "easy",
+            "category": "beginner",
+            "language": "javascript",
+            "question_text": "JavaScript'te `==` ve `===` operatörleri arasındaki temel fark nedir?",
+            "options": [
+                "Hiçbir fark yoktur.",
+                "`===` daha hızlıdır.",
+                "`===` tip dönüşümü yapmaz, hem değeri hem de tipi karşılaştırır.",
+                "`==` sadece objeler için kullanılır."
+            ],
+            "correct_answer": 2,
+            "explanation": "`==` (gevşek eşitlik) karşılaştırma yapmadan önce tipleri dönüştürmeye çalışır, oysa `===` (katı eşitlik) hem değeri hem de veri tipini kontrol eder.",
+            "tags": [
+                "javascript",
+                "operators",
+                "comparison"
+            ]
+        },
+        {
+            "id": 155,
+            "topic_id": 39,
+            "difficulty": "easy",
+            "category": "beginner",
+            "language": "javascript",
+            "question_text": "JavaScript'te bir dizi (array) nasıl tanımlanır?",
+            "options": [
+                "var colors = \"red, green, blue\";",
+                "var colors = [\"red\", \"green\", \"blue\"];",
+                "var colors = {\"red\", \"green\", \"blue\"};",
+                "var colors = (\"red\", \"green\", \"blue\");"
+            ],
+            "correct_answer": 1,
+            "explanation": "JavaScript dizileri köşeli parantezler `[]` kullanılarak oluşturulur ve elemanlar virgülle ayrılır.",
+            "tags": [
+                "javascript",
+                "arrays",
+                "data-structures"
+            ]
+        },
+        {
+            "id": 156,
+            "topic_id": 40,
+            "difficulty": "easy",
+            "category": "beginner",
+            "language": "javascript",
+            "question_text": "JavaScript'te bir kod bloğunu belirli bir koşul doğruysa çalıştırmak için ne kullanılır?",
+            "options": [
+                "for",
+                "while",
+                "if",
+                "switch"
+            ],
+            "correct_answer": 2,
+            "explanation": "`if` ifadesi, parantez içindeki koşul `true` olarak değerlendirilirse, takip eden kod bloğunu yürütür.",
+            "tags": [
+                "javascript",
+                "control-flow",
+                "if-else"
+            ]
+        },
+        {
+            "id": 157,
+            "topic_id": 41,
+            "difficulty": "easy",
+            "category": "beginner",
+            "language": "javascript",
+            "question_text": "Bir `for` döngüsünün doğru söz dizimi hangisidir?",
+            "options": [
+                "for (i = 0; i < 5; i++)",
+                "for (i < 5; i++)",
+                "for (i = 0; i++)",
+                "for i = 1 to 5"
+            ],
+            "correct_answer": 0,
+            "explanation": "JavaScript `for` döngüsü üç bölümden oluşur: bir başlangıç ifadesi, bir koşul ve bir artırma ifadesi.",
+            "tags": [
+                "javascript",
+                "loops",
+                "for-loop"
+            ]
+        },
+        {
+            "id": 158,
+            "topic_id": 42,
+            "difficulty": "easy",
+            "category": "beginner",
+            "language": "javascript",
+            "question_text": "JavaScript'te yeniden kullanılabilir bir kod bloğu oluşturmak için ne tanımlarsınız?",
+            "options": [
+                "Variable",
+                "Function",
+                "Loop",
+                "Object"
+            ],
+            "correct_answer": 1,
+            "explanation": "Fonksiyonlar, belirli bir görevi yerine getiren ve programın farklı yerlerinden çağrılabilen yeniden kullanılabilir kod bloklarıdır.",
+            "tags": [
+                "javascript",
+                "functions",
+                "reusability"
+            ]
+        },
+        {
+            "id": 159,
+            "topic_id": 43,
+            "difficulty": "easy",
+            "category": "beginner",
+            "language": "javascript",
+            "question_text": "JavaScript'te tek satırlık bir yorum nasıl yazılır?",
+            "options": [
+                "<!-- comment -->",
+                "/* comment */",
+                "// comment",
+                "# comment"
+            ],
+            "correct_answer": 2,
+            "explanation": "Tek satırlık yorumlar `//` ile başlar. Çok satırlı yorumlar `/* */` arasına yazılır.",
+            "tags": [
+                "javascript",
+                "syntax",
+                "comments"
+            ]
+        },
+        {
+            "id": 160,
+            "topic_id": 38,
+            "difficulty": "easy",
+            "category": "beginner",
+            "language": "javascript",
+            "question_text": "JavaScript'te `NaN` ne anlama gelir?",
+            "options": [
+                "\"Not a Name\"",
+                "\"No Available Number\"",
+                "\"Not a Number\"",
+                "\"Null and None\""
+            ],
+            "correct_answer": 2,
+            "explanation": "`NaN`, \"Not-a-Number\" (Sayı Değil) anlamına gelen özel bir sayısal değerdir ve genellikle geçersiz bir matematiksel işlemin sonucunda ortaya çıkar.",
+            "tags": [
+                "javascript",
+                "numbers",
+                "nan"
+            ]
+        }
+    ]
+}

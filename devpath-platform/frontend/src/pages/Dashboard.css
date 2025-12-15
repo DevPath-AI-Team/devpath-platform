@@ -1,0 +1,322 @@
+/* GENEL DASHBOARD YAPISI */
+.dashboard-container {
+    display: flex;
+    height: 100vh;
+    background-color: #f9fafb; /* Ana arka plan rengi daha açık */
+}
+
+/* YAN MENÜ */
+.sidebar {
+    width: 260px;
+    background-color: #ffffff;
+    border-right: 1px solid #e5e7eb;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 15px;
+}
+
+.sidebar-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 15px;
+    margin-bottom: 25px;
+}
+
+.brand-text {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #1f2937;
+}
+
+.nav-menu {
+    flex-grow: 1;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 12px 15px;
+    margin-bottom: 8px;
+    border-radius: 8px;
+    font-weight: 500;
+    color: #4b5563;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.nav-item:hover {
+    background-color: #f3f4f6;
+    color: #1f2937;
+}
+
+.nav-item.active {
+    background-color: #eef2ff;
+    color: #3730a3;
+    font-weight: 600;
+}
+
+.user-profile {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 15px;
+    margin-top: auto;
+    border-top: 1px solid #e5e7eb;
+    padding-top: 20px;
+}
+
+.user-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #4f46e5;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+}
+
+/* ANA İÇERİK BÖLÜMÜ */
+.main-content {
+    flex-grow: 1;
+    padding: 40px;
+    overflow-y: auto;
+}
+
+.header-section {
+    margin-bottom: 30px;
+}
+
+.welcome-title h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #1f2937;
+    margin: 0;
+}
+
+.welcome-title p {
+    font-size: 1rem;
+    color: #6b7280;
+    margin-top: 8px;
+}
+
+.section-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 20px;
+    margin-top: 40px;
+}
+
+/* DEVAM EDEN DERSLER GRID */
+.courses-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.course-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    border: 1px solid #e5e7eb;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+}
+
+.course-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.07);
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.card-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px; /* İkonun altına biraz boşluk */
+}
+
+.card-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #1f2937;
+    flex-grow: 1;
+}
+
+.card-desc {
+    color: #6b7280;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    flex-grow: 1;
+}
+
+.progress-container {
+    width: 100%;
+}
+
+.progress-bar-bg {
+    background-color: #e5e7eb;
+    height: 8px;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    background-color: #4f46e5;
+    height: 100%;
+    border-radius: 4px;
+}
+
+.continue-btn {
+    background-color: #4f46e5;
+    color: white;
+    border: none;
+    padding: 12px;
+    width: 100%;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: auto; /* Kartın en altına itemi */
+    transition: background-color 0.2s;
+}
+
+.continue-btn:hover {
+    background-color: #4338ca;
+}
+
+/* TAMAMLANAN DERSLER LİSTESİ */
+.completed-courses-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.completed-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #e5e7eb;
+    transition: background-color 0.2s;
+    cursor: pointer;
+}
+
+.completed-item:hover {
+    background-color: #f9fafb;
+}
+
+.completed-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.completed-title {
+    flex-grow: 1;
+    font-weight: 500;
+    color: #374151;
+}
+
+.review-btn {
+    background-color: #e5e7eb;
+    color: #374151;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.review-btn:hover {
+    background-color: #d1d5db;
+}
+
+.no-lessons-message {
+    color: #6b7280;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    border: 1px solid #e5e7eb;
+}
+
+
+/* ================= YENİ: DİL ETİKETLERİ ================= */
+.language-tag {
+    font-family: 'monospace', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 6px;
+    text-transform: uppercase;
+    border-width: 1px;
+    border-style: solid;
+    white-space: nowrap; /* Etiketin tek satırda kalmasını sağla */
+}
+
+.lang-tag-java {
+    background-color: #FFF2E6; /* Turuncu tonu */
+    color: #D95400;
+    border-color: #FFDAB3;
+}
+
+.lang-tag-python {
+    background-color: #E6F0FF; /* Mavi tonu */
+    color: #2D63A1;
+    border-color: #B3D1FF;
+}
+
+.lang-tag-js {
+    background-color: #FFFBE6; /* Sarı tonu */
+    color: #B89B00;
+    border-color: #FFF5B3;
+}
+
+.lang-tag-default {
+    background-color: #F3F4F6;
+    color: #4B5563;
+    border-color: #D1D5DB;
+}
+/* ======================================================== */
+
+/* AI FAB (Floating Action Button) */
+.ai-fab {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background-color: #4f46e5;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.ai-fab:hover {
+    transform: scale(1.1);
+}
