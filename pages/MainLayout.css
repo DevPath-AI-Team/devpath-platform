@@ -1,0 +1,57 @@
+
+/* === MainLayout.css === */
+
+/* Ana layout kabı */
+.main-layout {
+    display: flex;
+    background-color: #f0f2f5; /* Hafif gri bir arka plan */
+    min-height: 100vh;
+}
+
+/* İçerik alanı */
+.content {
+    flex-grow: 1; /* Mevcut tüm alanı kapla */
+    padding: 2rem;
+    transition: margin-left 0.3s ease-in-out;
+    overflow-y: auto; /* İçerik taşarsa kaydırma çubuğu çıkar */
+}
+
+/* Sidebar varken içerik alanını ayarla */
+.content.with-sidebar {
+    margin-left: 250px; /* Sidebar genişliği kadar boşluk bırak */
+}
+
+/* Sidebar yokken (örn: giriş sayfası) içerik tam ekran olsun */
+.content.full-width {
+    margin-left: 0;
+}
+
+/* Chatbot açma/kapatma ikonu */
+.chatbot-toggler {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #007bff; /* Ana renk */
+    color: white;
+    font-size: 28px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    transition: transform 0.2s ease-in-out, background-color 0.2s;
+}
+
+.chatbot-toggler:hover {
+    transform: scale(1.1);
+    background-color: #0056b3; /* Hover rengi */
+}
+
+/* Chatbot penceresinin kendisi, Chatbot.css içinde zaten tanımlı, 
+   ama MainLayout'un onu konumlandırması için gerekirse buraya ek stiller gelebilir. 
+   Şimdilik mevcut konumlandırması yeterli görünüyor. */

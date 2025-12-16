@@ -1,0 +1,139 @@
+
+.sidebar {
+    width: 260px;
+    background-color: var(--sidebar-bg, #ffffff);
+    border-right: 1px solid var(--border-color, #e5e7eb);
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem 1rem;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.sidebar-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0 1rem 1.5rem 1rem;
+    border-bottom: 1px solid var(--border-color, #e5e7eb);
+}
+
+.brand-text {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--header-color, #111827);
+}
+
+.nav-menu {
+    flex-grow: 1;
+    margin-top: 1.5rem;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.85rem 1rem;
+    margin-bottom: 0.5rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 500;
+    color: var(--nav-item-color, #4b5563);
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.nav-item:hover {
+    background-color: var(--nav-item-hover-bg, #f3f4f6);
+    color: var(--nav-item-hover-color, #111827);
+}
+
+.nav-item.active {
+    background-color: var(--nav-item-active-bg, #eef2ff);
+    color: var(--nav-item-active-color, #3730a3);
+    font-weight: 600;
+}
+
+.user-profile {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1.5rem 1rem;
+    border-top: 1px solid var(--border-color, #e5e7eb);
+}
+
+.user-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #dbeafe;
+    color: #3b82f6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.user-info {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.user-name {
+    font-weight: 600;
+    color: var(--header-color, #111827);
+}
+
+.user-role {
+    font-size: 0.875rem;
+    color: #6b7280;
+}
+
+.logout-icon {
+    cursor: pointer;
+    color: #6b7280;
+    padding: 0.5rem;
+    border-radius: 8px;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.logout-icon:hover {
+    background-color: #fce8e8;
+    color: #dc2626;
+}
+
+
+/* Koyu Tema Ayarlamaları */
+body.dark-theme .sidebar {
+    --sidebar-bg: #1f2937;
+    --border-color: #374151;
+}
+
+body.dark-theme .brand-text,
+body.dark-theme .user-name {
+    color: #f3f4f6;
+}
+
+body.dark-theme .nav-item {
+    color: #9ca3af;
+}
+
+body.dark-theme .nav-item:hover {
+    background-color: #374151;
+    color: #f9fafb;
+}
+
+body.dark-theme .nav-item.active {
+    background-color: #312e81; /* Koyu aktif arka plan */
+    color: #e0e7ff; /* Açık aktif metin */
+}
+
+body.dark-theme .user-role,
+body.dark-theme .logout-icon {
+    color: #9ca3af;
+}
+
+body.dark-theme .logout-icon:hover {
+    background-color: #4b1919;
+    color: #fca5a5;
+}

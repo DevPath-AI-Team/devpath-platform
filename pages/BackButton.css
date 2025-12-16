@@ -1,0 +1,34 @@
+
+.back-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--card-bg, #ffffff);
+    border: 1px solid var(--border-color, #e5e7eb);
+    border-radius: 50%; /* Tam yuvarlak */
+    width: 44px;
+    height: 44px;
+    cursor: pointer;
+    color: var(--text-color, #374151);
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.back-button:hover {
+    background-color: var(--background-color, #f8f9fa);
+    border-color: #d1d5db;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.07);
+    transform: translateY(-1px);
+}
+
+/* Koyu Tema Ayarları */
+body.dark-theme .back-button {
+    background-color: #1f2937;
+    border-color: #4b5563;
+    color: #d1d5db;
+}
+
+body.dark-theme .back-button:hover {
+    background-color: #374151;
+    border-color: #6b7280;
+}
