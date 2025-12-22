@@ -8,15 +8,23 @@
 
 .settings-content {
     flex-grow: 1;
-    padding: 2rem 3rem;
+    padding: 2rem 2rem;
     max-width: 900px;
-    margin: 0 auto;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.settings-header-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
 }
 
 .settings-header {
     font-size: 2.5rem;
     font-weight: 700;
-    margin-bottom: 2rem;
+    margin: 0;
     color: var(--header-color, #1f2937);
 }
 

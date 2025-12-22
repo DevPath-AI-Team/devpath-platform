@@ -1,120 +1,186 @@
-import React, { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
-import Sidebar from './Sidebar';
-import BackButton from './BackButton';
-import './Courses.css';
-import axios from 'axios';
-
-// İkonlar (Mevcut haliyle korunabilir)
-const JavaIcon = () => <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#e11d48" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 20h9" /><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z" /></svg>;
-const PythonIcon = () => <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ca8a04" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 2H2v10l10 10 10-10V2H12z" /><path d="M12 8v4" /><path d="M12 16v.01" /></svg>;
-const JsIcon = () => <svg width="24" height="24" fill="none" stroke="#f59e0b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 9a3 3 0 0 1 3-3v7a3 3 0 0 1-6 0v-1a3 3 0 0 1 3-3h0z"/><path d="M15 9a3 3 0 0 1 3-3v7a3 3 0 0 1-6 0v-1a3 3 0 0 1 3-3h0z"/></svg>;
-const DbIcon = () => <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#16a34a" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3" /><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3" /><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5" /></svg>;
-
-const getLanguageIcon = (language) => {
-    if (!language) return <DbIcon />;
-    const lang = language.toUpperCase();
-    switch (lang) {
-        case 'JAVA': return <JavaIcon />;
-        case 'PYTHON': return <PythonIcon />;
-        case 'JAVASCRIPT': return <JsIcon />;
-        default: return <DbIcon />;
-    }
-};
-
-// Ders ve Notları Gösteren Bileşen
-const CourseWithNotes = ({ lesson, note }) => {
-    return (
-        <div className="course-notes-card">
-            <div className="course-header">
-                <div className="course-icon">{getLanguageIcon(lesson.language)}</div>
-                <h3 className="course-title">{lesson.title}</h3>
-                <span className={`course-lang-tag ${lesson.language ? lesson.language.toLowerCase() : ''}`}>{lesson.language}</span>
-            </div>
-            <div className="notes-content">
-                <h4>Aldığım Notlar:</h4>
-                {note ? (
-                    <pre className="notes-text">{note}</pre>
-                ) : (
-                    <p className="no-notes">Bu ders için henüz not alınmamış.</p>
-                )}
-            </div>
-        </div>
-    );
-};
+import React, { useEffect, useState, useMemo } from "react";
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
+import "./Courses.css";
 
 const Courses = () => {
-    const [lessons, setLessons] = useState([]);
-    const [notes, setNotes] = useState(new Map()); // Notları lessonId -> content şeklinde saklamak için Map
-    const [isLoading, setIsLoading] = useState(true);
-    const [error, setError] = useState(null);
-    const navigate = useNavigate();
-    const userId = localStorage.getItem('userId');
+  const navigate = useNavigate();
+  const userId = localStorage.getItem("userId");
+  const token = localStorage.getItem("token");
+  const API = "http://localhost:8080";
+  
+  const auth = useMemo(() => ({ headers: { Authorization: `Bearer ${token}` } }), [token]);
+  
+  const [notes, setNotes] = useState([]);
+  const [lessons, setLessons] = useState({}); // lessonId -> lesson data
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
-    useEffect(() => {
-        if (!userId) {
-            navigate('/login');
-            return;
+  useEffect(() => {
+    if (!userId || !token) {
+      navigate("/login");
+      return;
+    }
+
+    const fetchNotes = async () => {
+      try {
+        setLoading(true);
+        setError(null);
+
+        // Kullanıcının tüm notlarını çek
+        const notesResponse = await axios.get(
+          `${API}/api/notes/user/${userId}`,
+          auth
+        );
+        
+        const notesData = notesResponse.data || [];
+        setNotes(notesData);
+
+        // Her not için ders bilgisini çek
+        const lessonPromises = notesData.map(note => 
+          axios.get(`${API}/api/lessons/${note.lessonId}`, auth)
+            .then(res => ({ lessonId: note.lessonId, lesson: res.data }))
+            .catch(err => {
+              console.error(`Ders ${note.lessonId} yüklenemedi:`, err);
+              return null;
+            })
+        );
+
+        const lessonResults = await Promise.all(lessonPromises);
+        const lessonsMap = {};
+        lessonResults.forEach(result => {
+          if (result) {
+            lessonsMap[result.lessonId] = result.lesson;
+          }
+        });
+        setLessons(lessonsMap);
+
+      } catch (err) {
+        console.error("Notlar yüklenemedi:", err);
+        if (err.response?.status === 401 || err.response?.status === 403) {
+          navigate("/login");
+        } else {
+          setError("Notlar yüklenirken bir hata oluştu.");
         }
+      } finally {
+        setLoading(false);
+      }
+    };
 
-        const fetchLessonsAndNotes = async () => {
-            setIsLoading(true);
-            try {
-                // --- İKİ İSTEĞİ AYNI ANDA YAP ---
-                const [lessonsResponse, notesResponse] = await Promise.all([
-                    axios.get('http://localhost:8080/api/lessons'), // Tüm dersleri çek
-                    axios.get(`http://localhost:8080/api/notes/user/${userId}`) // Kullanıcının tüm notlarını çek
-                ]);
+    fetchNotes();
+  }, [userId, token, auth, navigate]);
 
-                setLessons(lessonsResponse.data);
+  const getLanguageColor = (language) => {
+    const lang = language?.toUpperCase() || "";
+    if (lang === "JAVA") return { bg: "#FFF2E6", color: "#D95400" };
+    if (lang === "PYTHON") return { bg: "#E6F0FF", color: "#2D63A1" };
+    if (lang === "JAVASCRIPT" || lang === "JS") return { bg: "#FFFBE6", color: "#B89B00" };
+    return { bg: "#F3F4F6", color: "#6B7280" };
+  };
 
-                // Notları bir Map'e dönüştürerek erişimi kolaylaştır
-                const notesMap = new Map();
-                notesResponse.data.forEach(note => {
-                    notesMap.set(note.lessonId, note.content);
-                });
-                setNotes(notesMap);
+  const handleLessonClick = (lessonId) => {
+    navigate(`/course/${lessonId}`);
+  };
 
-            } catch (err) {
-                setError("Dersler ve notlar yüklenirken bir hata oluştu.");
-                console.error("Veri çekme hatası:", err);
-            } finally {
-                setIsLoading(false);
-            }
-        };
-
-        fetchLessonsAndNotes();
-    }, [userId, navigate]);
-
+  if (loading) {
     return (
-        <div className="courses-container">
-            <main className="courses-content">
-                <div className="courses-header">
-                    <BackButton />
-                    <h1>Tüm Derslerim ve Notlarım</h1>
-                </div>
-                
-                {isLoading && <p>Dersler ve notlar yükleniyor...</p>}
-                {error && <p className="error-message">{error}</p>}
-
-                {!isLoading && !error && (
-                    lessons.length > 0 ? (
-                        <div className="courses-grid">
-                            {lessons.map(lesson => (
-                                <CourseWithNotes 
-                                    key={lesson.lessonId} 
-                                    lesson={lesson} 
-                                    note={notes.get(lesson.lessonId)} // Map'ten notu al
-                                />
-                            ))}
-                        </div>
-                    ) : (
-                        <p>Platformda henüz hiç ders bulunmuyor.</p>
-                    )
-                )}
-            </main>
+      <div className="courses-container">
+        <div className="courses-content">
+          <div style={{ padding: "2rem", textAlign: "center" }}>Yükleniyor...</div>
         </div>
+      </div>
     );
+  }
+
+  if (error) {
+    return (
+      <div className="courses-container">
+        <div className="courses-content">
+          <div style={{ padding: "2rem", color: "red" }}>{error}</div>
+        </div>
+      </div>
+    );
+  }
+
+  return (
+    <div className="courses-container">
+      <div className="courses-content">
+        <div className="courses-header">
+          <h1>📚 Derslerim ve Notlarım</h1>
+        </div>
+
+        {notes.length === 0 ? (
+          <div style={{ 
+            padding: "3rem", 
+            textAlign: "center", 
+            color: "#6B7280",
+            backgroundColor: "#fff",
+            borderRadius: "12px",
+            boxShadow: "0 4px 6px rgba(0, 0, 0, 0.05)"
+          }}>
+            <p style={{ fontSize: "1.2rem", marginBottom: "0.5rem" }}>Henüz not almadınız</p>
+            <p style={{ fontSize: "0.95rem" }}>Ders videolarını izlerken not alabilirsiniz.</p>
+          </div>
+        ) : (
+          <div className="courses-grid">
+            {notes.map((note) => {
+              const lesson = lessons[note.lessonId];
+              if (!lesson) return null;
+
+              const langColors = getLanguageColor(lesson.language);
+              const notePreview = note.content.length > 200 
+                ? note.content.substring(0, 200) + "..." 
+                : note.content;
+
+              return (
+                <div 
+                  key={note.id} 
+                  className="course-notes-card"
+                  onClick={() => handleLessonClick(note.lessonId)}
+                  style={{ cursor: "pointer" }}
+                >
+                  <div className="course-header">
+                    <div className="course-icon">
+                      <span style={{ fontSize: "2rem" }}>📝</span>
+                    </div>
+                    <div className="course-title">{lesson.title}</div>
+                    <span 
+                      className="course-lang-tag"
+                      style={{ 
+                        backgroundColor: langColors.bg, 
+                        color: langColors.color 
+                      }}
+                    >
+                      {lesson.language}
+                    </span>
+                  </div>
+
+                  <div className="notes-content">
+                    <h4>Notlarım:</h4>
+                    <div className="notes-text">
+                      {notePreview.split('\n').map((line, idx) => (
+                        <p key={idx} style={{ margin: "0.5rem 0" }}>{line || "\u00A0"}</p>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div style={{ 
+                    marginTop: "1rem", 
+                    paddingTop: "1rem", 
+                    borderTop: "1px solid #e5e7eb",
+                    fontSize: "0.85rem",
+                    color: "#6B7280"
+                  }}>
+                    Derse gitmek için tıklayın →
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        )}
+      </div>
+    </div>
+  );
 };
 
 export default Courses;

@@ -1,5 +1,5 @@
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate, Outlet } from 'react-router-dom';
 import MainLayout from './pages/MainLayout'; // Yeni ana iskeletimiz
 
@@ -24,6 +24,13 @@ const AppLayout = () => (
 );
 
 function App() {
+  // Uygulama yüklendiğinde temayı localStorage'dan yükle
+  useEffect(() => {
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    document.body.className = '';
+    document.body.classList.add(`${savedTheme}-theme`);
+  }, []);
+
   return (
     <Router>
       <Routes>

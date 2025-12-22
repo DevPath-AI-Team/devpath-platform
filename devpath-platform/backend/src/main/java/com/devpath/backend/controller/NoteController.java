@@ -1,4 +1,4 @@
-package com.devpath.backend.controller;
+package com.devpath.backend.Controller;
 
 import com.devpath.backend.DTO.NoteDTO;
 import com.devpath.backend.service.NoteService;

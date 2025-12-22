@@ -120,3 +120,30 @@ body.dark-theme .no-notes {
     color: #9ca3af;
 }
 
+body.dark-theme .courses-container {
+    background-color: #111827;
+    color: #f3f4f6;
+}
+
+body.dark-theme .courses-header h1 {
+    color: #f3f4f6;
+}
+
+body.dark-theme .course-notes-card {
+    background-color: #1f2937;
+    border-color: #374151;
+}
+
+body.dark-theme .course-title {
+    color: #f3f4f6;
+}
+
+body.dark-theme .notes-content h4 {
+    color: #f3f4f6;
+}
+
+body.dark-theme .notes-text {
+    background-color: #111827;
+    color: #e2e8f0;
+}
+

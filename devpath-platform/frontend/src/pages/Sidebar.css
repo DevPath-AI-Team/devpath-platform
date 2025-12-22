@@ -1,42 +1,56 @@
 
 .sidebar {
-    width: 260px;
+    width: 200px; /* 220px'den 200px'e düşürüldü */
     background-color: var(--sidebar-bg, #ffffff);
     border-right: 1px solid var(--border-color, #e5e7eb);
     display: flex;
     flex-direction: column;
-    padding: 1.5rem 1rem;
+    padding: 0.75rem 0.5rem; /* Padding daha da azaltıldı */
     transition: background-color 0.3s, border-color 0.3s;
+    flex-shrink: 0; /* Sidebar genişliği sabit kalsın */
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    /* Scrollbar'ı gizle ama scroll edilebilir tut */
+    scrollbar-width: thin;
+    scrollbar-color: transparent transparent;
+}
+
+/* Webkit tarayıcılar için scrollbar'ı gizle */
+.sidebar::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
 }
 
 .sidebar-header {
     display: flex;
     align-items: center;
-    gap: 0.75rem;
-    padding: 0 1rem 1.5rem 1rem;
+    gap: 0.5rem;
+    padding: 0 0.5rem 0.75rem 0.5rem; /* Padding daha da azaltıldı */
     border-bottom: 1px solid var(--border-color, #e5e7eb);
 }
 
 .brand-text {
-    font-size: 1.5rem;
+    font-size: 1.3rem; /* Daha fazla büyütüldü */
     font-weight: 700;
     color: var(--header-color, #111827);
 }
 
 .nav-menu {
     flex-grow: 1;
-    margin-top: 1.5rem;
+    margin-top: 1rem; /* 1.5rem'den 1rem'e düşürüldü */
 }
 
 .nav-item {
     display: flex;
     align-items: center;
-    gap: 1rem;
-    padding: 0.85rem 1rem;
-    margin-bottom: 0.5rem;
+    gap: 0.5rem; /* 0.75rem'den 0.5rem'e düşürüldü */
+    padding: 0.5rem 0.5rem; /* Padding daha da azaltıldı */
+    margin-bottom: 0.25rem; /* Margin daha da azaltıldı */
     border-radius: 8px;
     cursor: pointer;
     font-weight: 500;
+    font-size: 1rem; /* Daha fazla büyütüldü */
     color: var(--nav-item-color, #4b5563);
     transition: background-color 0.2s, color 0.2s;
 }
@@ -55,14 +69,16 @@
 .user-profile {
     display: flex;
     align-items: center;
-    gap: 0.75rem;
-    padding: 1.5rem 1rem;
+    gap: 0.5rem;
+    padding: 0.75rem 0.5rem; /* Padding daha da azaltıldı */
     border-top: 1px solid var(--border-color, #e5e7eb);
+    margin-top: auto; /* Alt kısma yapıştır */
+    flex-shrink: 0; /* Boyutunu koru */
 }
 
 .user-avatar {
-    width: 40px;
-    height: 40px;
+    width: 36px; /* 40px'den 36px'e düşürüldü */
+    height: 36px; /* 40px'den 36px'e düşürüldü */
     border-radius: 50%;
     background-color: #dbeafe;
     color: #3b82f6;
@@ -70,22 +86,28 @@
     align-items: center;
     justify-content: center;
     font-weight: 600;
-    font-size: 1.1rem;
+    font-size: 1rem; /* 1.1rem'den 1rem'e düşürüldü */
+    flex-shrink: 0;
 }
 
 .user-info {
     flex-grow: 1;
     display: flex;
     flex-direction: column;
+    min-width: 0; /* Text overflow için */
 }
 
 .user-name {
     font-weight: 600;
+    font-size: 1rem; /* Daha fazla büyütüldü */
     color: var(--header-color, #111827);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .user-role {
-    font-size: 0.875rem;
+    font-size: 0.9rem; /* Daha fazla büyütüldü */
     color: #6b7280;
 }
 

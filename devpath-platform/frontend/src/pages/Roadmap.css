@@ -262,3 +262,450 @@
     font-size: 1.2rem;
     color: #6b7280;
 }
+
+/* ================= DİL SEÇİMİ BÖLÜMÜ ================= */
+.language-selection-section {
+    padding: 32px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+.language-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 24px;
+    margin-top: 30px;
+}
+
+.language-card {
+    background: linear-gradient(135deg, #ffffff 0%, #f9fafb 100%);
+    border: 2px solid #e5e7eb;
+    border-radius: 16px;
+    padding: 32px;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.language-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--lang-color, #6b7280);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.language-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    border-color: var(--lang-color, #6b7280);
+}
+
+.language-card:hover::before {
+    transform: scaleX(1);
+}
+
+.language-card-icon {
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.language-card:hover .language-card-icon {
+    transform: scale(1.1) rotate(5deg);
+}
+
+.language-card-content {
+    text-align: center;
+}
+
+.language-card-content h3 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #1f2937;
+    margin: 0 0 20px 0;
+}
+
+.view-roadmap-btn {
+    background: linear-gradient(135deg, var(--lang-color, #6b7280) 0%, var(--lang-color, #6b7280) 100%);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.view-roadmap-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    opacity: 0.9;
+}
+
+/* Seçilen Dil Başlığı */
+.selected-language-header {
+    padding: 24px 32px;
+    background: #ffffff;
+    border-bottom: 1px solid #e5e7eb;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.back-to-languages-btn {
+    background: #f3f4f6;
+    color: #374151;
+    border: 1px solid #e5e7eb;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.back-to-languages-btn:hover {
+    background: #e5e7eb;
+    transform: translateX(-2px);
+}
+
+.selected-language-info {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex: 1;
+}
+
+.selected-language-icon {
+    width: 64px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f9fafb;
+    border-radius: 12px;
+    border: 2px solid #e5e7eb;
+}
+
+.selected-language-info h2 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #1f2937;
+    margin: 0 0 4px 0;
+}
+
+.selected-language-info p {
+    color: #6b7280;
+    margin: 0;
+    font-size: 0.95rem;
+}
+
+/* ================= DARK MODE ================= */
+body.dark-theme .roadmap-container {
+    background-color: #111827;
+}
+
+body.dark-theme .roadmap-header h1 {
+    color: #f3f4f6;
+}
+
+body.dark-theme .roadmap-header p {
+    color: #9ca3af;
+}
+
+body.dark-theme .language-selection-section {
+    background-color: #111827;
+}
+
+body.dark-theme .section-title {
+    color: #f3f4f6;
+}
+
+body.dark-theme .section-subtitle {
+    color: #9ca3af;
+}
+
+body.dark-theme .language-card {
+    background: linear-gradient(135deg, #1f2937 0%, #111827 100%);
+    border-color: #374151;
+    color: #f3f4f6;
+}
+
+body.dark-theme .language-card h3 {
+    color: #f3f4f6;
+}
+
+body.dark-theme .roadmap-level-group {
+    background: #1f2937;
+    border-color: #374151;
+}
+
+body.dark-theme .roadmap-level-title {
+    color: #f3f4f6;
+    border-color: #374151;
+}
+
+body.dark-theme .roadmap-item {
+    background: #111827;
+    border-color: #374151;
+}
+
+body.dark-theme .roadmap-item:hover {
+    background: #1f2937;
+}
+
+body.dark-theme .roadmap-title {
+    color: #f3f4f6;
+}
+
+body.dark-theme .roadmap-language {
+    color: #9ca3af;
+}
+
+body.dark-theme .back-to-languages-btn {
+    background: #374151;
+    border-color: #4b5563;
+    color: #f3f4f6;
+}
+
+body.dark-theme .back-to-languages-btn:hover {
+    background: #4b5563;
+    border-color: #6b7280;
+}
+/* ================= DARK MODE ================= */
+body.dark-theme .roadmap-page-container {
+    background-color: #111827;
+}
+
+body.dark-theme .roadmap-header {
+    background-color: #1f2937;
+    border-color: #374151;
+}
+
+body.dark-theme .roadmap-title-section h1 {
+    color: #f3f4f6;
+}
+
+body.dark-theme .roadmap-title-section p {
+    color: #9ca3af;
+}
+
+body.dark-theme .roadmap-title-section strong {
+    color: #f3f4f6;
+}
+
+body.dark-theme .stat-card {
+    background-color: #1f2937;
+    border-color: #374151;
+}
+
+body.dark-theme .stat-value {
+    color: #f3f4f6;
+}
+
+body.dark-theme .stat-label {
+    color: #9ca3af;
+}
+
+body.dark-theme .timeline-main {
+    background-color: #111827;
+}
+
+body.dark-theme .timeline-container {
+    border-color: #374151;
+}
+
+body.dark-theme .timeline-item {
+    background-color: #1f2937;
+    border-color: #374151;
+}
+
+body.dark-theme .timeline-item:hover {
+    background-color: #374151;
+    border-color: #4b5563;
+}
+
+body.dark-theme .timeline-icon {
+    background-color: #1f2937;
+    border-color: #374151;
+}
+
+body.dark-theme .timeline-title {
+    color: #f3f4f6;
+}
+
+body.dark-theme .timeline-description {
+    color: #9ca3af;
+}
+
+body.dark-theme .timeline-header {
+    color: #f3f4f6;
+}
+
+body.dark-theme .time-info {
+    color: #9ca3af;
+}
+
+body.dark-theme .start-btn {
+    background-color: #3b82f6;
+    color: #ffffff;
+}
+
+body.dark-theme .start-btn:disabled {
+    background-color: #374151;
+    color: #6b7280;
+}
+
+body.dark-theme .language-selection-section {
+    background-color: #111827;
+}
+
+body.dark-theme .section-title {
+    color: #f3f4f6;
+}
+
+body.dark-theme .section-subtitle {
+    color: #9ca3af;
+}
+
+body.dark-theme .language-card {
+    background: linear-gradient(135deg, #1f2937 0%, #111827 100%);
+    border-color: #374151;
+    color: #f3f4f6;
+}
+
+body.dark-theme .language-card-content h3 {
+    color: #f3f4f6;
+}
+
+body.dark-theme .selected-language-header {
+    background-color: #1f2937;
+    border-color: #374151;
+}
+
+body.dark-theme .selected-language-info h2 {
+    color: #f3f4f6;
+}
+
+body.dark-theme .selected-language-info p {
+    color: #9ca3af;
+}
+
+body.dark-theme .selected-language-icon {
+    background-color: #111827;
+    border-color: #374151;
+}
+
+body.dark-theme .roadmap-level-group {
+    background: #1f2937;
+    border-color: #374151;
+}
+
+body.dark-theme .roadmap-level-title {
+    color: #f3f4f6;
+    border-color: #374151;
+}
+
+body.dark-theme .roadmap-item {
+    background: #111827;
+    border-color: #374151;
+}
+
+body.dark-theme .roadmap-item:hover {
+    background: #1f2937;
+}
+
+body.dark-theme .roadmap-title {
+    color: #f3f4f6;
+}
+
+body.dark-theme .roadmap-language {
+    color: #9ca3af;
+}
+
+body.dark-theme .back-to-languages-btn {
+    background: #374151;
+    border-color: #4b5563;
+    color: #f3f4f6;
+}
+
+body.dark-theme .back-to-languages-btn:hover {
+    background: #4b5563;
+    border-color: #6b7280;
+}
+
+body.dark-theme .loading-spinner {
+    color: #9ca3af;
+    background-color: #111827;
+}
+
+body.dark-theme .error-message {
+    color: #fca5a5;
+    background-color: #7f1d1d;
+}
+
+body.dark-theme .timeline-badge {
+    color: #f3f4f6;
+}
+
+body.dark-theme .type-badge {
+    background-color: #1e3a5f;
+    color: #93c5fd;
+}
+
+body.dark-theme .item-completed {
+    background-color: #064e3b;
+    border-color: #10b981;
+}
+
+body.dark-theme .item-completed .timeline-icon {
+    border-color: #10b981;
+    background-color: #064e3b;
+}
+
+body.dark-theme .item-current {
+    border-color: #3b82f6;
+    box-shadow: 0 0 15px rgba(59, 130, 246, 0.3);
+}
+
+body.dark-theme .item-current .timeline-icon {
+    border-color: #3b82f6;
+    background-color: #1e3a5f;
+}
+
+body.dark-theme .item-review {
+    background-color: #78350f;
+    border-color: #f59e0b;
+}
+
+body.dark-theme .item-review .timeline-icon {
+    border-color: #f59e0b;
+    background-color: #78350f;
+}
+
+body.dark-theme .timeline-main-end-note {
+    color: #9ca3af;
+}
+
+body.dark-theme .no-data-message {
+    color: #9ca3af;
+}
