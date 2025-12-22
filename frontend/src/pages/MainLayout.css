@@ -1,0 +1,71 @@
+
+/* === MainLayout.css === */
+
+/* Ana layout kabı */
+.main-layout {
+    display: flex;
+    background-color: #f0f2f5; /* Hafif gri bir arka plan */
+    min-height: 100vh;
+    width: 100%;
+    overflow-x: hidden; /* Yatay scrollbar'ı kaldır */
+}
+
+/* Sidebar - MainLayout içinde flex ile yan yana */
+.main-layout .sidebar {
+    flex-shrink: 0; /* Sidebar genişliği sabit kalsın */
+    width: 200px; /* Sidebar genişliği */
+}
+
+/* İçerik alanı */
+.content {
+    flex-grow: 1; /* Mevcut tüm alanı kapla */
+    padding: 2rem;
+    overflow-y: auto; /* İçerik taşarsa kaydırma çubuğu çıkar */
+    overflow-x: hidden; /* Yatay scrollbar'ı kaldır */
+    min-width: 0; /* Flex item'ın küçülmesine izin ver */
+}
+
+/* Sidebar varken içerik alanını ayarla - margin-left'e gerek yok, flex zaten hallediyor */
+.content.with-sidebar {
+    /* margin-left kaldırıldı - flex layout zaten yan yana koyuyor */
+}
+
+/* Sidebar yokken (örn: giriş sayfası) içerik tam ekran olsun */
+.content.full-width {
+    /* Tam genişlik zaten flex-grow ile sağlanıyor */
+}
+
+/* Chatbot açma/kapatma ikonu */
+.chatbot-toggler {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #007bff; /* Ana renk */
+    color: white;
+    font-size: 28px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    transition: transform 0.2s ease-in-out, background-color 0.2s;
+}
+
+.chatbot-toggler:hover {
+    transform: scale(1.1);
+    background-color: #0056b3; /* Hover rengi */
+}
+/* ================= DARK MODE ================= */
+body.dark-theme .main-layout {
+    background-color: #111827;
+}
+
+body.dark-theme .content {
+    background-color: #111827;
+    color: #f3f4f6;
+}
