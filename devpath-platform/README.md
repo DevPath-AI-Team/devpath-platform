@@ -1,4 +1,4 @@
-# DevPath AI - Kişiselleştirilmiş Java Öğrenme Platformu
+# DevPath AI - Kişiselleştirilmiş Yazılım Öğrenme Platformu
 
 DevPath AI, **yapay zeka destekli kişiselleştirilmiş yazılım öğrenme platformudur. Öğrencilerin mevcut bilgilerini değerlendirerek, zayıf yönlerini tespit edip özel öğrenme yolları oluşturan akıllı eğitim sistemidir.
 
