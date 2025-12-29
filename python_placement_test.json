@@ -1,0 +1,210 @@
+{
+  "test_info": {
+    "language": "PYTHON",
+    "title": "Python Seviye Belirleme Testi",
+    "description": "Bu test Python bilgi seviyenizi belirlemek için hazırlanmıştır.",
+    "total_questions": 15
+  },
+  "questions": [
+    
+    {
+      "id": 1,
+      "difficulty": "beginner",
+      "topic": "variables",
+      "question": "Python'da bir değişkene değer atamak için hangi operatör kullanılır?",
+      "options": {
+        "A": "==",
+        "B": "=",
+        "C": ":=",
+        "D": "=>"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 2,
+      "difficulty": "beginner",
+      "topic": "data_types",
+      "question": "print(type(3.14)) çıktısı nedir?",
+      "options": {
+        "A": "<class 'int'>",
+        "B": "<class 'float'>",
+        "C": "<class 'double'>",
+        "D": "<class 'decimal'>"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 3,
+      "difficulty": "beginner",
+      "topic": "strings",
+      "question": "'Hello' + ' ' + 'World' ifadesinin sonucu nedir?",
+      "options": {
+        "A": "HelloWorld",
+        "B": "Hello World",
+        "C": "Hello + World",
+        "D": "Hata verir"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 4,
+      "difficulty": "beginner",
+      "topic": "conditionals",
+      "question": "if x > 5: ifadesinden sonra ne gelmelidir?",
+      "options": {
+        "A": "{}",
+        "B": "Girinti (indentation)",
+        "C": ";",
+        "D": "then"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 5,
+      "difficulty": "beginner",
+      "topic": "loops",
+      "question": "for i in range(3): print(i) çıktısı nedir?",
+      "options": {
+        "A": "1 2 3",
+        "B": "0 1 2",
+        "C": "0 1 2 3",
+        "D": "1 2"
+      },
+      "correct_answer": "B"
+    },
+
+   
+    {
+      "id": 6,
+      "difficulty": "intermediate",
+      "topic": "list_comprehension",
+      "question": "Aşağıdakilerden hangisi list comprehension örneğidir?",
+      "options": {
+        "A": "for i in range(5): print(i)",
+        "B": "[i for i in range(5)]",
+        "C": "list(range(5))",
+        "D": "print(range(5))"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 7,
+      "difficulty": "intermediate",
+      "topic": "exceptions",
+      "question": "Exception yakalama için doğru kullanım hangisidir?",
+      "options": {
+        "A": "try: x=1/0",
+        "B": "catch ZeroDivisionError",
+        "C": "try: x=1/0 except ZeroDivisionError: pass",
+        "D": "try:\n    x=1/0\nexcept ZeroDivisionError:\n    pass"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 8,
+      "difficulty": "intermediate",
+      "topic": "file_handling",
+      "question": "Bir dosya güvenli şekilde nasıl açılır?",
+      "options": {
+        "A": "open('a.txt')",
+        "B": "with open('a.txt') as f:",
+        "C": "file('a.txt')",
+        "D": "open file a.txt"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 9,
+      "difficulty": "intermediate",
+      "topic": "oop",
+      "question": "self neyi temsil eder?",
+      "options": {
+        "A": "Sınıfı",
+        "B": "Fonksiyonu",
+        "C": "Nesnenin kendisini",
+        "D": "Static alanı"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 10,
+      "difficulty": "intermediate",
+      "topic": "json",
+      "question": "json.load() ne yapar?",
+      "options": {
+        "A": "JSON’u stringe çevirir",
+        "B": "JSON’u dosyaya yazar",
+        "C": "JSON dosyasını Python objesine çevirir",
+        "D": "JSON doğrular"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 11,
+      "difficulty": "intermediate",
+      "topic": "functions",
+      "question": "*args ne için kullanılır?",
+      "options": {
+        "A": "Zorunlu parametre",
+        "B": "Anahtar parametre",
+        "C": "Değişken sayıda argüman almak",
+        "D": "Decorator tanımlamak"
+      },
+      "correct_answer": "C"
+    },
+
+   
+    {
+      "id": 12,
+      "difficulty": "advanced",
+      "topic": "generators",
+      "question": "Aşağıdakilerden hangisi generator’dür?",
+      "options": {
+        "A": "[x for x in range(5)]",
+        "B": "(x for x in range(5))",
+        "C": "list(range(5))",
+        "D": "range(5)"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 13,
+      "difficulty": "advanced",
+      "topic": "async",
+      "question": "async/await ne amaçla kullanılır?",
+      "options": {
+        "A": "Çok çekirdekli işlem",
+        "B": "Paralel thread",
+        "C": "Asenkron I/O",
+        "D": "Bellek yönetimi"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 14,
+      "difficulty": "advanced",
+      "topic": "threading",
+      "question": "Python’da GIL neyi etkiler?",
+      "options": {
+        "A": "Bellek kullanımı",
+        "B": "Thread’lerin CPU paralelliği",
+        "C": "Dosya okuma",
+        "D": "Garbage collection"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 15,
+      "difficulty": "advanced",
+      "topic": "decorators",
+      "question": "Decorator ne yapar?",
+      "options": {
+        "A": "Sınıf oluşturur",
+        "B": "Fonksiyon davranışını sarmalar",
+        "C": "Hata yakalar",
+        "D": "Thread başlatır"
+      },
+      "correct_answer": "B"
+    }
+  ]
+}

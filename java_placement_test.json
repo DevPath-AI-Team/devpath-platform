@@ -1,0 +1,143 @@
+{
+  "test_info": {
+    "title": "Java Seviye Belirleme Testi",
+    "total_questions": 15
+  },
+  "questions": [
+    {
+      "id": 1,
+      "question": "Java'da hangisi doğru bir değişken ismidir?",
+      "options": ["A) 123variable", "B) _variable", "C) variable-name", "D) class"],
+      "correct_answer": "B",
+      "topic": "variables",
+      "difficulty": "beginner",
+      "explanation": "Java'da değişken isimleri bir harf, alt çizgi (_) veya dolar işareti ($) ile başlamalıdır. Sayı ile başlayamaz ve 'class' gibi rezerve edilmiş anahtar kelimeler olamaz."
+    },
+    {
+      "id": 2,
+      "question": "Java'da '==' operatörü neyi karşılaştırır? (Nesneler için)",
+      "options": ["A) Değerleri", "B) Referansları (Hafıza Adreslerini)", "C) Hem değerleri hem referansları", "D) İçeriklerini"],
+      "correct_answer": "B",
+      "topic": "operators",
+      "difficulty": "beginner",
+      "explanation": "Primitive tipler (int, char, vb.) için '==' değerleri karşılaştırırken, nesneler için hafızadaki referanslarının (adreslerinin) aynı olup olmadığını kontrol eder. İçerik karşılaştırması için .equals() metodu kullanılır."
+    },
+    {
+      "id": 3,
+      "question": "Aşağıdaki döngülerden hangisi en az bir kere çalışır?",
+      "options": ["A) for", "B) while", "C) do-while", "D) Hepsi"],
+      "correct_answer": "C",
+      "topic": "loops",
+      "difficulty": "beginner",
+      "explanation": "do-while döngüsü, koşulu döngü bloğunu bir kez çalıştırdıktan sonra kontrol eder. Bu nedenle, koşul başlangıçta yanlış olsa bile döngü en az bir kez çalışır."
+    },
+    {
+      "id": 4,
+      "question": "Java'da bir metodun geri dönüş değeri yoksa hangi keyword kullanılır?",
+      "options": ["A) null", "B) void", "C) empty", "D) none"],
+      "correct_answer": "B",
+      "topic": "methods",
+      "difficulty": "beginner",
+      "explanation": "'void' anahtar kelimesi, bir metodun herhangi bir değer döndürmediğini belirtmek için kullanılır."
+    },
+    {
+      "id": 5,
+      "question": "int[] numbers = new int[5]; dizisinde kaç eleman vardır?",
+      "options": ["A) 4", "B) 5", "C) 6", "D) Belirsiz"],
+      "correct_answer": "B",
+      "topic": "arrays",
+      "difficulty": "beginner",
+      "explanation": "Java'da bir dizi (array) tanımlanırken köşeli parantez içinde belirtilen sayı, o dizinin eleman sayısını (length) belirtir. Bu dizi 0'dan 4'e kadar olan indekslere sahip 5 eleman tutabilir."
+    },
+    {
+      "id": 6,
+      "question": "Hangisi OOP'nin temel prensiplerinden biri DEĞİLDİR?",
+      "options": ["A) Encapsulation", "B) Inheritance", "C) Polymorphism", "D) Iteration"],
+      "correct_answer": "D",
+      "topic": "oop_concepts",
+      "difficulty": "intermediate",
+      "explanation": "Iteration (yineleme), programlamada genel bir kavramdır (döngüler gibi) ancak Nesne Yönelimli Programlamanın (OOP) dört temel prensibinden biri değildir. OOP prensipleri Encapsulation, Inheritance, Polymorphism ve Abstraction'dır."
+    },
+    {
+      "id": 7,
+      "question": "'private' access modifier ne anlama gelir?",
+      "options": ["A) Sadece aynı class içinden erişilebilir", "B) Aynı package içinden erişilebilir", "C) Tüm class'lardan erişilebilir", "D) Sadece alt sınıflardan erişilebilir"],
+      "correct_answer": "A",
+      "topic": "access_modifiers",
+      "difficulty": "intermediate",
+      "explanation": "'private' erişim belirleyicisi, bir üyenin (değişken veya metod) sadece tanımlandığı sınıfın içinden erişilebilir olmasını sağlar. Bu, encapsulation'ın temelini oluşturur."
+    },
+    {
+      "id": 8,
+      "question": "Hangisi Java'da exception handling için kullanılan keyword'lerden biri DEĞİLDİR?",
+      "options": ["A) try", "B) catch", "C) finally", "D) error"],
+      "correct_answer": "D",
+      "topic": "exceptions",
+      "difficulty": "intermediate",
+      "explanation": "Java'da hata yönetimi (exception handling) için try, catch, finally, throw ve throws anahtar kelimeleri kullanılır. 'error' bir anahtar kelime değil, genellikle kurtarılamayan ciddi sistem hatalarını temsil eden bir sınıftır."
+    },
+    {
+      "id": 9,
+      "question": "ArrayList ve LinkedList arasındaki temel fark nedir?",
+      "options": ["A) ArrayList synchronized'dır", "B) LinkedList daha hızlıdır (her zaman)", "C) ArrayList array tabanlıdır, LinkedList node tabanlıdır", "D) LinkedList daha az hafıza kullanır"],
+      "correct_answer": "C",
+      "topic": "collections",
+      "difficulty": "intermediate",
+      "explanation": "ArrayList, dahili olarak dinamik bir dizi (array) kullanır ve elemanlara indeks ile hızlı erişim (O(1)) sağlar. LinkedList ise her elemanı bir önceki ve sonraki elemanı işaret eden bir düğüm (node) olarak tutar, bu da ekleme ve silme işlemlerini (özellikle ortadan) daha verimli hale getirir."
+    },
+    {
+      "id": 10,
+      "question": "'final' keyword'ü bir class'ın önünde kullanılırsa ne olur?",
+      "options": ["A) Değiştirilemez", "B) Override edilemez", "C) O class'tan kalıtım alınamaz (extend edilemez)", "D) Hiçbir şey olmaz"],
+      "correct_answer": "C",
+      "topic": "final_keyword",
+      "difficulty": "intermediate",
+      "explanation": "Bir sınıf 'final' olarak tanımlandığında, bu sınıftan başka bir sınıfın kalıtım yoluyla türetilmesi (extend edilmesi) engellenmiş olur. Bu, genellikle güvenlik veya tasarım nedenleriyle yapılır (örn: String sınıfı)."
+    },
+    {
+      "id": 11,
+      "question": "HashMap'te null key kabul edilir mi?",
+      "options": ["A) Evet, sadece bir tane", "B) Evet, birden fazla", "C) Hayır, hiç kabul edilmez", "D) Sadece value'lar null olabilir"],
+      "correct_answer": "A",
+      "topic": "collections",
+      "difficulty": "advanced",
+      "explanation": "HashMap, bir adet null anahtara (key) ve birden fazla null değere (value) izin verir. Null anahtar, hash kodu 0 olan bir girişte saklanır."
+    },
+    {
+      "id": 12,
+      "question": "Thread'ler arasında senkronizasyon için hangisi kullanılmaz?",
+      "options": ["A) volatile", "B) synchronized", "C) transient", "D) AtomicInteger"],
+      "correct_answer": "C",
+      "topic": "multithreading",
+      "difficulty": "advanced",
+      "explanation": "'transient' anahtar kelimesi, bir alanın (field) nesne serileştirme (serialization) işlemine dahil edilmemesini sağlar. Thread senkronizasyonu ile bir ilgisi yoktur. 'volatile', 'synchronized' ve Atomic sınıfları ise thread güvenliğini sağlamak için kullanılır."
+    },
+    {
+      "id": 13,
+      "question": "Java'da memory leak nasıl oluşabilir?",
+      "options": ["A) Static collection'lara sürekli eleman ekleyip çıkarmamak", "B) Kapatılmayan veritabanı bağlantıları", "C) Kaydı silinmeyen listener'lar", "D) Hepsi"],
+      "correct_answer": "D",
+      "topic": "memory_management",
+      "difficulty": "advanced",
+      "explanation": "Java'da Garbage Collector olmasına rağmen, artık ihtiyaç duyulmayan nesnelere olan referanslar tutulmaya devam ederse memory leak oluşabilir. Static koleksiyonlar, kapatılmayan kaynaklar (dosyalar, bağlantılar) ve kaydı silinmeyen listener'lar bunun yaygın örnekleridir."
+    },
+    {
+      "id": 14,
+      "question": "Java 8 Stream API'de map() ve flatMap() arasındaki fark nedir?",
+      "options": ["A) map bir-e-bir, flatMap bir-e-çok dönüşüm yapar", "B) flatMap() daha yavaştır", "C) map() sadece sayılarla çalışır", "D) Fark yoktur"],
+      "correct_answer": "A",
+      "topic": "streams_api",
+      "difficulty": "advanced",
+      "explanation": "map() metodu, her elemanı alıp tek bir eleman döndüren bir fonksiyonu uygular (örn: bir stream'deki her string'i uzunluğuna (int) çevirmek). flatMap() ise her elemanı alıp bir stream döndüren bir fonksiyonu uygular ve sonuçta ortaya çıkan tüm stream'leri tek bir stream'de birleştirir (örn: bir liste listesini tek bir listeye düzleştirmek)."
+    },
+    {
+      "id": 15,
+      "question": "JVM'de PermGen ve Metaspace arasındaki fark nedir?",
+      "options": ["A) PermGen Java 8'de Metaspace ile değiştirilmiştir", "B) Metaspace native memory kullanır", "C) Metaspace dinamik olarak büyüyebilir", "D) Hepsi"],
+      "correct_answer": "D",
+      "topic": "jvm_internals",
+      "difficulty": "advanced",
+      "explanation": "Java 8 ile birlikte, sınıf meta verilerinin saklandığı ve boyutu sabit olan PermGen (Permanent Generation) alanı, native memory (işletim sistemi tarafından yönetilen bellek) kullanan ve varsayılan olarak dinamik olarak büyüyebilen Metaspace ile değiştirilmiştir. Bu, 'java.lang.OutOfMemoryError: PermGen space' hatasını büyük ölçüde ortadan kaldırmıştır."
+    }
+  ]
+}

@@ -1,0 +1,355 @@
+{
+  "topics": [
+    {
+      "id": 1,
+      "name": "Python Giriş ve Kurulum",
+      "description": "Python programlama diline giriş, kurulum ve ilk program yazma",
+      "prerequisite": [],
+      "youtube_url": ""
+    },
+    {
+      "id": 2,
+      "name": "Değişkenler ve Veri Tipleri",
+      "description": "Python'da değişken tanımlama, int, float, string, boolean veri tipleri",
+      "prerequisite": [1],
+      "youtube_url": ""
+    },
+    {
+      "id": 3,
+      "name": "Operatörler",
+      "description": "Aritmetik, karşılaştırma, mantıksal ve atama operatörleri",
+      "prerequisite": [2],
+      "youtube_url": ""
+    },
+    {
+      "id": 4,
+      "name": "String İşlemleri",
+      "description": "String metodları, formatlama, slicing ve string manipülasyonu",
+      "prerequisite": [2],
+      "youtube_url": ""
+    },
+    {
+      "id": 5,
+      "name": "Kullanıcı Girişi ve Çıkışı",
+      "description": "input() ve print() fonksiyonları, tip dönüşümleri",
+      "prerequisite": [2],
+      "youtube_url": ""
+    },
+    {
+      "id": 6,
+      "name": "Koşullu İfadeler",
+      "description": "if, elif, else yapıları ve koşullu mantık",
+      "prerequisite": [3],
+      "youtube_url": ""
+    },
+    {
+      "id": 7,
+      "name": "Döngüler - For",
+      "description": "for döngüsü, range() fonksiyonu ve iterasyon",
+      "prerequisite": [6],
+      "youtube_url": ""
+    },
+    {
+      "id": 8,
+      "name": "Döngüler - While",
+      "description": "while döngüsü, break, continue ve döngü kontrolü",
+      "prerequisite": [6],
+      "youtube_url": ""
+    },
+    {
+      "id": 9,
+      "name": "Listeler",
+      "description": "Liste oluşturma, indeksleme, list metodları ve list comprehension",
+      "prerequisite": [7, 8],
+      "youtube_url": ""
+    },
+    {
+      "id": 10,
+      "name": "Tuple ve Set",
+      "description": "Tuple ve Set veri yapıları, farkları ve kullanım alanları",
+      "prerequisite": [9],
+      "youtube_url": ""
+    },
+    {
+      "id": 11,
+      "name": "Sözlükler (Dictionary)",
+      "description": "Dictionary oluşturma, key-value çiftleri ve dictionary metodları",
+      "prerequisite": [9],
+      "youtube_url": ""
+    },
+    {
+      "id": 12,
+      "name": "Fonksiyonlar - Temel",
+      "description": "Fonksiyon tanımlama, parametreler ve return değerleri",
+      "prerequisite": [9],
+      "youtube_url": ""
+    },
+    {
+      "id": 13,
+      "name": "Fonksiyonlar - İleri",
+      "description": "*args, **kwargs, lambda fonksiyonları ve closure",
+      "prerequisite": [12],
+      "youtube_url": ""
+    },
+    {
+      "id": 14,
+      "name": "Modüller ve Paketler",
+      "description": "import, from-import, kendi modül oluşturma ve pip kullanımı",
+      "prerequisite": [12],
+      "youtube_url": ""
+    },
+    {
+      "id": 15,
+      "name": "Dosya İşlemleri",
+      "description": "Dosya okuma, yazma, with statement ve dosya modları",
+      "prerequisite": [12],
+      "youtube_url": ""
+    },
+    {
+      "id": 16,
+      "name": "Hata Yönetimi",
+      "description": "try, except, finally, raise ve özel exception oluşturma",
+      "prerequisite": [12],
+      "youtube_url": ""
+    },
+    {
+      "id": 17,
+      "name": "Nesne Yönelimli Programlama - Giriş",
+      "description": "Class ve object kavramları, __init__ metodu ve attribute",
+      "prerequisite": [13],
+      "youtube_url": ""
+    },
+    {
+      "id": 18,
+      "name": "OOP - Kalıtım (Inheritance)",
+      "description": "Sınıf kalıtımı, super() fonksiyonu ve method override",
+      "prerequisite": [17],
+      "youtube_url": ""
+    },
+    {
+      "id": 19,
+      "name": "OOP - Encapsulation ve Polymorphism",
+      "description": "Kapsülleme, private/protected üyeler ve çok biçimlilik",
+      "prerequisite": [18],
+      "youtube_url": ""
+    },
+    {
+      "id": 20,
+      "name": "OOP - Magic Methods",
+      "description": "__str__, __repr__, __len__, __add__ ve diğer özel metodlar",
+      "prerequisite": [19],
+      "youtube_url": ""
+    },
+    {
+      "id": 21,
+      "name": "Decorators",
+      "description": "Fonksiyon dekoratörleri, @property ve class decorators",
+      "prerequisite": [13, 17],
+      "youtube_url": ""
+    },
+    {
+      "id": 22,
+      "name": "Generators ve Iterators",
+      "description": "yield keyword, generator expressions ve iterator protocol",
+      "prerequisite": [13],
+      "youtube_url": ""
+    },
+    {
+      "id": 23,
+      "name": "List Comprehension ve Generator Expression",
+      "description": "Tek satırda liste, dict ve set oluşturma teknikleri",
+      "prerequisite": [9, 11, 22],
+      "youtube_url": ""
+    },
+    {
+      "id": 24,
+      "name": "Regular Expressions (Regex)",
+      "description": "re modülü, pattern matching ve metin işleme",
+      "prerequisite": [4, 14],
+      "youtube_url": ""
+    },
+    {
+      "id": 25,
+      "name": "Tarih ve Zaman İşlemleri",
+      "description": "datetime modülü, tarih formatlama ve zaman hesaplamaları",
+      "prerequisite": [14],
+      "youtube_url": ""
+    },
+    {
+      "id": 26,
+      "name": "JSON İşlemleri",
+      "description": "JSON okuma, yazma, API veri işleme",
+      "prerequisite": [11, 15],
+      "youtube_url": ""
+    },
+    {
+      "id": 27,
+      "name": "Virtual Environment",
+      "description": "venv oluşturma, requirements.txt ve proje izolasyonu",
+      "prerequisite": [14],
+      "youtube_url": ""
+    },
+    {
+      "id": 28,
+      "name": "Unit Testing",
+      "description": "unittest modülü, test yazma ve test-driven development",
+      "prerequisite": [16, 17],
+      "youtube_url": ""
+    },
+    {
+      "id": 29,
+      "name": "Multithreading",
+      "description": "threading modülü, Thread oluşturma ve senkronizasyon",
+      "prerequisite": [17],
+      "youtube_url": ""
+    },
+    {
+      "id": 30,
+      "name": "Multiprocessing",
+      "description": "multiprocessing modülü, Process ve Pool kullanımı",
+      "prerequisite": [29],
+      "youtube_url": ""
+    },
+    {
+      "id": 31,
+      "name": "Async/Await",
+      "description": "asyncio modülü, asenkron programlama ve coroutines",
+      "prerequisite": [22, 29],
+      "youtube_url": ""
+    },
+    {
+      "id": 32,
+      "name": "Context Managers",
+      "description": "with statement, __enter__, __exit__ ve contextlib",
+      "prerequisite": [20],
+      "youtube_url": ""
+    },
+    {
+      "id": 33,
+      "name": "Type Hints ve Annotations",
+      "description": "Tip belirtme, typing modülü ve mypy kullanımı",
+      "prerequisite": [13, 17],
+      "youtube_url": ""
+    },
+    {
+      "id": 34,
+      "name": "Veritabanı - SQLite",
+      "description": "sqlite3 modülü, SQL sorguları ve CRUD işlemleri",
+      "prerequisite": [15, 16],
+      "youtube_url": ""
+    },
+    {
+      "id": 35,
+      "name": "HTTP İstekleri",
+      "description": "requests kütüphanesi, GET/POST istekleri ve API kullanımı",
+      "prerequisite": [26],
+      "youtube_url": ""
+    },
+    {
+      "id": 36,
+      "name": "Web Scraping",
+      "description": "BeautifulSoup ile web kazıma ve veri çekme",
+      "prerequisite": [35],
+      "youtube_url": ""
+    },
+    {
+      "id": 37,
+      "name": "NumPy Temelleri",
+      "description": "NumPy array oluşturma, array işlemleri ve matematiksel fonksiyonlar",
+      "prerequisite": [9, 14],
+      "youtube_url": ""
+    },
+    {
+      "id": 38,
+      "name": "Pandas Temelleri",
+      "description": "DataFrame ve Series, veri okuma/yazma ve temel işlemler",
+      "prerequisite": [37],
+      "youtube_url": ""
+    },
+    {
+      "id": 39,
+      "name": "Veri Analizi ile Pandas",
+      "description": "Veri filtreleme, gruplama, birleştirme ve pivot tablolar",
+      "prerequisite": [38],
+      "youtube_url": ""
+    },
+    {
+      "id": 40,
+      "name": "Matplotlib ile Veri Görselleştirme",
+      "description": "Grafik oluşturma, özelleştirme ve farklı grafik türleri",
+      "prerequisite": [38],
+      "youtube_url": ""
+    },
+    {
+      "id": 41,
+      "name": "Seaborn ile İstatistiksel Görselleştirme",
+      "description": "İstatistiksel grafikler ve gelişmiş görselleştirme",
+      "prerequisite": [40],
+      "youtube_url": ""
+    },
+    {
+      "id": 42,
+      "name": "Flask Web Framework - Giriş",
+      "description": "Flask kurulumu, routing ve template rendering",
+      "prerequisite": [14, 26],
+      "youtube_url": ""
+    },
+    {
+      "id": 43,
+      "name": "FastAPI - Giriş",
+      "description": "FastAPI kurulumu, endpoint oluşturma ve otomatik dokümantasyon",
+      "prerequisite": [26, 33],
+      "youtube_url": ""
+    },
+    {
+      "id": 44,
+      "name": "REST API Geliştirme",
+      "description": "RESTful API tasarımı, CRUD endpoint'leri ve best practices",
+      "prerequisite": [43],
+      "youtube_url": ""
+    },
+    {
+      "id": 45,
+      "name": "ORM - SQLAlchemy",
+      "description": "SQLAlchemy ile veritabanı modelleme ve sorgulama",
+      "prerequisite": [34, 43],
+      "youtube_url": ""
+    },
+    {
+      "id": 46,
+      "name": "Authentication ve Authorization",
+      "description": "JWT, OAuth2 ve güvenlik implementasyonu",
+      "prerequisite": [44],
+      "youtube_url": ""
+    },
+    {
+      "id": 47,
+      "name": "Design Patterns",
+      "description": "Singleton, Factory, Observer ve diğer tasarım kalıpları",
+      "prerequisite": [19, 21],
+      "youtube_url": ""
+    },
+    {
+      "id": 48,
+      "name": "SOLID Prensipleri",
+      "description": "Yazılım tasarım prensipleri ve clean code",
+      "prerequisite": [47],
+      "youtube_url": ""
+    },
+    {
+      "id": 49,
+      "name": "Logging ve Debugging",
+      "description": "logging modülü, log seviyeleri ve debugging teknikleri",
+      "prerequisite": [16, 27],
+      "youtube_url": ""
+    },
+    {
+      "id": 50,
+      "name": "Proje: Python ile Tam Uygulama",
+      "description": "Öğrenilen tüm konuları birleştiren kapsamlı proje geliştirme",
+      "prerequisite": [44, 45, 48],
+      "youtube_url": ""
+    }
+  ]
+}
+

@@ -1,0 +1,40 @@
+{
+  "java": {
+    "test_info": {
+      "title": "Java Seviye Belirleme Testi",
+      "total_questions": 30
+    },
+    "questions": [
+      { "id": 1, "question": "Java'da hangisi doğru bir değişken ismidir?", "options": ["A) 123variable", "B) _variable", "C) variable-name", "D) class"], "correct_answer": "B", "topic": "variables", "difficulty": "beginner" },
+      { "id": 2, "question": "Java'da '==' operatörü nesnelerde neyi karşılaştırır?", "options": ["A) Değerleri", "B) Referansları", "C) İçerikleri", "D) Tipleri"], "correct_answer": "B", "topic": "operators", "difficulty": "beginner" },
+      { "id": 3, "question": "Hangi döngü en az bir kez çalışır?", "options": ["A) for", "B) while", "C) do-while", "D) foreach"], "correct_answer": "C", "topic": "loops", "difficulty": "beginner" },
+      { "id": 4, "question": "Geri dönüş değeri olmayan metod için hangi keyword kullanılır?", "options": ["A) null", "B) void", "C) empty", "D) none"], "correct_answer": "B", "topic": "methods", "difficulty": "beginner" },
+      { "id": 5, "question": "int[] arr = new int[5]; dizisinin boyu kaçtır?", "options": ["A) 4", "B) 5", "C) 6", "D) 0"], "correct_answer": "B", "topic": "arrays", "difficulty": "beginner" },
+      { "id": 6, "question": "OOP'nin temel prensiplerinden biri değildir?", "options": ["A) Encapsulation", "B) Inheritance", "C) Polymorphism", "D) Compilation"], "correct_answer": "D", "topic": "oop", "difficulty": "beginner" },
+      { "id": 7, "question": "private erişim belirleyicisi ne anlama gelir?", "options": ["A) Her yerden erişilir", "B) Aynı package", "C) Aynı class", "D) Alt class"], "correct_answer": "C", "topic": "encapsulation", "difficulty": "beginner" },
+      { "id": 8, "question": "Java programı hangi metodla başlar?", "options": ["A) start()", "B) run()", "C) main()", "D) init()"], "correct_answer": "C", "topic": "syntax", "difficulty": "beginner" },
+      { "id": 9, "question": "char veri tipi ne tutar?", "options": ["A) Metin", "B) Karakter", "C) Boolean", "D) Nesne"], "correct_answer": "B", "topic": "datatypes", "difficulty": "beginner" },
+      { "id": 10, "question": "String sınıfı mutable mıdır?", "options": ["A) Evet", "B) Hayır", "C) Bazen", "D) JVM'e bağlı"], "correct_answer": "B", "topic": "string", "difficulty": "beginner" },
+      { "id": 11, "question": "for döngüsü genellikle ne için kullanılır?", "options": ["A) Sonsuz döngü", "B) Sayaç kontrollü", "C) Koşulsuz", "D) Event"], "correct_answer": "B", "topic": "loops", "difficulty": "intermediate" },
+      { "id": 12, "question": "Array ve ArrayList arasındaki temel fark nedir?", "options": ["A) Hız", "B) Boyut", "C) Tip", "D) Thread"], "correct_answer": "B", "topic": "collections", "difficulty": "intermediate" },
+      { "id": 13, "question": "Method overloading neye dayanır?", "options": ["A) Return type", "B) Parametre sayısı/tipi", "C) Access modifier", "D) Class adı"], "correct_answer": "B", "topic": "methods", "difficulty": "intermediate" },
+      { "id": 14, "question": "this anahtar kelimesi neyi temsil eder?", "options": ["A) Class", "B) Metod", "C) Mevcut nesne", "D) Parent"], "correct_answer": "C", "topic": "oop", "difficulty": "intermediate" },
+      { "id": 15, "question": "Static metodlar neye aittir?", "options": ["A) Nesne", "B) Class", "C) Interface", "D) JVM"], "correct_answer": "B", "topic": "static", "difficulty": "intermediate" },
+      { "id": 16, "question": "final keyword'ü değişkende ne yapar?", "options": ["A) Silinir", "B) Değiştirilemez", "C) Gizlenir", "D) Override"], "correct_answer": "B", "topic": "final", "difficulty": "intermediate" },
+      { "id": 17, "question": "Exception handling için hangisi kullanılmaz?", "options": ["A) try", "B) catch", "C) throw", "D) error"], "correct_answer": "D", "topic": "exceptions", "difficulty": "intermediate" },
+      { "id": 18, "question": "Constructor'ın return type'ı var mıdır?", "options": ["A) Evet", "B) Hayır", "C) void", "D) Class"], "correct_answer": "B", "topic": "constructors", "difficulty": "intermediate" },
+      { "id": 19, "question": "Abstract class'ta ne olabilir?", "options": ["A) Sadece abstract metod", "B) Sadece concrete", "C) İkisi de", "D) Constructor yok"], "correct_answer": "C", "topic": "abstraction", "difficulty": "intermediate" },
+      { "id": 20, "question": "Interface içinde değişkenler nasıldır?", "options": ["A) private", "B) protected", "C) public static final", "D) local"], "correct_answer": "C", "topic": "interfaces", "difficulty": "intermediate" },
+      { "id": 21, "question": "HashMap null key kabul eder mi?", "options": ["A) Hayır", "B) 1 tane", "C) Birden fazla", "D) Sadece value"], "correct_answer": "B", "topic": "collections", "difficulty": "advanced" },
+      { "id": 22, "question": "ConcurrentHashMap neden kullanılır?", "options": ["A) Hız", "B) Thread safety", "C) Memory", "D) IO"], "correct_answer": "B", "topic": "multithreading", "difficulty": "advanced" },
+      { "id": 23, "question": "volatile keyword ne sağlar?", "options": ["A) Atomicity", "B) Visibility", "C) Lock", "D) Speed"], "correct_answer": "B", "topic": "multithreading", "difficulty": "advanced" },
+      { "id": 24, "question": "Stream API map() ne yapar?", "options": ["A) Filtreler", "B) Dönüştürür", "C) Sıralar", "D) Toplar"], "correct_answer": "B", "topic": "streams", "difficulty": "advanced" },
+      { "id": 25, "question": "flatMap() ne zaman kullanılır?", "options": ["A) Nested yapı", "B) Sayılar", "C) String", "D) Null"], "correct_answer": "A", "topic": "streams", "difficulty": "advanced" },
+      { "id": 26, "question": "JVM hangi bileşeni içermez?", "options": ["A) ClassLoader", "B) GC", "C) JIT", "D) Compiler"], "correct_answer": "D", "topic": "jvm", "difficulty": "advanced" },
+      { "id": 27, "question": "Memory leak Java'da nasıl oluşur?", "options": ["A) GC yok", "B) Referans bırakılmaz", "C) Referans silinmez", "D) Stack"], "correct_answer": "C", "topic": "memory", "difficulty": "advanced" },
+      { "id": 28, "question": "Checked exception ne zaman yakalanır?", "options": ["A) Runtime", "B) Compile time", "C) JVM", "D) GC"], "correct_answer": "B", "topic": "exceptions", "difficulty": "advanced" },
+      { "id": 29, "question": "Optional sınıfının amacı nedir?", "options": ["A) Hız", "B) Null safety", "C) Thread", "D) IO"], "correct_answer": "B", "topic": "java8", "difficulty": "advanced" },
+      { "id": 30, "question": "Metaspace neyi saklar?", "options": ["A) Nesneler", "B) Class metadata", "C) Stack", "D) Heap"], "correct_answer": "B", "topic": "jvm", "difficulty": "advanced" }
+    ]
+  }
+}

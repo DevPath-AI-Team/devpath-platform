@@ -1,0 +1,316 @@
+.lesson-layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1.5rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.lesson-left-column,
+.lesson-right-column {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+.lesson-title {
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #1e293b;
+}
+
+.lesson-description {
+  font-size: 1.1rem;
+  color: #475569;
+  margin-bottom: 2rem;
+}
+
+.video-player-wrapper {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  border-radius: 8px;
+  background-color: #000;
+}
+
+.video-player-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* Sağ Sütun: Online Kod Editörü */
+.online-editor-wrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.editor-header {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #1e293b;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.code-editor-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  flex-grow: 1;
+  min-height: 600px;
+  height: 100%;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+.code-editor-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  background-color: #f1f5f9;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+}
+
+.run-code-btn {
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  padding: 0.65rem 1.25rem;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 4px rgba(37, 99, 235, 0.2);
+}
+
+.run-code-btn:hover:not(:disabled) {
+  background-color: #1d4ed8;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(37, 99, 235, 0.3);
+}
+
+.run-code-btn:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.run-code-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.code-input {
+  width: 100%;
+  flex-grow: 1;
+  min-height: 350px;
+  height: 400px;
+  border-radius: 8px;
+  border: 2px solid #3b82f6;
+  padding: 1.25rem;
+  font-family: 'Courier New', 'Monaco', 'Consolas', monospace;
+  font-size: 1rem;
+  line-height: 1.8;
+  background-color: #1e293b;
+  color: #e2e8f0;
+  resize: vertical;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: border-color 0.2s ease;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+.code-input:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1), 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.code-output {
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  background-color: #f8fafc;
+  min-height: 180px;
+  max-height: 250px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.output-header {
+  padding: 0.75rem 1rem;
+  background-color: #e5e7eb;
+  border-bottom: 1px solid #d1d5db;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #374151;
+  border-radius: 8px 8px 0 0;
+}
+
+.output-content {
+  flex-grow: 1;
+  padding: 1.25rem;
+  margin: 0;
+  font-family: 'Courier New', 'Monaco', 'Consolas', monospace;
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: #1f2937;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  overflow-y: auto;
+  background-color: #ffffff;
+  border-radius: 0 0 8px 8px;
+}
+
+/* Sonraki Ders Butonu */
+.next-lesson-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(37, 99, 235, 0.3) !important;
+}
+
+.next-lesson-btn:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+/* Alt Kısım: Notlar */
+.notes-section {
+  margin-top: 2rem;
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  box-sizing: border-box;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+.notes-header {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #1e293b;
+}
+
+.notes-textarea {
+  width: 100%;
+  min-height: 150px;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+  padding: 1.5rem;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #334155;
+  resize: vertical;
+  background-color: #f8fafc;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+.notes-footer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.save-note-btn {
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.save-note-btn:hover {
+  background-color: #1d4ed8;
+}
+
+.save-status-message {
+  margin-left: 1rem;
+  font-size: 0.9rem;
+  color: #16a34a;
+}
+
+.error-message {
+  color: #dc2626;
+}
+
+/* ================= DARK MODE ================= */
+body.dark-theme .lesson-left-column,
+body.dark-theme .lesson-right-column {
+  background-color: #1f2937;
+  border-color: #374151;
+  color: #f3f4f6;
+}
+
+body.dark-theme .lesson-left-column h1 {
+  color: #f3f4f6;
+}
+
+body.dark-theme .lesson-left-column p {
+  color: #9ca3af;
+}
+
+body.dark-theme .notes-section {
+  background-color: #1f2937;
+  border-color: #374151;
+}
+
+body.dark-theme .notes-header {
+  color: #f3f4f6;
+}
+
+body.dark-theme .notes-textarea {
+  background-color: #111827;
+  border-color: #374151;
+  color: #f3f4f6;
+}
+
+body.dark-theme .code-input {
+  background-color: #0f172a;
+  border-color: #3b82f6;
+  color: #e2e8f0;
+}
+
+body.dark-theme .code-output {
+  background-color: #1f2937;
+  border-color: #374151;
+}
+
+body.dark-theme .output-header {
+  background-color: #374151;
+  border-color: #4b5563;
+  color: #f3f4f6;
+}
+
+body.dark-theme .output-content {
+  background-color: #111827;
+  color: #e2e8f0;
+}
+
+body.dark-theme .code-editor-toolbar {
+  background-color: #1f2937;
+  border-color: #374151;
+}
+
+body.dark-theme .code-editor-toolbar span {
+  color: #9ca3af;
+}
