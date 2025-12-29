@@ -1,0 +1,89 @@
+{
+  "javascript": {
+    "test_info": {
+      "title": "JavaScript Seviye Belirleme Testi",
+      "total_questions": 10
+    },
+    "questions": [
+      {
+        "id": 1,
+        "question": "JavaScript'te bir değişken tanımlamak için kullanılan anahtar kelimelerden hangisi yeniden atanamaz?",
+        "options": ["A) var", "B) let", "C) const", "D) static"],
+        "correct_answer": "C",
+        "topic": "variables",
+        "difficulty": "beginner"
+      },
+      {
+        "id": 2,
+        "question": "console.log(typeof 42) ifadesinin çıktısı nedir?",
+        "options": ["A) number", "B) integer", "C) float", "D) int"],
+        "correct_answer": "A",
+        "topic": "data_types",
+        "difficulty": "beginner"
+      },
+      {
+        "id": 3,
+        "question": "Bir string'i bir sayıya dönüştürmek için hangi fonksiyon kullanılır?",
+        "options": ["A) String()", "B) Number()", "C) toInteger()", "D) parseFloat()"],
+        "correct_answer": "B",
+        "topic": "type_conversion",
+        "difficulty": "beginner"
+      },
+      {
+        "id": 4,
+        "question": "'5' == 5 ifadesinin sonucu nedir?",
+        "options": ["A) true", "B) false", "C) undefined", "D) Hata verir"],
+        "correct_answer": "A",
+        "topic": "operators",
+        "difficulty": "beginner"
+      },
+      {
+        "id": 5,
+        "question": "'5' === 5 ifadesinin sonucu nedir?",
+        "options": ["A) true", "B) false", "C) null", "D) Hata verir"],
+        "correct_answer": "B",
+        "topic": "operators",
+        "difficulty": "beginner"
+      },
+      {
+        "id": 6,
+        "question": "Bir dizi (array) oluşturmak için hangi sözdizimi doğrudur?",
+        "options": ["A) {1, 2, 3}", "B) (1, 2, 3)", "C) [1, 2, 3]", "D) <1, 2, 3>"],
+        "correct_answer": "C",
+        "topic": "arrays",
+        "difficulty": "beginner"
+      },
+      {
+        "id": 7,
+        "question": "Bir fonksiyon tanımlamak için en yaygın anahtar kelime hangisidir?",
+        "options": ["A) func", "B) method", "C) def", "D) function"],
+        "correct_answer": "D",
+        "topic": "functions", "difficulty": "beginner"
+      },
+      {
+        "id": 8,
+        "question": "DOM'da bir elementi ID'sine göre seçmek için hangi metod kullanılır?",
+        "options": ["A) getElementByName()", "B) querySelector()", "C) getElementById()", "D) findElement()"],
+        "correct_answer": "C",
+        "topic": "dom",
+        "difficulty": "beginner"
+      },
+      {
+        "id": 9,
+        "question": "for (let i = 0; i < 3; i++) { console.log(i); } kodunun çıktısı nedir?",
+        "options": ["A) 1 2 3", "B) 0 1 2", "C) 1 2", "D) 0 1 2 3"],
+        "correct_answer": "B",
+        "topic": "loops",
+        "difficulty": "beginner"
+      },
+      {
+        "id": 10,
+        "question": "Bir yorum satırı oluşturmak için hangi karakterler kullanılır?",
+        "options": ["A) //", "B) ##", "C) ", "D) /* */ "],
+        "correct_answer": "A",
+        "topic": "syntax",
+        "difficulty": "beginner"
+      }
+    ]
+  }
+}
