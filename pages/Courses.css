@@ -1,0 +1,149 @@
+
+.courses-container {
+    display: flex;
+    background-color: var(--background-color, #f8f9fa);
+    color: var(--text-color, #212529);
+    min-height: 100vh;
+}
+
+.courses-content {
+    flex-grow: 1;
+    padding: 2rem 3rem;
+}
+
+.courses-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.courses-header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--header-color, #1f2937);
+}
+
+.courses-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: 2rem;
+}
+
+.course-notes-card {
+    background-color: var(--card-bg, #ffffff);
+    border: 1px solid var(--border-color, #e5e7eb);
+    border-radius: 12px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    transition: box-shadow 0.2s;
+}
+
+.course-notes-card:hover {
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+
+.course-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    border-bottom: 1px solid var(--border-color, #e5e7eb);
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+}
+
+.course-icon {
+    flex-shrink: 0;
+}
+
+.course-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--header-color, #111827);
+    flex-grow: 1;
+}
+
+.course-lang-tag {
+    font-size: 0.8rem;
+    font-weight: 700;
+    padding: 0.2rem 0.6rem;
+    border-radius: 12px;
+    text-transform: uppercase;
+}
+
+.course-lang-tag.java { background-color: #FFF2E6; color: #D95400; }
+.course-lang-tag.python { background-color: #E6F0FF; color: #2D63A1; }
+.course-lang-tag.javascript { background-color: #FFFBE6; color: #B89B00; }
+
+.notes-content {
+    padding-top: 0.5rem;
+}
+
+.notes-content h4 {
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+}
+
+.notes-text {
+    background-color: var(--code-bg, #f3f4f6);
+    padding: 1rem;
+    border-radius: 8px;
+    white-space: pre-wrap; /* Satır sonlarını koru */
+    word-wrap: break-word; /* Uzun kelimeleri kır */
+    font-family: 'Courier New', Courier, monospace;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.no-notes {
+    font-style: italic;
+    color: #6b7280;
+}
+
+/* Koyu Tema Ayarları */
+body.dark-theme .course-notes-card {
+    background-color: #1f2937;
+    border-color: #374151;
+}
+
+body.dark-theme .course-title {
+    color: #f3f4f6;
+}
+
+body.dark-theme .notes-text {
+    background-color: #374151;
+    color: #d1d5db;
+}
+
+body.dark-theme .no-notes {
+    color: #9ca3af;
+}
+
+body.dark-theme .courses-container {
+    background-color: #111827;
+    color: #f3f4f6;
+}
+
+body.dark-theme .courses-header h1 {
+    color: #f3f4f6;
+}
+
+body.dark-theme .course-notes-card {
+    background-color: #1f2937;
+    border-color: #374151;
+}
+
+body.dark-theme .course-title {
+    color: #f3f4f6;
+}
+
+body.dark-theme .notes-content h4 {
+    color: #f3f4f6;
+}
+
+body.dark-theme .notes-text {
+    background-color: #111827;
+    color: #e2e8f0;
+}
+

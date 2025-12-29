@@ -1,0 +1,166 @@
+
+.settings-container {
+    display: flex;
+    background-color: var(--background-color, #f8f9fa);
+    color: var(--text-color, #212529);
+    min-height: 100vh;
+}
+
+.settings-content {
+    flex-grow: 1;
+    padding: 2rem 2rem;
+    max-width: 900px;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.settings-header-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.settings-header {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 0;
+    color: var(--header-color, #1f2937);
+}
+
+.settings-card {
+    background-color: var(--card-bg, #ffffff);
+    border: 1px solid var(--border-color, #e5e7eb);
+    border-radius: 12px;
+    padding: 1.5rem 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.card-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    color: var(--header-color, #111827);
+}
+
+.form-group {
+    margin-bottom: 1.25rem;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    color: #374151;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.25);
+}
+
+.card-button {
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.card-button:hover {
+    background-color: #1d4ed8;
+}
+
+/* Tema Seçici */
+.theme-selector {
+    display: flex;
+    gap: 1rem;
+}
+
+.theme-button {
+    flex: 1;
+    padding: 0.75rem;
+    border: 2px solid #e5e7eb;
+    border-radius: 8px;
+    background-color: transparent;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s, border-color 0.2s;
+}
+
+.theme-button.active {
+    border-color: #2563eb;
+    background-color: #dbeafe;
+}
+
+/* Tehlike Alanı */
+.danger-zone {
+    border-color: #ef4444;
+}
+
+.danger-zone .card-title {
+    color: #dc2626;
+}
+
+.danger-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.danger-button {
+    background-color: #dc2626;
+}
+
+.danger-button:hover {
+    background-color: #b91c1c;
+}
+
+/* Body Tema Class'ları (Başlangıç) */
+body.light-theme {
+    --background-color: #f8f9fa;
+    --text-color: #212529;
+    --card-bg: #ffffff;
+    --border-color: #e5e7eb;
+    --header-color: #111827;
+}
+
+body.dark-theme {
+    --background-color: #111827; /* Koyu arka plan */
+    --text-color: #f3f4f6;    /* Açık metin rengi */
+    --card-bg: #1f2937;       /* Daha açık kart arka planı */
+    --border-color: #374151; /* Daha belirgin sınır */
+    --header-color: #ffffff;   /* Başlıklar için beyaz */
+}
+
+/* Koyu temada form elemanları */
+body.dark-theme .form-group label {
+    color: #d1d5db;
+}
+
+body.dark-theme .form-group input,
+body.dark-theme .form-group select {
+    background-color: #374151;
+    border-color: #4b5563;
+    color: #f3f4f6;
+}
+
+body.dark-theme .form-group input::placeholder {
+    color: #9ca3af;
+}
