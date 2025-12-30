@@ -17,16 +17,7 @@ jobs:
       with:
         node-version: 20
 
-    - name: Dosya Dedektifi (Hata Nerede?)
-      run: |
-        echo "Main.jsx dosyasını arıyorum..."
-        find . -name "Main.jsx"
-        echo "main.jsx dosyasını arıyorum..."
-        find . -name "main.jsx"
-        echo "Şu anki klasör içeriği:"
-        ls -F
-
-    - name: Kütüphaneleri Yükle
+    - name: Bağımlılıkları Yükle
       run: npm install
 
     - name: Projeyi Derle
