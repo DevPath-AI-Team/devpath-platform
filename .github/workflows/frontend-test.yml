@@ -1,0 +1,30 @@
+name: Frontend React Kontrolü
+
+on:
+  push:
+    branches: [ "son-frontend" ] 
+  pull_request:
+    branches: [ "son-frontend" ]
+
+jobs:
+  build-frontend:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [18.x] 
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Node.js ${{ matrix.node-version }} Kuruluyor
+      uses: actions/setup-node@v3
+      with:
+        node-version: ${{ matrix.node-version }}
+        cache: 'npm'
+
+    - name: Kütüphaneleri Yükle (npm install)
+      run: npm install
+
+    - name: Projeyi Derle (Build Testi)
+      run: npm run build
