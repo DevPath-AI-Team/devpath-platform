@@ -10,28 +10,17 @@ jobs:
   build-frontend:
     runs-on: ubuntu-latest
 
-    strategy:
-      matrix:
-        node-version: [20.x] 
-
     steps:
     - uses: actions/checkout@v3
 
-    - name: Node.js ${{ matrix.node-version }} Kuruluyor
+    - name: Node.js Kuruluyor
       uses: actions/setup-node@v3
       with:
-        node-version: ${{ matrix.node-version }}
-        cache: 'npm'
-
-    - name: Dosya Yapısını Kontrol Et (Debug)
-      run: |
-        echo "Ana dizindeki dosyalar:"
-        ls -la
-        echo "Src klasörü içindeki dosyalar:"
-        ls -R src || echo "Src klasörü bulunamadı!"
+        node-version: 20 # Vite 7 için mutlaka 20 olmalı
 
     - name: Kütüphaneleri Yükle
       run: npm install
 
-    - name: Projeyi Derle (Build)
+    - name: Projeyi Derle
       run: npm run build
+
