@@ -3,20 +3,18 @@ name: Frontend React Kontrolü
 on:
   push:
     branches: [ "son-frontend" ] 
-  pull_request:
     branches: [ "son-frontend" ]
 
 jobs:
   build-frontend:
     runs-on: ubuntu-latest
-
     steps:
     - uses: actions/checkout@v3
 
-    - name: Node.js Kuruluyor
+    - name: Node.js Kur
       uses: actions/setup-node@v3
       with:
-        node-version: 20 # Vite 7 için mutlaka 20 olmalı
+        node-version: 20 
 
     - name: Kütüphaneleri Yükle
       run: npm install
