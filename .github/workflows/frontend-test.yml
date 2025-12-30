@@ -2,11 +2,9 @@ name: Frontend React Kontrolü
 
 on:
   push:
-    branches: 
-      - "son-frontend"
+    branches: [ "son-frontend" ]
   pull_request:
-    branches: 
-      - "son-frontend"
+    branches: [ "son-frontend" ]
 
 jobs:
   build-frontend:
@@ -18,6 +16,15 @@ jobs:
       uses: actions/setup-node@v3
       with:
         node-version: 20
+
+    - name: Dosya Dedektifi (Hata Nerede?)
+      run: |
+        echo "Main.jsx dosyasını arıyorum..."
+        find . -name "Main.jsx"
+        echo "main.jsx dosyasını arıyorum..."
+        find . -name "main.jsx"
+        echo "Şu anki klasör içeriği:"
+        ls -F
 
     - name: Kütüphaneleri Yükle
       run: npm install
