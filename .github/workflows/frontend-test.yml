@@ -2,8 +2,11 @@ name: Frontend React Kontrolü
 
 on:
   push:
-    branches: [ "son-frontend" ] 
-    branches: [ "son-frontend" ]
+    branches: 
+      - "son-frontend"
+  pull_request:
+    branches: 
+      - "son-frontend"
 
 jobs:
   build-frontend:
@@ -14,11 +17,10 @@ jobs:
     - name: Node.js Kur
       uses: actions/setup-node@v3
       with:
-        node-version: 20 
+        node-version: 20
 
     - name: Kütüphaneleri Yükle
       run: npm install
 
     - name: Projeyi Derle
       run: npm run build
-
