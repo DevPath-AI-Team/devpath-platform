@@ -19,13 +19,10 @@ jobs:
         java-version: '17'
         distribution: 'temurin'
 
-    # Bu adım robotun hangi dosyaları gördüğünü listeler 
-    - name: Dosyaları Listele
-      run: ls -la
-      
-    # Wrapper (gradlew) yerine direkt Gradle komutunu kullanıyoruz.
-    # Bu yöntem dosya hatası verme riskini sıfırlar.
+    # 'gradle-version: 8.5' diyerek sunucuya taze Gradle kurduruyoruz.
+    # Böylece "dosya kilitli", "izin yok" hatası imkansız hale geliyor.
     - name: Testleri Çalıştır
       uses: gradle/gradle-build-action@v2
       with:
+        gradle-version: '8.5'
         arguments: test
