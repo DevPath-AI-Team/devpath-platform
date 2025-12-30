@@ -19,10 +19,8 @@ jobs:
         java-version: '17'
         distribution: 'temurin'
 
-    # 'gradle-version: 8.5' diyerek sunucuya taze Gradle kurduruyoruz.
-    # Böylece "dosya kilitli", "izin yok" hatası imkansız hale geliyor.
     - name: Testleri Çalıştır
       uses: gradle/gradle-build-action@v2
       with:
-        gradle-version: '8.5'
+        gradle-version: 'current'
         arguments: test
