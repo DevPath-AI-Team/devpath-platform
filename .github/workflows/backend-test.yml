@@ -1,0 +1,29 @@
+name: Backend Java Testleri
+
+on:
+  push:
+    branches: [ "son-backend" ]
+  pull_request:
+    branches: [ "son-backend" ]  
+jobs:
+  test-backend:
+    runs-on: ubuntu-latest
+    
+    steps:
+    # 1. Kodları Sanal Makineye İndir
+    - uses: actions/checkout@v3
+    
+    # 2. Java 17 Kur (Spring Boot için)
+    - name: Set up JDK 17
+      uses: actions/setup-java@v3
+      with:
+        java-version: '17'
+        distribution: 'temurin'
+        
+    # 3. Gradle'a Çalışma İzni Ver
+    - name: Grant execute permission for gradlew
+      run: chmod +x gradlew
+      
+    # 4. Testleri Başlat
+    - name: Testleri Çalıştır
+      run: ./gradlew test
